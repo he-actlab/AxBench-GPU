@@ -1843,6 +1843,7 @@ void functionalCoreSim::executeWarp(unsigned i, bool &allAtBarrier, bool & someO
 {
     if(!m_warpAtBarrier[i] && m_liveThreadCount[i]!=0){
         warp_inst_t inst =getExecuteWarp(i);
+        inst.print(stdout);
         execute_warp_inst_t(inst,i);
         if(inst.isatomic()) inst.do_atomic(true);
         if(inst.op==BARRIER_OP || inst.op==MEMORY_BARRIER_OP ) m_warpAtBarrier[i]=true;
