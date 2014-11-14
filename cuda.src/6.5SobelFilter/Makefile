@@ -134,7 +134,7 @@ endif
 
 ALL_CCFLAGS :=
 ALL_CCFLAGS += $(NVCCFLAGS)
-ALL_CCFLAGS += -dc
+#ALL_CCFLAGS += -dc
 ALL_CCFLAGS += $(EXTRA_NVCCFLAGS)
 ALL_CCFLAGS += $(addprefix -Xcompiler ,$(CCFLAGS))
 ALL_CCFLAGS += $(addprefix -Xcompiler ,$(EXTRA_CCFLAGS))
@@ -214,10 +214,11 @@ SobelFilter.o:SobelFilter.cpp
 SobelFilter_kernels.o:SobelFilter_kernels.cu
 	$(EXEC) $(NVCC) $(INCLUDES) $(ALL_CCFLAGS) $(GENCODE_FLAGS) -o $@ -c $<
 
-npuKernel.o:npuKernel.cu
-	$(EXEC) $(NVCC) $(INCLUDES) $(ALL_CCFLAGS) $(GENCODE_FLAGS) -o $@ -c $<
+#npuKernel.o:npuKernel.cu
+#	$(EXEC) $(NVCC) $(INCLUDES) $(ALL_CCFLAGS) $(GENCODE_FLAGS) -o $@ -c $<
 
-SobelFilter: SobelFilter.o SobelFilter_kernels.o npuKernel.o
+#SobelFilter: SobelFilter.o SobelFilter_kernels.o npuKernel.o
+SobelFilter: SobelFilter.o SobelFilter_kernels.o 
 	$(EXEC) $(NVCC) $(ALL_LDFLAGS) $(GENCODE_FLAGS) -o $@ $+ $(LIBRARIES)
 	$(EXEC) mkdir -p ../../bin/$(OS_ARCH)/$(OSLOWER)/$(TARGET)$(if $(abi),/$(abi))
 	$(EXEC) cp $@ ../../bin/$(OS_ARCH)/$(OSLOWER)/$(TARGET)$(if $(abi),/$(abi))

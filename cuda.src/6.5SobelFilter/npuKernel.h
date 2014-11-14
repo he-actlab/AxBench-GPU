@@ -9,15 +9,15 @@
 
 #ifdef NPU
 __device__ unsigned char
-ComputeSobel(unsigned char ul, // upper left
-             unsigned char um, // upper middle
-             unsigned char ur, // upper right
-             unsigned char ml, // middle left
-             unsigned char mm, // middle (unused)
-             unsigned char mr, // middle right
-             unsigned char ll, // lower left
-             unsigned char lm, // lower middle
-             unsigned char lr, // lower right
+ComputeSobel(unsigned char ul_in, // upper left
+             unsigned char um_in, // upper middle
+             unsigned char ur_in, // upper right
+             unsigned char ml_in, // middle left
+             unsigned char mm_in, // middle (unused)
+             unsigned char mr_in, // middle right
+             unsigned char ll_in, // lower left
+             unsigned char lm_in, // lower middle
+             unsigned char lr_in, // lower right
              float fScale);
 
 __device__ float af0(float, float);
