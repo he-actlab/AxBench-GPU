@@ -1,0 +1,18 @@
+{
+    "CUDAkernel1DCT": {
+        "InputRangeA": 0.0, 
+        "InputRangeB": 0.0, 
+        "OutputRangeA": -2.0, 
+        "OutputRangeB": 2.0, 
+        "nInputs": "8", 
+        "nOutputs": "1"
+    }, 
+    "CUDAkernel1IDCT": {
+        "InputRangeA": 0.0, 
+        "InputRangeB": 0.0, 
+        "OutputRangeA": -2.0, 
+        "OutputRangeB": 2.0, 
+        "nInputs": "8", 
+        "nOutputs": "1"
+    }
+}

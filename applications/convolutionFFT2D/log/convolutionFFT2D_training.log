@@ -1,0 +1,668 @@
+Application name: 				convolutionFFT2D_spProcess2D_kernel
+Number of input neurons: 			1
+Number of output neurons: 		2
+Min number of hidden neurons:		2
+Max number of hidden neurons:		4
+Number of hidden layers: 			4
+Sampling Rate: 					0.1
+Test Fraction: 					0.85
+Learning rate: 					0.3
+Number of epochs:					150
+Kernel Name:                      spProcess2D_kernel
+--------------- Training convolutionFFT2D_spProcess2D_kernel ---------------
+# preparing the configuration 1_2_2...
+# preparing the configuration 1_4_2...
+# preparing the configuration 1_2_2_2...
+# preparing the configuration 1_4_2_2...
+# preparing the configuration 1_4_4_2...
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_2_2/epochs_150
+# config: 1 -> 2 -> 2
+# epochs: 150
+# run:    1
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_2_2/epochs_150/run_1
+@ Start RPROP...0
+# training algorithm: RPROP
+***********************************************
+# config: 1 -> 2 -> 2
+# epochs: 150
+# run:    2
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_2_2/epochs_150/run_2
+@ Start RPROP...0
+# training algorithm: RPROP
+***********************************************
+# config: 1 -> 2 -> 2
+# epochs: 150
+# run:    3
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_2_2/epochs_150/run_3
+@ Start RPROP...0
+# training algorithm: RPROP
+***********************************************
+# config: 1 -> 2 -> 2
+# epochs: 150
+# run:    4
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_2_2/epochs_150/run_4
+@ Start RPROP...0
+# training algorithm: RPROP
+***********************************************
+# config: 1 -> 2 -> 2
+# epochs: 150
+# run:    5
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_2_2/epochs_150/run_5
+@ Start RPROP...0
+# training algorithm: RPROP
+***********************************************
+# config: 1 -> 2 -> 2
+# epochs: 150
+# run:    6
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_2_2/epochs_150/run_6
+@ Start RPROP...0
+# training algorithm: RPROP
+***********************************************
+# config: 1 -> 2 -> 2
+# epochs: 150
+# run:    7
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_2_2/epochs_150/run_7
+@ Start RPROP...0
+# training algorithm: RPROP
+***********************************************
+# config: 1 -> 2 -> 2
+# epochs: 150
+# run:    8
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_2_2/epochs_150/run_8
+@ Start RPROP...0
+# training algorithm: RPROP
+***********************************************
+# config: 1 -> 2 -> 2
+# epochs: 150
+# run:    9
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_2_2/epochs_150/run_9
+@ Start RPROP...0
+# training algorithm: RPROP
+***********************************************
+# config: 1 -> 2 -> 2
+# epochs: 150
+# run:    10
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_2_2/epochs_150/run_10
+@ Start RPROP...0
+# training algorithm: RPROP
+***********************************************
+# config: 1 -> 2 -> 2
+# epochs: 150
+# run:    11
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_2_2/epochs_150/run_11
+@ Start RPROP...0
+# training algorithm: RPROP
+***********************************************
+# config: 1 -> 2 -> 2
+# epochs: 150
+# run:    12
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_2_2/epochs_150/run_12
+@ Start RPROP...0
+# training algorithm: RPROP
+***********************************************
+# config: 1 -> 2 -> 2
+# epochs: 150
+# run:    13
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_2_2/epochs_150/run_13
+@ Start RPROP...0
+# training algorithm: RPROP
+***********************************************
+# config: 1 -> 2 -> 2
+# epochs: 150
+# run:    14
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_2_2/epochs_150/run_14
+@ Start RPROP...0
+# training algorithm: RPROP
+***********************************************
+# config: 1 -> 2 -> 2
+# epochs: 150
+# run:    15
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_2_2/epochs_150/run_15
+@ Start RPROP...0
+# training algorithm: RPROP
+***********************************************
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_4_2/epochs_150
+# config: 1 -> 4 -> 2
+# epochs: 150
+# run:    1
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_4_2/epochs_150/run_1
+@ Start RPROP...0
+# training algorithm: RPROP
+***********************************************
+# config: 1 -> 4 -> 2
+# epochs: 150
+# run:    2
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_4_2/epochs_150/run_2
+@ Start RPROP...0
+# training algorithm: RPROP
+***********************************************
+# config: 1 -> 4 -> 2
+# epochs: 150
+# run:    3
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_4_2/epochs_150/run_3
+@ Start RPROP...0
+# training algorithm: RPROP
+***********************************************
+# config: 1 -> 4 -> 2
+# epochs: 150
+# run:    4
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_4_2/epochs_150/run_4
+@ Start RPROP...0
+# training algorithm: RPROP
+***********************************************
+# config: 1 -> 4 -> 2
+# epochs: 150
+# run:    5
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_4_2/epochs_150/run_5
+@ Start RPROP...0
+# training algorithm: RPROP
+***********************************************
+# config: 1 -> 4 -> 2
+# epochs: 150
+# run:    6
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_4_2/epochs_150/run_6
+@ Start RPROP...0
+# training algorithm: RPROP
+***********************************************
+# config: 1 -> 4 -> 2
+# epochs: 150
+# run:    7
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_4_2/epochs_150/run_7
+@ Start RPROP...0
+# training algorithm: RPROP
+***********************************************
+# config: 1 -> 4 -> 2
+# epochs: 150
+# run:    8
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_4_2/epochs_150/run_8
+@ Start RPROP...0
+# training algorithm: RPROP
+***********************************************
+# config: 1 -> 4 -> 2
+# epochs: 150
+# run:    9
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_4_2/epochs_150/run_9
+@ Start RPROP...0
+# training algorithm: RPROP
+***********************************************
+# config: 1 -> 4 -> 2
+# epochs: 150
+# run:    10
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_4_2/epochs_150/run_10
+@ Start RPROP...0
+# training algorithm: RPROP
+***********************************************
+# config: 1 -> 4 -> 2
+# epochs: 150
+# run:    11
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_4_2/epochs_150/run_11
+@ Start RPROP...0
+# training algorithm: RPROP
+***********************************************
+# config: 1 -> 4 -> 2
+# epochs: 150
+# run:    12
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_4_2/epochs_150/run_12
+@ Start RPROP...0
+# training algorithm: RPROP
+***********************************************
+# config: 1 -> 4 -> 2
+# epochs: 150
+# run:    13
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_4_2/epochs_150/run_13
+@ Start RPROP...0
+# training algorithm: RPROP
+***********************************************
+# config: 1 -> 4 -> 2
+# epochs: 150
+# run:    14
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_4_2/epochs_150/run_14
+@ Start RPROP...0
+# training algorithm: RPROP
+***********************************************
+# config: 1 -> 4 -> 2
+# epochs: 150
+# run:    15
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_4_2/epochs_150/run_15
+@ Start RPROP...0
+# training algorithm: RPROP
+***********************************************
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_2_2_2/epochs_150
+# config: 1 -> 2 -> 2 -> 2
+# epochs: 150
+# run:    1
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_2_2_2/epochs_150/run_1
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop convolutionFFT2D_spProcess2D_kernel 150 aggregated_train.fann 1 2 2 2 0.3 0 aggregated_test.fann >> run_1_rprop.log
+***********************************************
+# config: 1 -> 2 -> 2 -> 2
+# epochs: 150
+# run:    2
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_2_2_2/epochs_150/run_2
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop convolutionFFT2D_spProcess2D_kernel 150 aggregated_train.fann 1 2 2 2 0.3 0 aggregated_test.fann >> run_2_rprop.log
+***********************************************
+# config: 1 -> 2 -> 2 -> 2
+# epochs: 150
+# run:    3
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_2_2_2/epochs_150/run_3
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop convolutionFFT2D_spProcess2D_kernel 150 aggregated_train.fann 1 2 2 2 0.3 0 aggregated_test.fann >> run_3_rprop.log
+***********************************************
+# config: 1 -> 2 -> 2 -> 2
+# epochs: 150
+# run:    4
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_2_2_2/epochs_150/run_4
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop convolutionFFT2D_spProcess2D_kernel 150 aggregated_train.fann 1 2 2 2 0.3 0 aggregated_test.fann >> run_4_rprop.log
+***********************************************
+# config: 1 -> 2 -> 2 -> 2
+# epochs: 150
+# run:    5
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_2_2_2/epochs_150/run_5
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop convolutionFFT2D_spProcess2D_kernel 150 aggregated_train.fann 1 2 2 2 0.3 0 aggregated_test.fann >> run_5_rprop.log
+***********************************************
+# config: 1 -> 2 -> 2 -> 2
+# epochs: 150
+# run:    6
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_2_2_2/epochs_150/run_6
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop convolutionFFT2D_spProcess2D_kernel 150 aggregated_train.fann 1 2 2 2 0.3 0 aggregated_test.fann >> run_6_rprop.log
+***********************************************
+# config: 1 -> 2 -> 2 -> 2
+# epochs: 150
+# run:    7
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_2_2_2/epochs_150/run_7
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop convolutionFFT2D_spProcess2D_kernel 150 aggregated_train.fann 1 2 2 2 0.3 0 aggregated_test.fann >> run_7_rprop.log
+***********************************************
+# config: 1 -> 2 -> 2 -> 2
+# epochs: 150
+# run:    8
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_2_2_2/epochs_150/run_8
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop convolutionFFT2D_spProcess2D_kernel 150 aggregated_train.fann 1 2 2 2 0.3 0 aggregated_test.fann >> run_8_rprop.log
+***********************************************
+# config: 1 -> 2 -> 2 -> 2
+# epochs: 150
+# run:    9
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_2_2_2/epochs_150/run_9
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop convolutionFFT2D_spProcess2D_kernel 150 aggregated_train.fann 1 2 2 2 0.3 0 aggregated_test.fann >> run_9_rprop.log
+***********************************************
+# config: 1 -> 2 -> 2 -> 2
+# epochs: 150
+# run:    10
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_2_2_2/epochs_150/run_10
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop convolutionFFT2D_spProcess2D_kernel 150 aggregated_train.fann 1 2 2 2 0.3 0 aggregated_test.fann >> run_10_rprop.log
+***********************************************
+# config: 1 -> 2 -> 2 -> 2
+# epochs: 150
+# run:    11
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_2_2_2/epochs_150/run_11
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop convolutionFFT2D_spProcess2D_kernel 150 aggregated_train.fann 1 2 2 2 0.3 0 aggregated_test.fann >> run_11_rprop.log
+***********************************************
+# config: 1 -> 2 -> 2 -> 2
+# epochs: 150
+# run:    12
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_2_2_2/epochs_150/run_12
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop convolutionFFT2D_spProcess2D_kernel 150 aggregated_train.fann 1 2 2 2 0.3 0 aggregated_test.fann >> run_12_rprop.log
+***********************************************
+# config: 1 -> 2 -> 2 -> 2
+# epochs: 150
+# run:    13
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_2_2_2/epochs_150/run_13
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop convolutionFFT2D_spProcess2D_kernel 150 aggregated_train.fann 1 2 2 2 0.3 0 aggregated_test.fann >> run_13_rprop.log
+***********************************************
+# config: 1 -> 2 -> 2 -> 2
+# epochs: 150
+# run:    14
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_2_2_2/epochs_150/run_14
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop convolutionFFT2D_spProcess2D_kernel 150 aggregated_train.fann 1 2 2 2 0.3 0 aggregated_test.fann >> run_14_rprop.log
+***********************************************
+# config: 1 -> 2 -> 2 -> 2
+# epochs: 150
+# run:    15
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_2_2_2/epochs_150/run_15
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop convolutionFFT2D_spProcess2D_kernel 150 aggregated_train.fann 1 2 2 2 0.3 0 aggregated_test.fann >> run_15_rprop.log
+***********************************************
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_4_2_2/epochs_150
+# config: 1 -> 4 -> 2 -> 2
+# epochs: 150
+# run:    1
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_4_2_2/epochs_150/run_1
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop convolutionFFT2D_spProcess2D_kernel 150 aggregated_train.fann 1 4 2 2 0.3 0 aggregated_test.fann >> run_1_rprop.log
+***********************************************
+# config: 1 -> 4 -> 2 -> 2
+# epochs: 150
+# run:    2
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_4_2_2/epochs_150/run_2
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop convolutionFFT2D_spProcess2D_kernel 150 aggregated_train.fann 1 4 2 2 0.3 0 aggregated_test.fann >> run_2_rprop.log
+***********************************************
+# config: 1 -> 4 -> 2 -> 2
+# epochs: 150
+# run:    3
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_4_2_2/epochs_150/run_3
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop convolutionFFT2D_spProcess2D_kernel 150 aggregated_train.fann 1 4 2 2 0.3 0 aggregated_test.fann >> run_3_rprop.log
+***********************************************
+# config: 1 -> 4 -> 2 -> 2
+# epochs: 150
+# run:    4
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_4_2_2/epochs_150/run_4
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop convolutionFFT2D_spProcess2D_kernel 150 aggregated_train.fann 1 4 2 2 0.3 0 aggregated_test.fann >> run_4_rprop.log
+***********************************************
+# config: 1 -> 4 -> 2 -> 2
+# epochs: 150
+# run:    5
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_4_2_2/epochs_150/run_5
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop convolutionFFT2D_spProcess2D_kernel 150 aggregated_train.fann 1 4 2 2 0.3 0 aggregated_test.fann >> run_5_rprop.log
+***********************************************
+# config: 1 -> 4 -> 2 -> 2
+# epochs: 150
+# run:    6
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_4_2_2/epochs_150/run_6
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop convolutionFFT2D_spProcess2D_kernel 150 aggregated_train.fann 1 4 2 2 0.3 0 aggregated_test.fann >> run_6_rprop.log
+***********************************************
+# config: 1 -> 4 -> 2 -> 2
+# epochs: 150
+# run:    7
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_4_2_2/epochs_150/run_7
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop convolutionFFT2D_spProcess2D_kernel 150 aggregated_train.fann 1 4 2 2 0.3 0 aggregated_test.fann >> run_7_rprop.log
+***********************************************
+# config: 1 -> 4 -> 2 -> 2
+# epochs: 150
+# run:    8
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_4_2_2/epochs_150/run_8
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop convolutionFFT2D_spProcess2D_kernel 150 aggregated_train.fann 1 4 2 2 0.3 0 aggregated_test.fann >> run_8_rprop.log
+***********************************************
+# config: 1 -> 4 -> 2 -> 2
+# epochs: 150
+# run:    9
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_4_2_2/epochs_150/run_9
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop convolutionFFT2D_spProcess2D_kernel 150 aggregated_train.fann 1 4 2 2 0.3 0 aggregated_test.fann >> run_9_rprop.log
+***********************************************
+# config: 1 -> 4 -> 2 -> 2
+# epochs: 150
+# run:    10
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_4_2_2/epochs_150/run_10
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop convolutionFFT2D_spProcess2D_kernel 150 aggregated_train.fann 1 4 2 2 0.3 0 aggregated_test.fann >> run_10_rprop.log
+***********************************************
+# config: 1 -> 4 -> 2 -> 2
+# epochs: 150
+# run:    11
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_4_2_2/epochs_150/run_11
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop convolutionFFT2D_spProcess2D_kernel 150 aggregated_train.fann 1 4 2 2 0.3 0 aggregated_test.fann >> run_11_rprop.log
+***********************************************
+# config: 1 -> 4 -> 2 -> 2
+# epochs: 150
+# run:    12
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_4_2_2/epochs_150/run_12
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop convolutionFFT2D_spProcess2D_kernel 150 aggregated_train.fann 1 4 2 2 0.3 0 aggregated_test.fann >> run_12_rprop.log
+***********************************************
+# config: 1 -> 4 -> 2 -> 2
+# epochs: 150
+# run:    13
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_4_2_2/epochs_150/run_13
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop convolutionFFT2D_spProcess2D_kernel 150 aggregated_train.fann 1 4 2 2 0.3 0 aggregated_test.fann >> run_13_rprop.log
+***********************************************
+# config: 1 -> 4 -> 2 -> 2
+# epochs: 150
+# run:    14
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_4_2_2/epochs_150/run_14
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop convolutionFFT2D_spProcess2D_kernel 150 aggregated_train.fann 1 4 2 2 0.3 0 aggregated_test.fann >> run_14_rprop.log
+***********************************************
+# config: 1 -> 4 -> 2 -> 2
+# epochs: 150
+# run:    15
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_4_2_2/epochs_150/run_15
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop convolutionFFT2D_spProcess2D_kernel 150 aggregated_train.fann 1 4 2 2 0.3 0 aggregated_test.fann >> run_15_rprop.log
+***********************************************
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_4_4_2/epochs_150
+# config: 1 -> 4 -> 4 -> 2
+# epochs: 150
+# run:    1
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_4_4_2/epochs_150/run_1
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop convolutionFFT2D_spProcess2D_kernel 150 aggregated_train.fann 1 4 4 2 0.3 0 aggregated_test.fann >> run_1_rprop.log
+***********************************************
+# config: 1 -> 4 -> 4 -> 2
+# epochs: 150
+# run:    2
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_4_4_2/epochs_150/run_2
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop convolutionFFT2D_spProcess2D_kernel 150 aggregated_train.fann 1 4 4 2 0.3 0 aggregated_test.fann >> run_2_rprop.log
+***********************************************
+# config: 1 -> 4 -> 4 -> 2
+# epochs: 150
+# run:    3
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_4_4_2/epochs_150/run_3
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop convolutionFFT2D_spProcess2D_kernel 150 aggregated_train.fann 1 4 4 2 0.3 0 aggregated_test.fann >> run_3_rprop.log
+***********************************************
+# config: 1 -> 4 -> 4 -> 2
+# epochs: 150
+# run:    4
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_4_4_2/epochs_150/run_4
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop convolutionFFT2D_spProcess2D_kernel 150 aggregated_train.fann 1 4 4 2 0.3 0 aggregated_test.fann >> run_4_rprop.log
+***********************************************
+# config: 1 -> 4 -> 4 -> 2
+# epochs: 150
+# run:    5
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_4_4_2/epochs_150/run_5
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop convolutionFFT2D_spProcess2D_kernel 150 aggregated_train.fann 1 4 4 2 0.3 0 aggregated_test.fann >> run_5_rprop.log
+***********************************************
+# config: 1 -> 4 -> 4 -> 2
+# epochs: 150
+# run:    6
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_4_4_2/epochs_150/run_6
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop convolutionFFT2D_spProcess2D_kernel 150 aggregated_train.fann 1 4 4 2 0.3 0 aggregated_test.fann >> run_6_rprop.log
+***********************************************
+# config: 1 -> 4 -> 4 -> 2
+# epochs: 150
+# run:    7
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_4_4_2/epochs_150/run_7
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop convolutionFFT2D_spProcess2D_kernel 150 aggregated_train.fann 1 4 4 2 0.3 0 aggregated_test.fann >> run_7_rprop.log
+***********************************************
+# config: 1 -> 4 -> 4 -> 2
+# epochs: 150
+# run:    8
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_4_4_2/epochs_150/run_8
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop convolutionFFT2D_spProcess2D_kernel 150 aggregated_train.fann 1 4 4 2 0.3 0 aggregated_test.fann >> run_8_rprop.log
+***********************************************
+# config: 1 -> 4 -> 4 -> 2
+# epochs: 150
+# run:    9
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_4_4_2/epochs_150/run_9
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop convolutionFFT2D_spProcess2D_kernel 150 aggregated_train.fann 1 4 4 2 0.3 0 aggregated_test.fann >> run_9_rprop.log
+***********************************************
+# config: 1 -> 4 -> 4 -> 2
+# epochs: 150
+# run:    10
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_4_4_2/epochs_150/run_10
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop convolutionFFT2D_spProcess2D_kernel 150 aggregated_train.fann 1 4 4 2 0.3 0 aggregated_test.fann >> run_10_rprop.log
+***********************************************
+# config: 1 -> 4 -> 4 -> 2
+# epochs: 150
+# run:    11
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_4_4_2/epochs_150/run_11
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop convolutionFFT2D_spProcess2D_kernel 150 aggregated_train.fann 1 4 4 2 0.3 0 aggregated_test.fann >> run_11_rprop.log
+***********************************************
+# config: 1 -> 4 -> 4 -> 2
+# epochs: 150
+# run:    12
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_4_4_2/epochs_150/run_12
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop convolutionFFT2D_spProcess2D_kernel 150 aggregated_train.fann 1 4 4 2 0.3 0 aggregated_test.fann >> run_12_rprop.log
+***********************************************
+# config: 1 -> 4 -> 4 -> 2
+# epochs: 150
+# run:    13
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_4_4_2/epochs_150/run_13
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop convolutionFFT2D_spProcess2D_kernel 150 aggregated_train.fann 1 4 4 2 0.3 0 aggregated_test.fann >> run_13_rprop.log
+***********************************************
+# config: 1 -> 4 -> 4 -> 2
+# epochs: 150
+# run:    14
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_4_4_2/epochs_150/run_14
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop convolutionFFT2D_spProcess2D_kernel 150 aggregated_train.fann 1 4 4 2 0.3 0 aggregated_test.fann >> run_14_rprop.log
+***********************************************
+# config: 1 -> 4 -> 4 -> 2
+# epochs: 150
+# run:    15
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/convolutionFFT2D/nn.configs/spProcess2D_kernel/1_4_4_2/epochs_150/run_15
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop convolutionFFT2D_spProcess2D_kernel 150 aggregated_train.fann 1 4 4 2 0.3 0 aggregated_test.fann >> run_15_rprop.log
+***********************************************
+bash ../../scripts/run_training.sh convolutionFFT2D_spProcess2D_kernel 1 2 2 4 4 0.1 0.85 0.3 150 spProcess2D_kernel

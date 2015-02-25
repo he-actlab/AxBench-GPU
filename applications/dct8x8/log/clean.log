@@ -1,0 +1,2 @@
+rm -f ./bin/dct8x8.out 
+rm -rf ./obj

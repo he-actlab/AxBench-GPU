@@ -1,0 +1,15 @@
+
+
+if [ ! -d "./bin" ];then 	\
+		mkdir bin;				\
+	fi
+if [ ! -d "./obj" ];then 	\
+		mkdir obj;				\
+	fi
+#python /home/yazdan/phd/projects/many.npu/parrot.c/src/ParrotObserver/plang.py -c /home/yazdan/phd/projects/many.npu/parrot.c/src/ParrotObserver/ParrotC.json -a observe -e "/usr/local/cuda/bin/nvcc -arch=compute_20 -code=sm_20,compute_20 -I/home/yazdan/NVIDIA_GPU_Computing_SDK/C/common/inc -I./src  --compiler-options -fno-strict-aliasing -O3 -DUNIX  -I. -I/usr/local/cuda/include -I/home/brian/NVIDIA_GPU_Computing_SDK/C/common/inc -I/home/brian/NVIDIA_GPU_Computing_SDK/shared/inc -c" -s "src.nn/quickshift_gpu_nn.cu" -o #"obj/quickshift_gpu.o" -t
+/usr/local/cuda/bin/nvcc -arch=compute_20 -code=sm_20,compute_20 -I/home/yazdan/NVIDIA_GPU_Computing_SDK/C/common/inc -I./src  --compiler-options -fno-strict-aliasing -O3 -DUNIX  -I. -I/usr/local/cuda/include -I/home/brian/NVIDIA_GPU_Computing_SDK/C/common/inc -I/home/brian/NVIDIA_GPU_Computing_SDK/shared/inc -o obj/quickshift_gpu.o -c src.nn/quickshift_gpu_nn.cu
+src.nn/quickshift_gpu_nn.cu(169): warning: variable "Dij" was declared but never referenced
+
+src.nn/quickshift_gpu_nn.cu(169): warning: variable "Dij" was declared but never referenced
+
+g++ -fPIC  -o ./bin/quickshift_nn.out obj/Image.o obj/quickshift_cpu.o obj/main.o obj/quickshift_gpu.o -L/usr/local/cuda/lib64 -L/home/brian/NVIDIA_GPU_Computing_SDK/C/lib -L/home/brian/NVIDIA_GPU_Computing_SDK/C/common/lib/linux -L/home/brian/NVIDIA_GPU_Computing_SDK/shared/lib -lcudart -lcutil_x86_64 -lshrutil_x86_64

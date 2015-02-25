@@ -1,0 +1,107 @@
+{
+    "layers": {
+        "hidden_0": "3", 
+        "input": "10", 
+        "output": "2"
+    }, 
+    "neurons": {
+        "n_0": {
+            "activation_function": "0", 
+            "activation_steepness": "0.00000000000000000000e+00", 
+            "num_inputs": "0", 
+            "w_0": "1.26543104648590087891e-01", 
+            "w_1": "2.17324644327163696289e-01"
+        }, 
+        "n_1": {
+            "activation_function": "0", 
+            "activation_steepness": "0.00000000000000000000e+00", 
+            "num_inputs": "0", 
+            "w_0": "4.11325991153717041016e-02", 
+            "w_1": "5.48915788531303405762e-02"
+        }, 
+        "n_10": {
+            "activation_function": "3", 
+            "activation_steepness": "5.00000000000000000000e-01", 
+            "num_inputs": "10", 
+            "w_0": "-2.09879770874977111816e-01"
+        }, 
+        "n_11": {
+            "activation_function": "3", 
+            "activation_steepness": "5.00000000000000000000e-01", 
+            "num_inputs": "10", 
+            "w_0": "-1.65652498602867126465e-01"
+        }, 
+        "n_12": {
+            "activation_function": "3", 
+            "activation_steepness": "0.00000000000000000000e+00", 
+            "num_inputs": "0", 
+            "w_0": "-1.95581108331680297852e-01"
+        }, 
+        "n_13": {
+            "activation_function": "3", 
+            "activation_steepness": "5.00000000000000000000e-01", 
+            "num_inputs": "3"
+        }, 
+        "n_14": {
+            "activation_function": "3", 
+            "activation_steepness": "0.00000000000000000000e+00", 
+            "num_inputs": "0"
+        }, 
+        "n_2": {
+            "activation_function": "0", 
+            "activation_steepness": "0.00000000000000000000e+00", 
+            "num_inputs": "0", 
+            "w_0": "1.17371626198291778564e-01", 
+            "w_1": "7.04831779003143310547e-02"
+        }, 
+        "n_3": {
+            "activation_function": "0", 
+            "activation_steepness": "0.00000000000000000000e+00", 
+            "num_inputs": "0", 
+            "w_0": "1.42193138599395751953e-01", 
+            "w_1": "6.02513104677200317383e-02"
+        }, 
+        "n_4": {
+            "activation_function": "0", 
+            "activation_steepness": "0.00000000000000000000e+00", 
+            "num_inputs": "0", 
+            "w_0": "6.00739456713199615479e-02", 
+            "w_1": "1.15147888660430908203e-01"
+        }, 
+        "n_5": {
+            "activation_function": "0", 
+            "activation_steepness": "0.00000000000000000000e+00", 
+            "num_inputs": "0", 
+            "w_0": "7.37289935350418090820e-02", 
+            "w_1": "1.81482791900634765625e-01"
+        }, 
+        "n_6": {
+            "activation_function": "0", 
+            "activation_steepness": "0.00000000000000000000e+00", 
+            "num_inputs": "0", 
+            "w_0": "1.75143331289291381836e-01", 
+            "w_1": "9.49739590287208557129e-02"
+        }, 
+        "n_7": {
+            "activation_function": "0", 
+            "activation_steepness": "0.00000000000000000000e+00", 
+            "num_inputs": "0", 
+            "w_0": "1.74654543399810791016e-01", 
+            "w_1": "2.18051195144653320312e-01"
+        }, 
+        "n_8": {
+            "activation_function": "0", 
+            "activation_steepness": "0.00000000000000000000e+00", 
+            "num_inputs": "0", 
+            "w_0": "5.65821081399917602539e-02", 
+            "w_1": "6.93177282810211181641e-02"
+        }, 
+        "n_9": {
+            "activation_function": "0", 
+            "activation_steepness": "0.00000000000000000000e+00", 
+            "num_inputs": "0", 
+            "w_0": "7.76723623275756835938e-02", 
+            "w_1": "1.68929010629653930664e-01"
+        }
+    }
+}

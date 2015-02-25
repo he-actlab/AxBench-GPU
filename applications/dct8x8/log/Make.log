@@ -1,0 +1,79 @@
+
+
+if [ ! -d "./bin" ];then 	\
+		mkdir bin;				\
+	fi
+if [ ! -d "./obj" ];then 	\
+		mkdir obj;				\
+	fi
+# "/usr/local/cuda-6.5"/bin/nvcc -ccbin g++ -I../../common/inc -I/home/yazdan/NVIDIA_CUDA-6.5_Samples/common/inc  -m64     -gencode arch=compute_11,code=sm_11 -gencode arch=compute_20,code=sm_20 -gencode arch=compute_30,code=sm_30 -gencode arch=compute_35,code=sm_35 -gencode arch=compute_37,code=sm_37 -gencode arch=compute_50,code=sm_50 -gencode arch=compute_50,code=compute_50 -lfann -lboost_regex -std=c++11 -I -I/usr/local/include -Isrc -I/home/yazdan/phd/projects/many.npu/parrot.c/src/ParrotLib -o obj/BmpUtil.o -c src/BmpUtil.cpp
+python /home/yazdan/phd/projects/many.npu/parrot.c/src/ParrotObserver/plang.py -c /home/yazdan/phd/projects/many.npu/parrot.c/src/ParrotObserver/ParrotC.json -a observe -e ""/usr/local/cuda-6.5"/bin/nvcc -ccbin g++ -I../../common/inc -I/home/yazdan/NVIDIA_CUDA-6.5_Samples/common/inc  -m64     -gencode arch=compute_11,code=sm_11 -gencode arch=compute_20,code=sm_20 -gencode arch=compute_30,code=sm_30 -gencode arch=compute_35,code=sm_35 -gencode arch=compute_37,code=sm_37 -gencode arch=compute_50,code=sm_50 -gencode arch=compute_50,code=compute_50 -lfann -lboost_regex -std=c++11 -I -I/usr/local/include -Isrc -I/home/yazdan/phd/projects/many.npu/parrot.c/src/ParrotLib -c" -s "src/BmpUtil.cpp" -o "obj/BmpUtil.o" -t
+nvcc warning : The 'compute_11', 'compute_12', 'compute_13', 'sm_11', 'sm_12', and 'sm_13' architectures are deprecated, and may be removed in a future release.
+cppParser
+[]
+Parrot Observer
+/usr/local/cuda-6.5/bin/nvcc -ccbin g++ -I../../common/inc -I/home/yazdan/NVIDIA_CUDA-6.5_Samples/common/inc  -m64     -gencode arch=compute_11,code=sm_11 -gencode arch=compute_20,code=sm_20 -gencode arch=compute_30,code=sm_30 -gencode arch=compute_35,code=sm_35 -gencode arch=compute_37,code=sm_37 -gencode arch=compute_50,code=sm_50 -gencode arch=compute_50,code=compute_50 -lfann -lboost_regex -std=c++11 -I -I/usr/local/include -Isrc -I/home/yazdan/phd/projects/many.npu/parrot.c/src/ParrotLib -c obj/BmpUtil.o.parroto.cpp -o obj/BmpUtil.o
+mv obj/BmpUtil.o.parroto.cpp obj/BmpUtil.o.parroto.cpp.tmp
+# "/usr/local/cuda-6.5"/bin/nvcc -ccbin g++ -I../../common/inc -I/home/yazdan/NVIDIA_CUDA-6.5_Samples/common/inc  -m64     -gencode arch=compute_11,code=sm_11 -gencode arch=compute_20,code=sm_20 -gencode arch=compute_30,code=sm_30 -gencode arch=compute_35,code=sm_35 -gencode arch=compute_37,code=sm_37 -gencode arch=compute_50,code=sm_50 -gencode arch=compute_50,code=compute_50 -lfann -lboost_regex -std=c++11 -I -I/usr/local/include -Isrc -I/home/yazdan/phd/projects/many.npu/parrot.c/src/ParrotLib -o obj/DCT8x8_Gold.o -c src/DCT8x8_Gold.cpp
+python /home/yazdan/phd/projects/many.npu/parrot.c/src/ParrotObserver/plang.py -c /home/yazdan/phd/projects/many.npu/parrot.c/src/ParrotObserver/ParrotC.json -a observe -e ""/usr/local/cuda-6.5"/bin/nvcc -ccbin g++ -I../../common/inc -I/home/yazdan/NVIDIA_CUDA-6.5_Samples/common/inc  -m64     -gencode arch=compute_11,code=sm_11 -gencode arch=compute_20,code=sm_20 -gencode arch=compute_30,code=sm_30 -gencode arch=compute_35,code=sm_35 -gencode arch=compute_37,code=sm_37 -gencode arch=compute_50,code=sm_50 -gencode arch=compute_50,code=compute_50 -lfann -lboost_regex -std=c++11 -I -I/usr/local/include -Isrc -I/home/yazdan/phd/projects/many.npu/parrot.c/src/ParrotLib -c" -s "src/DCT8x8_Gold.cpp" -o "obj/DCT8x8_Gold.o" -t
+nvcc warning : The 'compute_11', 'compute_12', 'compute_13', 'sm_11', 'sm_12', and 'sm_13' architectures are deprecated, and may be removed in a future release.
+cppParser
+[]
+Parrot Observer
+/usr/local/cuda-6.5/bin/nvcc -ccbin g++ -I../../common/inc -I/home/yazdan/NVIDIA_CUDA-6.5_Samples/common/inc  -m64     -gencode arch=compute_11,code=sm_11 -gencode arch=compute_20,code=sm_20 -gencode arch=compute_30,code=sm_30 -gencode arch=compute_35,code=sm_35 -gencode arch=compute_37,code=sm_37 -gencode arch=compute_50,code=sm_50 -gencode arch=compute_50,code=compute_50 -lfann -lboost_regex -std=c++11 -I -I/usr/local/include -Isrc -I/home/yazdan/phd/projects/many.npu/parrot.c/src/ParrotLib -c obj/DCT8x8_Gold.o.parroto.cpp -o obj/DCT8x8_Gold.o
+mv obj/DCT8x8_Gold.o.parroto.cpp obj/DCT8x8_Gold.o.parroto.cpp.tmp
+# "/usr/local/cuda-6.5"/bin/nvcc -ccbin g++ -I../../common/inc -I/home/yazdan/NVIDIA_CUDA-6.5_Samples/common/inc  -m64     -gencode arch=compute_11,code=sm_11 -gencode arch=compute_20,code=sm_20 -gencode arch=compute_30,code=sm_30 -gencode arch=compute_35,code=sm_35 -gencode arch=compute_37,code=sm_37 -gencode arch=compute_50,code=sm_50 -gencode arch=compute_50,code=compute_50 -lfann -lboost_regex -std=c++11 -I -I/usr/local/include -Isrc -I/home/yazdan/phd/projects/many.npu/parrot.c/src/ParrotLib -o obj/dct8x8.o -c src/dct8x8.cu
+python /home/yazdan/phd/projects/many.npu/parrot.c/src/ParrotObserver/plang.py -c /home/yazdan/phd/projects/many.npu/parrot.c/src/ParrotObserver/ParrotC.json -a observe -e ""/usr/local/cuda-6.5"/bin/nvcc -ccbin g++ -I../../common/inc -I/home/yazdan/NVIDIA_CUDA-6.5_Samples/common/inc  -m64     -gencode arch=compute_11,code=sm_11 -gencode arch=compute_20,code=sm_20 -gencode arch=compute_30,code=sm_30 -gencode arch=compute_35,code=sm_35 -gencode arch=compute_37,code=sm_37 -gencode arch=compute_50,code=sm_50 -gencode arch=compute_50,code=compute_50 -lfann -lboost_regex -std=c++11 -I -I/usr/local/include -Isrc -I/home/yazdan/phd/projects/many.npu/parrot.c/src/ParrotLib -c" -s "src/dct8x8.cu" -o "obj/dct8x8.o" -t
+nvcc warning : The 'compute_11', 'compute_12', 'compute_13', 'sm_11', 'sm_12', and 'sm_13' architectures are deprecated, and may be removed in a future release.
+ptxas /tmp/tmpxft_000076d6_00000000-20_dct8x8.o.parroto.compute_11.ptx, line 142; warning : Double is not supported. Demoting to float
+cppParser
+[([(303, 303), ['CUDAkernel1DCT', 'CUDAkernel1IDCT']], [(386, 386), ['CUDAkernel1DCT', 'CUDAkernel1IDCT']])]
+--------------------------------
+[8]parrotInput
+['parrotInput', '8', None, None]
+('parrotInput', '8', ('0', '0'))
+--------------------------------
+[1]<0.0; 1.0>parrotOutput
+['parrotOutput', '1', '0.0', ' 1.0']
+('parrotOutput', '1', ('0.0', '1.0'))
+{
+    "CUDAkernel1DCT": {
+        "InputRangeB": 0.0,
+        "InputRangeA": 0.0,
+        "OutputRangeB": 1.0,
+        "OutputRangeA": 0.0,
+        "nOutputs": "1",
+        "nInputs": "8"
+    }
+}
+--------------------------------
+[8]parrotInput
+['parrotInput', '8', None, None]
+('parrotInput', '8', ('0', '0'))
+--------------------------------
+[1]<0.0; 1.0>parrotOutput
+['parrotOutput', '1', '0.0', ' 1.0']
+('parrotOutput', '1', ('0.0', '1.0'))
+{
+    "CUDAkernel1IDCT": {
+        "InputRangeB": 0.0,
+        "InputRangeA": 0.0,
+        "OutputRangeB": 1.0,
+        "OutputRangeA": 0.0,
+        "nOutputs": "1",
+        "nInputs": "8"
+    },
+    "CUDAkernel1DCT": {
+        "InputRangeB": 0.0,
+        "InputRangeA": 0.0,
+        "OutputRangeB": 1.0,
+        "OutputRangeA": 0.0,
+        "nOutputs": "1",
+        "nInputs": "8"
+    }
+}
+Parrot Observer
+/usr/local/cuda-6.5/bin/nvcc -ccbin g++ -I../../common/inc -I/home/yazdan/NVIDIA_CUDA-6.5_Samples/common/inc  -m64     -gencode arch=compute_11,code=sm_11 -gencode arch=compute_20,code=sm_20 -gencode arch=compute_30,code=sm_30 -gencode arch=compute_35,code=sm_35 -gencode arch=compute_37,code=sm_37 -gencode arch=compute_50,code=sm_50 -gencode arch=compute_50,code=compute_50 -lfann -lboost_regex -std=c++11 -I -I/usr/local/include -Isrc -I/home/yazdan/phd/projects/many.npu/parrot.c/src/ParrotLib -c obj/dct8x8.o.parroto.cu -o obj/dct8x8.o
+mv obj/dct8x8.o.parroto.cu obj/dct8x8.o.parroto.cu.tmp
+"/usr/local/cuda-6.5"/bin/nvcc -ccbin g++   -m64       -gencode arch=compute_11,code=sm_11 -gencode arch=compute_20,code=sm_20 -gencode arch=compute_30,code=sm_30 -gencode arch=compute_35,code=sm_35 -gencode arch=compute_37,code=sm_37 -gencode arch=compute_50,code=sm_50 -gencode arch=compute_50,code=compute_50 -o ./bin/dct8x8.out obj/BmpUtil.o obj/DCT8x8_Gold.o obj/dct8x8.o 
+nvcc warning : The 'compute_11', 'compute_12', 'compute_13', 'sm_11', 'sm_12', and 'sm_13' architectures are deprecated, and may be removed in a future release.

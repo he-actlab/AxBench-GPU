@@ -1,0 +1,5 @@
+float layer_1_0 = parrotInput[0] * -0.029867 + parrotInput[1] * -0.143351 + parrotInput[2] * -0.073883 + 1.0f * -0.110627;
+float layer_1_1 = parrotInput[0] * -0.065459 + parrotInput[1] * -0.121010 + parrotInput[2] * -0.204893 + 1.0f * -0.215100;
+float layer_2_0 = sigmoid(layer_1_0, 0.500000) * -0.039302 + sigmoid(layer_1_1, 0.500000) * -0.061728 + 1.0f * -0.107041;
+layer_2_0 = sigmoid(layer_2_0, 0.5);
+parrotOutput[0] = layer_2_0;

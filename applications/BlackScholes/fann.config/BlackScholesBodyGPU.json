@@ -1,0 +1,65 @@
+{
+    "layers": {
+        "hidden_0": "3", 
+        "input": "4", 
+        "output": "2"
+    }, 
+    "neurons": {
+        "n_0": {
+            "activation_function": "0", 
+            "activation_steepness": "0.00000000000000000000e+00", 
+            "num_inputs": "0", 
+            "w_0": "-2.98669859766960144043e-02", 
+            "w_1": "-6.54594227671623229980e-02"
+        }, 
+        "n_1": {
+            "activation_function": "0", 
+            "activation_steepness": "0.00000000000000000000e+00", 
+            "num_inputs": "0", 
+            "w_0": "-1.43351316452026367188e-01", 
+            "w_1": "-1.21009670197963714600e-01"
+        }, 
+        "n_2": {
+            "activation_function": "0", 
+            "activation_steepness": "0.00000000000000000000e+00", 
+            "num_inputs": "0", 
+            "w_0": "-7.38826170563697814941e-02", 
+            "w_1": "-2.04892873764038085938e-01"
+        }, 
+        "n_3": {
+            "activation_function": "0", 
+            "activation_steepness": "0.00000000000000000000e+00", 
+            "num_inputs": "0", 
+            "w_0": "-1.10626623034477233887e-01", 
+            "w_1": "-2.15100288391113281250e-01"
+        }, 
+        "n_4": {
+            "activation_function": "3", 
+            "activation_steepness": "5.00000000000000000000e-01", 
+            "num_inputs": "4", 
+            "w_0": "-3.93020585179328918457e-02"
+        }, 
+        "n_5": {
+            "activation_function": "3", 
+            "activation_steepness": "5.00000000000000000000e-01", 
+            "num_inputs": "4", 
+            "w_0": "-6.17284402251243591309e-02"
+        }, 
+        "n_6": {
+            "activation_function": "3", 
+            "activation_steepness": "0.00000000000000000000e+00", 
+            "num_inputs": "0", 
+            "w_0": "-1.07040628790855407715e-01"
+        }, 
+        "n_7": {
+            "activation_function": "3", 
+            "activation_steepness": "5.00000000000000000000e-01", 
+            "num_inputs": "3"
+        }, 
+        "n_8": {
+            "activation_function": "3", 
+            "activation_steepness": "0.00000000000000000000e+00", 
+            "num_inputs": "0"
+        }
+    }
+}

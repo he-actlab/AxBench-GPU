@@ -1,0 +1,9 @@
+
+
+if [ ! -d "./bin" ];then 	\
+		mkdir bin;				\
+	fi
+if [ ! -d "./obj" ];then 	\
+		mkdir obj;				\
+	fi
+make: *** No rule to make target `src/bmploader_nn.cpp', needed by `obj/bmploader_nn.o'.  Stop.

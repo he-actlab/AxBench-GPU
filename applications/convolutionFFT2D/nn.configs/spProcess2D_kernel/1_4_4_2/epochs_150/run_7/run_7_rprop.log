@@ -1,0 +1,58 @@
+# config: 1->2->2
+# epochs: 150
+# run:    7
+Max epochs      150. Desired error: 0.0000010000.
+Epochs            1. Current error: 0.7361229658. Bit fail 232.
+Epochs          150. Current error: 0.4620241821. Bit fail 145.
+# Train MSE: 0.462024
+# Test MSE: 0.48593
+Max epochs      150. Desired error: 0.0000010000.
+Epochs            1. Current error: 0.7247322202. Bit fail 231.
+Epochs          150. Current error: 0.4636373520. Bit fail 146.
+# Train MSE: 0.463637
+# Test MSE: 0.482926
+Max epochs      150. Desired error: 0.0000010000.
+Epochs            1. Current error: 0.7675894499. Bit fail 234.
+Epochs          150. Current error: 0.4597402513. Bit fail 146.
+# Train MSE: 0.45974
+# Test MSE: 0.48523
+Max epochs      150. Desired error: 0.0000010000.
+Epochs            1. Current error: 0.8012567163. Bit fail 238.
+Epochs          150. Current error: 0.4617487490. Bit fail 148.
+# Train MSE: 0.461749
+# Test MSE: 0.482565
+Max epochs      150. Desired error: 0.0000010000.
+Epochs            1. Current error: 0.7756962180. Bit fail 236.
+Epochs          150. Current error: 0.4624067247. Bit fail 147.
+# Train MSE: 0.462407
+# Test MSE: 0.484232
+Max epochs      150. Desired error: 0.0000010000.
+Epochs            1. Current error: 0.7559254169. Bit fail 235.
+Epochs          150. Current error: 0.4622288644. Bit fail 145.
+# Train MSE: 0.462229
+# Test MSE: 0.487231
+Max epochs      150. Desired error: 0.0000010000.
+Epochs            1. Current error: 0.7458362579. Bit fail 233.
+Epochs          150. Current error: 0.4612342715. Bit fail 148.
+# Train MSE: 0.461234
+# Test MSE: 0.491716
+Max epochs      150. Desired error: 0.0000010000.
+Epochs            1. Current error: 0.7335767746. Bit fail 232.
+Epochs          150. Current error: 0.4613642991. Bit fail 150.
+# Train MSE: 0.461364
+# Test MSE: 0.484627
+Max epochs      150. Desired error: 0.0000010000.
+Epochs            1. Current error: 0.6964313984. Bit fail 231.
+Epochs          150. Current error: 0.4609159827. Bit fail 150.
+# Train MSE: 0.460916
+# Test MSE: 0.483687
+Max epochs      150. Desired error: 0.0000010000.
+Epochs            1. Current error: 0.7245073318. Bit fail 233.
+Epochs          150. Current error: 0.4631421268. Bit fail 146.
+# Train MSE: 0.463142
+# Test MSE: 0.481527
+Max epochs      150. Desired error: 0.0000010000.
+Epochs            1. Current error: 0.7311471105. Bit fail 233.
+Epochs          150. Current error: 0.4609660208. Bit fail 151.
+# Train MSE: 0.460966
+# Test MSE: 0.483837

@@ -1,0 +1,91 @@
+# config: 6->2->1
+# epochs: 450
+# run:    9
+# Training: 2
+Max epochs      450. Desired error: 0.0000010000.
+Epochs            1. Current error: 0.0038577178. Bit fail 2.
+Epochs          200. Current error: 0.0036420131. Bit fail 2.
+Epochs          400. Current error: 0.0036113581. Bit fail 2.
+Epochs          450. Current error: 0.0036102994. Bit fail 2.
+# Train MSE: 0.0036103
+# Test MSE: 0.00206572
+# Training: 2
+Max epochs      450. Desired error: 0.0000010000.
+Epochs            1. Current error: 0.0040719942. Bit fail 3.
+Epochs          200. Current error: 0.0099882623. Bit fail 3.
+Epochs          400. Current error: 0.0037382455. Bit fail 2.
+Epochs          450. Current error: 0.0037202914. Bit fail 2.
+# Train MSE: 0.00372029
+# Test MSE: 0.00199947
+# Training: 2
+Max epochs      450. Desired error: 0.0000010000.
+Epochs            1. Current error: 0.0038353030. Bit fail 3.
+Epochs          200. Current error: 0.0037560121. Bit fail 3.
+Epochs          400. Current error: 9.8809347153. Bit fail 9.
+Epochs          450. Current error: 0.0037558333. Bit fail 3.
+# Train MSE: 0.00375583
+# Test MSE: 0.00195742
+# Training: 2
+Max epochs      450. Desired error: 0.0000010000.
+Epochs            1. Current error: 0.0045220358. Bit fail 2.
+Epochs          200. Current error: 0.0037561997. Bit fail 3.
+Epochs          400. Current error: 0.0037550910. Bit fail 3.
+Epochs          450. Current error: 0.0037558647. Bit fail 3.
+# Train MSE: 0.00375586
+# Test MSE: 0.00195749
+# Training: 2
+Max epochs      450. Desired error: 0.0000010000.
+Epochs            1. Current error: 0.0061178803. Bit fail 3.
+Epochs          200. Current error: 0.0036356726. Bit fail 2.
+Epochs          400. Current error: 0.0032352698. Bit fail 2.
+Epochs          450. Current error: 0.0031945419. Bit fail 2.
+# Train MSE: 0.00319454
+# Test MSE: 0.00284732
+# Training: 2
+Max epochs      450. Desired error: 0.0000010000.
+Epochs            1. Current error: 0.0055963709. Bit fail 3.
+Epochs          200. Current error: 0.0034794582. Bit fail 2.
+Epochs          400. Current error: 0.0033427977. Bit fail 2.
+Epochs          450. Current error: 0.0033106969. Bit fail 2.
+# Train MSE: 0.0033107
+# Test MSE: 0.00200536
+# Training: 2
+Max epochs      450. Desired error: 0.0000010000.
+Epochs            1. Current error: 0.0069102701. Bit fail 3.
+Epochs          200. Current error: 0.0037558845. Bit fail 3.
+Epochs          400. Current error: 0.0037562319. Bit fail 3.
+Epochs          450. Current error: 0.0037559615. Bit fail 3.
+# Train MSE: 0.00375596
+# Test MSE: 11206.3
+# Training: 2
+Max epochs      450. Desired error: 0.0000010000.
+Epochs            1. Current error: 0.0088652773. Bit fail 3.
+Epochs          200. Current error: 0.0037557725. Bit fail 3.
+Epochs          400. Current error: 0.0037552400. Bit fail 3.
+Epochs          450. Current error: 0.0037556279. Bit fail 3.
+# Train MSE: 0.00375563
+# Test MSE: 0.701032
+# Training: 2
+Max epochs      450. Desired error: 0.0000010000.
+Epochs            1. Current error: 0.0085143093. Bit fail 2.
+Epochs          200. Current error: 8362.2255859375. Bit fail 35.
+Epochs          400. Current error: 0.0037557967. Bit fail 3.
+Epochs          450. Current error: 0.0037558789. Bit fail 3.
+# Train MSE: 0.00375588
+# Test MSE: 0.0836734
+# Training: 2
+Max epochs      450. Desired error: 0.0000010000.
+Epochs            1. Current error: 0.0037160590. Bit fail 2.
+Epochs          200. Current error: 0.0036216332. Bit fail 2.
+Epochs          400. Current error: 0.0036129891. Bit fail 2.
+Epochs          450. Current error: 0.0036113716. Bit fail 2.
+# Train MSE: 0.00361137
+# Test MSE: 0.00206995
+# Training: 2
+Max epochs      450. Desired error: 0.0000010000.
+Epochs            1. Current error: 0.0045823199. Bit fail 2.
+Epochs          200. Current error: 1538.9101562500. Bit fail 19.
+Epochs          400. Current error: 0.0037555443. Bit fail 3.
+Epochs          450. Current error: 0.0037555643. Bit fail 3.
+# Train MSE: 0.00375556
+# Test MSE: 0.00195669

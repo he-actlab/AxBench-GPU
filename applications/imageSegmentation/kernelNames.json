@@ -1,0 +1,10 @@
+{
+    "compute_E_gpu": {
+        "InputRangeA": 0.0, 
+        "InputRangeB": 0.0, 
+        "OutputRangeA": -1.0, 
+        "OutputRangeB": 1.0, 
+        "nInputs": "6", 
+        "nOutputs": "1"
+    }
+}

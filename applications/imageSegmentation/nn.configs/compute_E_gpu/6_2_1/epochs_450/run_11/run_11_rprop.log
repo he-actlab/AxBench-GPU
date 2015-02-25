@@ -1,0 +1,91 @@
+# config: 6->2->1
+# epochs: 450
+# run:    11
+# Training: 2
+Max epochs      450. Desired error: 0.0000010000.
+Epochs            1. Current error: 0.0030754113. Bit fail 0.
+Epochs          200. Current error: 0.0003115759. Bit fail 0.
+Epochs          400. Current error: 0.0003115948. Bit fail 0.
+Epochs          450. Current error: 0.0003115929. Bit fail 0.
+# Train MSE: 0.000311593
+# Test MSE: 40.4467
+# Training: 2
+Max epochs      450. Desired error: 0.0000010000.
+Epochs            1. Current error: 0.0005671490. Bit fail 0.
+Epochs          200. Current error: 0.0003115852. Bit fail 0.
+Epochs          400. Current error: 0.0004233298. Bit fail 0.
+Epochs          450. Current error: 0.0005353692. Bit fail 0.
+# Train MSE: 0.000535369
+# Test MSE: 5.12469
+# Training: 2
+Max epochs      450. Desired error: 0.0000010000.
+Epochs            1. Current error: 0.0014391768. Bit fail 0.
+Epochs          200. Current error: 0.0003115929. Bit fail 0.
+Epochs          400. Current error: 0.0003115992. Bit fail 0.
+Epochs          450. Current error: 0.0003116080. Bit fail 0.
+# Train MSE: 0.000311608
+# Test MSE: 127.407
+# Training: 2
+Max epochs      450. Desired error: 0.0000010000.
+Epochs            1. Current error: 0.0004342288. Bit fail 0.
+Epochs          200. Current error: 0.0003057524. Bit fail 0.
+Epochs          400. Current error: 0.0003055542. Bit fail 0.
+Epochs          450. Current error: 0.0003055967. Bit fail 0.
+# Train MSE: 0.000305597
+# Test MSE: 0.00307169
+# Training: 2
+Max epochs      450. Desired error: 0.0000010000.
+Epochs            1. Current error: 0.0005632141. Bit fail 0.
+Epochs          200. Current error: 0.0002983343. Bit fail 0.
+Epochs          400. Current error: 0.0003042004. Bit fail 0.
+Epochs          450. Current error: 0.0003042145. Bit fail 0.
+# Train MSE: 0.000304215
+# Test MSE: 0.00307362
+# Training: 2
+Max epochs      450. Desired error: 0.0000010000.
+Epochs            1. Current error: 0.0008417743. Bit fail 0.
+Epochs          200. Current error: 0.0003013058. Bit fail 0.
+Epochs          400. Current error: 0.0003007369. Bit fail 0.
+Epochs          450. Current error: 0.0003005276. Bit fail 0.
+# Train MSE: 0.000300528
+# Test MSE: 0.00302676
+# Training: 2
+Max epochs      450. Desired error: 0.0000010000.
+Epochs            1. Current error: 0.0011613148. Bit fail 0.
+Epochs          200. Current error: 0.0003085960. Bit fail 0.
+Epochs          400. Current error: 1.3357346058. Bit fail 4.
+Epochs          450. Current error: 0.0003003045. Bit fail 0.
+# Train MSE: 0.000300305
+# Test MSE: 37.0633
+# Training: 2
+Max epochs      450. Desired error: 0.0000010000.
+Epochs            1. Current error: 0.0019298935. Bit fail 0.
+Epochs          200. Current error: 0.0003050698. Bit fail 0.
+Epochs          400. Current error: 0.0002915790. Bit fail 0.
+Epochs          450. Current error: 0.0002937289. Bit fail 0.
+# Train MSE: 0.000293729
+# Test MSE: 0.00304672
+# Training: 2
+Max epochs      450. Desired error: 0.0000010000.
+Epochs            1. Current error: 0.0017819579. Bit fail 0.
+Epochs          200. Current error: 0.0003062512. Bit fail 0.
+Epochs          400. Current error: 0.0003056978. Bit fail 0.
+Epochs          450. Current error: 0.0003056828. Bit fail 0.
+# Train MSE: 0.000305683
+# Test MSE: 0.00307115
+# Training: 2
+Max epochs      450. Desired error: 0.0000010000.
+Epochs            1. Current error: 0.0008920213. Bit fail 0.
+Epochs          200. Current error: 21.6347942352. Bit fail 71.
+Epochs          400. Current error: 0.0003115879. Bit fail 0.
+Epochs          450. Current error: 2716.1728515625. Bit fail 144.
+# Train MSE: 2716.17
+# Test MSE: 542.664
+# Training: 2
+Max epochs      450. Desired error: 0.0000010000.
+Epochs            1. Current error: 0.0003820131. Bit fail 0.
+Epochs          200. Current error: 517.9802856445. Bit fail 63.
+Epochs          400. Current error: 0.0003262367. Bit fail 0.
+Epochs          450. Current error: 0.0003112026. Bit fail 0.
+# Train MSE: 0.000311203
+# Test MSE: 0.00309073

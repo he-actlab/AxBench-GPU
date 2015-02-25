@@ -1,0 +1,31 @@
+
+
+if [ ! -d "./bin" ];then 	\
+		mkdir bin;				\
+	fi
+if [ ! -d "./obj" ];then 	\
+		mkdir obj;				\
+	fi
+python /home/yazdan/phd/projects/many.npu/parrot.c/src/ParrotObserver/plang.py -c /home/yazdan/phd/projects/many.npu/parrot.c/src/ParrotObserver/ParrotC.json -a observe -e ""/usr/local/cuda-6.5"/bin/nvcc -ccbin g++ -lfann -lboost_regex -std=c++11 -I -I/usr/local/include -Isrc -I/home/yazdan/NVIDIA_CUDA-6.5_Samples/common/inc -I../../common/inc  -m64     -gencode arch=compute_11,code=sm_11 -gencode arch=compute_20,code=sm_20 -gencode arch=compute_30,code=sm_30 -gencode arch=compute_35,code=sm_35 -gencode arch=compute_37,code=sm_37 -gencode arch=compute_50,code=sm_50 -gencode arch=compute_50,code=compute_50 -I/home/yazdan/phd/projects/many.npu/parrot.c/src/ParrotLib -c" -s "src/SobelFilter.cpp" -o "obj/SobelFilter.o" -t
+[]
+Parrot Observer
+Error! Oops: Action not found! Please specify one of the following: compile,train,observe,substitute
+# "/usr/local/cuda-6.5"/bin/nvcc -ccbin g++ -I../../common/inc  -m64     -gencode arch=compute_11,code=sm_11 -gencode arch=compute_20,code=sm_20 -gencode arch=compute_30,code=sm_30 -gencode arch=compute_35,code=sm_35 -gencode arch=compute_37,code=sm_37 -gencode arch=compute_50,code=sm_50 -gencode arch=compute_50,code=compute_50 -o obj/SobelFilter.o -c src/SobelFilter.cpp
+python /home/yazdan/phd/projects/many.npu/parrot.c/src/ParrotObserver/plang.py -c /home/yazdan/phd/projects/many.npu/parrot.c/src/ParrotObserver/ParrotC.json -a observe -e ""/usr/local/cuda-6.5"/bin/nvcc -ccbin g++ -I../../common/inc -I/home/yazdan/NVIDIA_CUDA-6.5_Samples/common/inc  -m64     -gencode arch=compute_11,code=sm_11 -gencode arch=compute_20,code=sm_20 -gencode arch=compute_30,code=sm_30 -gencode arch=compute_35,code=sm_35 -gencode arch=compute_37,code=sm_37 -gencode arch=compute_50,code=sm_50 -gencode arch=compute_50,code=compute_50 -lfann -lboost_regex -std=c++11 -I -I/usr/local/include -Isrc -I/home/yazdan/phd/projects/many.npu/parrot.c/src/ParrotLib -c" -s "src/SobelFilter_kernels.cu" -o "obj/SobelFilter_kernels.o" -t
+[([(256, 256), ['computeSobel']], [(300, 300), ['computeSobel']])]
+--------------------------------
+[9]parrotInput
+['parrotInput', '9', None, None]
+('parrotInput', '9', ('0', '0'))
+--------------------------------
+[1]<0.0; 1.0>parrotOutput
+['parrotOutput', '1', '0.0', ' 1.0']
+('parrotOutput', '1', ('0.0', '1.0'))
+Parrot Observer
+Error! Oops: Action not found! Please specify one of the following: compile,train,observe,substitute
+# "/usr/local/cuda-6.5"/bin/nvcc -ccbin g++ -I../../common/inc  -m64     -gencode arch=compute_11,code=sm_11 -gencode arch=compute_20,code=sm_20 -gencode arch=compute_30,code=sm_30 -gencode arch=compute_35,code=sm_35 -gencode arch=compute_37,code=sm_37 -gencode arch=compute_50,code=sm_50 -gencode arch=compute_50,code=compute_50 -o obj/SobelFilter_kernels.o -c src/SobelFilter_kernels.cu
+"/usr/local/cuda-6.5"/bin/nvcc -ccbin g++   -m64       -gencode arch=compute_11,code=sm_11 -gencode arch=compute_20,code=sm_20 -gencode arch=compute_30,code=sm_30 -gencode arch=compute_35,code=sm_35 -gencode arch=compute_37,code=sm_37 -gencode arch=compute_50,code=sm_50 -gencode arch=compute_50,code=compute_50 -o ./bin/sobel.out obj/SobelFilter.o obj/SobelFilter_kernels.o  -L../../common/lib/linux/x86_64 -L/usr/lib/"nvidia-340" -lGL -lGLU -lX11 -lXi -lXmu -lglut -lGLEW
+nvcc warning : The 'compute_11', 'compute_12', 'compute_13', 'sm_11', 'sm_12', and 'sm_13' architectures are deprecated, and may be removed in a future release.
+g++: error: obj/SobelFilter.o: No such file or directory
+g++: error: obj/SobelFilter_kernels.o: No such file or directory
+make: *** [sobel.out] Error 1
