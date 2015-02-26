@@ -198,7 +198,7 @@ LFLAGS		:= -lfann -lboost_regex -lParrot
 HEADERS     := src
 INCLUDE 	:= -I${ANALOG_INC} -I${FANN_INC} -I${HEADERS}
 LIB			:= -L${ANALOG_LIB} -L${FANN_LIB} -L$(PARROT_LIB)
-MODULE		:= mean.out
+MODULE		:= meanFilter.out
 
 ################################################################################
 
@@ -226,12 +226,12 @@ else
 endif
 
 ./obj/meanFilter.o:./src/meanFilter.cpp
-	#python $(PLANG) -c $(PARROT_JSON) -a observe -e "$(NVCC) $(CFLAGS) $(INCLUDE) -I$(NVIDIA_HELPER) $(INCLUDES) $(ALL_CCFLAGS) $(GENCODE_FLAGS) -I$(PARROT_LIB) -c" -s "$<" -o "$@" -t
-	$(EXEC) $(NVCC) $(INCLUDES) -I$(NVIDIA_HELPER) $(ALL_CCFLAGS) $(GENCODE_FLAGS) $(CFLAGS) $(INCLUDE) -I$(PARROT_LIB) -o $@ -c $<
+	python $(PLANG) -c $(PARROT_JSON) -a observe -e "$(NVCC) $(CFLAGS) $(INCLUDE) -I$(NVIDIA_HELPER) $(INCLUDES) $(ALL_CCFLAGS) $(GENCODE_FLAGS) -I$(PARROT_LIB) -c" -s "$<" -o "$@" -t
+	#$(EXEC) $(NVCC) $(INCLUDES) -I$(NVIDIA_HELPER) $(ALL_CCFLAGS) $(GENCODE_FLAGS) $(CFLAGS) $(INCLUDE) -I$(PARROT_LIB) -o $@ -c $<
 
 ./obj/meanFilter_kernels.o:./src/meanFilter_kernels.cu
-	#python $(PLANG) -c $(PARROT_JSON) -a observe -e "$(NVCC) $(INCLUDES) -I$(NVIDIA_HELPER) $(ALL_CCFLAGS) $(GENCODE_FLAGS) $(CFLAGS) $(INCLUDE) -I$(PARROT_LIB) -c" -s "$<" -o "$@" -t
-	$(EXEC) $(NVCC) $(INCLUDES) -I$(NVIDIA_HELPER) $(ALL_CCFLAGS) $(GENCODE_FLAGS) $(CFLAGS) $(INCLUDE) -I$(PARROT_LIB) -o $@ -c $<
+	python $(PLANG) -c $(PARROT_JSON) -a observe -e "$(NVCC) $(INCLUDES) -I$(NVIDIA_HELPER) $(ALL_CCFLAGS) $(GENCODE_FLAGS) $(CFLAGS) $(INCLUDE) -I$(PARROT_LIB) -c" -s "$<" -o "$@" -t
+	#$(EXEC) $(NVCC) $(INCLUDES) -I$(NVIDIA_HELPER) $(ALL_CCFLAGS) $(GENCODE_FLAGS) $(CFLAGS) $(INCLUDE) -I$(PARROT_LIB) -o $@ -c $<
 
 $(MODULE): ./obj/meanFilter.o ./obj/meanFilter_kernels.o
 	$(EXEC) $(NVCC) $(ALL_LDFLAGS) $(GENCODE_FLAGS) -o ./bin/$@ $+ $(LIBRARIES)

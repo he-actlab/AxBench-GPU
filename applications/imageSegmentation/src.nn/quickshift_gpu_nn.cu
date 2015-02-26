@@ -178,29 +178,21 @@ __global__ void compute_E_gpu(const float * I, int N1, int N2, int K, int R, flo
       parrotInput[5] = TEXI(j1,j2,2);
       float Fij;
 
-float layer_1_0 = parrotInput[0] * -0.235787 + parrotInput[1] * 0.462597 + parrotInput[2] * -1.271883 + parrotInput[3] * 0.279773 + parrotInput[4] * -1.342726 + parrotInput[5] * 0.175240 + 1.0f * -0.503726;
+float layer_1_0 = parrotInput[0] * -1.522834 + parrotInput[1] * -0.662261 + parrotInput[2] * -1500.000000 + parrotInput[3] * 1500.000000 + parrotInput[4] * 1500.000000 + parrotInput[5] * 209.477997 + 1.0f * -0.517169;
 
-float layer_1_1 = parrotInput[0] * 6.561533 + parrotInput[1] * 157.272705 + parrotInput[2] * 1500.000000 + parrotInput[3] * -0.502851 + parrotInput[4] * 1500.000000 + parrotInput[5] * -2.373700 + 1.0f * 25.035355;
+float layer_1_1 = parrotInput[0] * -0.387868 + parrotInput[1] * -0.369250 + parrotInput[2] * 0.427768 + parrotInput[3] * 0.192909 + parrotInput[4] * -0.445800 + parrotInput[5] * 0.655006 + 1.0f * -1.834540;
 
-float layer_1_2 = parrotInput[0] * 0.086830 + parrotInput[1] * -0.290783 + parrotInput[2] * 0.352454 + parrotInput[3] * 0.240718 + parrotInput[4] * -0.883761 + parrotInput[5] * 0.531285 + 1.0f * -2.181985;
+float layer_1_2 = parrotInput[0] * 136.454300 + parrotInput[1] * -2.051326 + parrotInput[2] * 1500.000000 + parrotInput[3] * -135.596634 + parrotInput[4] * -1442.484253 + parrotInput[5] * -122.538925 + 1.0f * -1.537653;
 
-float layer_1_3 = parrotInput[0] * -0.206895 + parrotInput[1] * 1.230483 + parrotInput[2] * -0.612619 + parrotInput[3] * -0.586422 + parrotInput[4] * 11.093882 + parrotInput[5] * -9.681805 + 1.0f * -0.555981;
+float layer_1_3 = parrotInput[0] * -0.296651 + parrotInput[1] * 0.333198 + parrotInput[2] * -0.753976 + parrotInput[3] * -0.367202 + parrotInput[4] * -0.499004 + parrotInput[5] * 1.655033 + 1.0f * -2.038385;
 
-float layer_2_0 = sigmoid(layer_1_0, 0.500000) * 1499.570312 + sigmoid(layer_1_1, 0.500000) * 500.211487 + sigmoid(layer_1_2, 0.500000) * -1500.000000 + sigmoid(layer_1_3, 0.500000) * 1500.000000 + 1.0f * 997.353088;
+float layer_2_0 = sigmoid(layer_1_0, 0.500000) * 0.001715 + sigmoid(layer_1_1, 0.500000) * 0.146615 + sigmoid(layer_1_2, 0.500000) * -0.007966 + sigmoid(layer_1_3, 0.500000) * -0.142282 + 1.0f * 0.011396;
 
-layer_2_0 = sigmoid(layer_2_0, 0.5);
+layer_2_0 = linear(layer_2_0, 0.5);
 
-float layer_2_1 = sigmoid(layer_1_0, 0.500000) * 87.320946 + sigmoid(layer_1_1, 0.500000) * -38.906097 + sigmoid(layer_1_2, 0.500000) * 37.652473 + sigmoid(layer_1_3, 0.500000) * -1500.000000 + 1.0f * -1.490238;
+parrotOutput[0] = layer_2_0;
 
-layer_2_1 = sigmoid(layer_2_1, 0.5);
-
-float layer_3_0 = sigmoid(layer_2_0, 0.500000) * 1500.000000 + sigmoid(layer_2_1, 0.000000) * 997.353088 + 1.0f * -0.024615;
-
-layer_3_0 = sigmoid(layer_3_0, 0.5);
-
-parrotOutput[0] = layer_3_0;
-
-// parrotOutput[0] = layer_3_0;
+// parrotOutput[0] = layer_2_0;
 // 
 //       Dij = myDistance(I, K, v, i1, i2, j1, j2);
 //       int d1 = j1 - i1;
@@ -231,7 +223,7 @@ extern "C"
 void quickshift_gpu(image_t im, float sigma, float tau, float * map, float * gaps, float * E)
 {
 #if USE_TEX_I
-  printf("quickshiftGPU: using texture for I\n");
+  //printf("quickshiftGPU: using texture for I\n");
   cudaArray * cu_array_I;
 
   // Allocate array
@@ -289,14 +281,14 @@ void quickshift_gpu(image_t im, float sigma, float tau, float * map, float * gap
   tR = (int) ceil (tau) ;
 
   if (verb) {
-    printf("quickshiftGPU: [N1,N2,K]: [%d,%d,%d]\n", N1,N2,K) ;
-    printf("quickshiftGPU: type: quick\n");
-    printf("quickshiftGPU: sigma:   %g\n", sigma) ;
+    //printf("quickshiftGPU: [N1,N2,K]: [%d,%d,%d]\n", N1,N2,K) ;
+    //printf("quickshiftGPU: type: quick\n");
+    //printf("quickshiftGPU: sigma:   %g\n", sigma) ;
     /* R is ceil(3 * sigma) and determines the window size to accumulate
      * similarity */
-    printf("quickshiftGPU: R:       %d\n", R) ;
-    printf("quickshiftGPU: tau:     %g\n", tau) ;
-    printf("quickshiftGPU: tR:      %d\n", tR) ;
+    //printf("quickshiftGPU: R:       %d\n", R) ;
+    //printf("quickshiftGPU: tau:     %g\n", tau) ;
+    //printf("quickshiftGPU: tR:      %d\n", tR) ;
   }
 
   unsigned int Etimer;
@@ -321,7 +313,7 @@ void quickshift_gpu(image_t im, float sigma, float tau, float * map, float * gap
 
   cutilCheckError( cutStopTimer(Etimer) );
   float ETime = cutGetTimerValue(Etimer);
-  printf("ComputeE: %fms\n", ETime);
+  //printf("ComputeE: %fms\n", ETime);
 
   unsigned int Ntimer;
   cutilCheckError( cutCreateTimer(&Ntimer) );
@@ -330,7 +322,7 @@ void quickshift_gpu(image_t im, float sigma, float tau, float * map, float * gap
 
   /* Texture map E */
 #if USE_TEX_E
-  printf("quickshiftGPU: using texture for E\n");
+  //printf("quickshiftGPU: using texture for E\n");
   cudaChannelFormatDesc descriptionE = cudaCreateChannelDesc<float>();
 
   cudaArray * cu_array_E;
@@ -365,9 +357,9 @@ void quickshift_gpu(image_t im, float sigma, float tau, float * map, float * gap
 
   cutilCheckError( cutStopTimer(Ntimer) );
   float NTime = cutGetTimerValue(Ntimer);
-  printf("ComputeN: %fms\n", NTime);
-  printf("dimGrid: %d %d\n", dimGrid.x, dimGrid.y);
-  printf("dimBlock: %d %d\n", dimBlock.x, dimBlock.y);
+  //printf("ComputeN: %fms\n", NTime);
+  //printf("dimGrid: %d %d\n", dimGrid.x, dimGrid.y);
+  //printf("dimBlock: %d %d\n", dimBlock.x, dimBlock.y);
 
   cutilSafeCall(cudaFree(I));
   cutilSafeCall(cudaFree(map_d));

@@ -1,5 +1,11 @@
-float layer_1_0 = parrotInput[0] * -1.274760 + parrotInput[1] * -3.174375 + parrotInput[2] * -3.091899 + 1.0f * 1.416145;
-float layer_1_1 = parrotInput[0] * -1.305807 + parrotInput[1] * -3.050832 + parrotInput[2] * -3.140882 + 1.0f * 1.406161;
-float layer_2_0 = sigmoid(layer_1_0, 0.500000) * -3.173786 + sigmoid(layer_1_1, 0.500000) * -1.292932 + 1.0f * 0.626378;
+float layer_1_0 = parrotInput[0] * 4.699794 + parrotInput[1] * 0.877188 + parrotInput[2] * 0.496408 + 1.0f * -3.661214;
+float layer_1_1 = parrotInput[0] * -3.402053 + parrotInput[1] * 3.861662 + parrotInput[2] * -6.814451 + 1.0f * 1.839221;
+float layer_1_2 = parrotInput[0] * -2.248324 + parrotInput[1] * -8.565042 + parrotInput[2] * 3.407546 + 1.0f * 1.899614;
+float layer_1_3 = parrotInput[0] * 4.647291 + parrotInput[1] * 0.815243 + parrotInput[2] * 0.595827 + 1.0f * -3.638438;
+float layer_2_0 = sigmoid(layer_1_0, 0.500000) * -10.469186 + sigmoid(layer_1_1, 0.500000) * 24.400442 + sigmoid(layer_1_2, 0.500000) * 24.699705 + sigmoid(layer_1_3, 0.500000) * -10.481432 + 1.0f * 0.666498;
 layer_2_0 = sigmoid(layer_2_0, 0.5);
-parrotOutput[0] = layer_2_0;
+float layer_2_1 = sigmoid(layer_1_0, 0.500000) * -9.471014 + sigmoid(layer_1_1, 0.500000) * 19.837952 + sigmoid(layer_1_2, 0.500000) * 20.186312 + sigmoid(layer_1_3, 0.500000) * -9.508874 + 1.0f * 1.531181;
+layer_2_1 = sigmoid(layer_2_1, 0.5);
+float layer_3_0 = sigmoid(layer_2_0, 0.500000) * -10.481432 + sigmoid(layer_2_1, 0.000000) * 0.666498 + 1.0f * -3.288635;
+layer_3_0 = sigmoid(layer_3_0, 0.5);
+parrotOutput[0] = layer_3_0;

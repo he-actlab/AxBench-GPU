@@ -40,7 +40,7 @@ src.nn/imageDenoising_nn.cu(129): warning: variable "fCount" was declared but ne
 
 src.nn/imageDenoising_nn.cu(131): warning: variable "sumWeights" was declared but never referenced
 
-ptxas /tmp/tmpxft_00002620_00000000-20_imageDenoising_nn.compute_11.ptx, line 1105; warning : Double is not supported. Demoting to float
+ptxas /tmp/tmpxft_00006a60_00000000-20_imageDenoising_nn.compute_11.ptx, line 1104; warning : Double is not supported. Demoting to float
 src.nn/imageDenoising_nn.cu(129): warning: variable "fCount" was declared but never referenced
 
 src.nn/imageDenoising_nn.cu(131): warning: variable "sumWeights" was declared but never referenced

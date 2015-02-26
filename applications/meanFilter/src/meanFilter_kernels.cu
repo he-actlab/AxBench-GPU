@@ -42,7 +42,7 @@ inline void __checkCudaErrors(cudaError err, const char *file, const int line)
 
 
 __device__ unsigned char
-ComputeSobel(unsigned char ul, // upper left
+ComputeMean(unsigned char ul, // upper left
              unsigned char um, // upper middle
              unsigned char ur, // upper right
              unsigned char ml, // middle left
@@ -68,7 +68,7 @@ ComputeSobel(unsigned char ul, // upper left
     parrotInput[8] = (float) lr / 256.0;  
     short Sum = 0;
 
-#pragma parrot(input, "computeSobel", [9]parrotInput)
+#pragma parrot(input, "computeMean", [9]parrotInput)
 
     //short Horz = ur + 2*mr + lr - ul - 2*ml - ll;
     //short Vert = ul + 2*um + ur - ll - 2*lm - lr;
@@ -86,7 +86,7 @@ ComputeSobel(unsigned char ul, // upper left
 
     parrotOutput[0] = Sum / 256.0;
 
-#pragma parrot(output, "computeSobel", [1]<0.0; 1.0>parrotOutput)
+#pragma parrot(output, "computeMean", [1]<0.0; 1.0>parrotOutput)
 
     Sum = parrotOutput[0] * 256.0;
 
@@ -94,7 +94,7 @@ ComputeSobel(unsigned char ul, // upper left
 }
 
 __global__ void
-SobelShared(uchar4 *pSobelOriginal, unsigned short SobelPitch,
+MeanShared(uchar4 *pMeanOriginal, unsigned short MeanPitch,
 #ifndef FIXED_BLOCKWIDTH
             short BlockWidth, short SharedPitch,
 #endif
@@ -141,7 +141,7 @@ SobelShared(uchar4 *pSobelOriginal, unsigned short SobelPitch,
     __syncthreads();
 
     u >>= 2;    // index as uchar4 from here
-    uchar4 *pSobel = (uchar4 *)(((char *) pSobelOriginal)+v*SobelPitch);
+    uchar4 *pMean = (uchar4 *)(((char *) pMeanOriginal)+v*MeanPitch);
     SharedIdx = threadIdx.y * SharedPitch;
 
     for (ib = threadIdx.x; ib < BlockWidth; ib += blockDim.x)
@@ -159,34 +159,34 @@ SobelShared(uchar4 *pSobelOriginal, unsigned short SobelPitch,
 
         uchar4 out;
 
-        out.x = ComputeSobel(pix00, pix01, pix02,
+        out.x = ComputeMean(pix00, pix01, pix02,
                              pix10, pix11, pix12,
                              pix20, pix21, pix22, fScale);
 
         pix00 = LocalBlock[SharedIdx+4*ib+0*SharedPitch+3];
         pix10 = LocalBlock[SharedIdx+4*ib+1*SharedPitch+3];
         pix20 = LocalBlock[SharedIdx+4*ib+2*SharedPitch+3];
-        out.y = ComputeSobel(pix01, pix02, pix00,
+        out.y = ComputeMean(pix01, pix02, pix00,
                              pix11, pix12, pix10,
                              pix21, pix22, pix20, fScale);
 
         pix01 = LocalBlock[SharedIdx+4*ib+0*SharedPitch+4];
         pix11 = LocalBlock[SharedIdx+4*ib+1*SharedPitch+4];
         pix21 = LocalBlock[SharedIdx+4*ib+2*SharedPitch+4];
-        out.z = ComputeSobel(pix02, pix00, pix01,
+        out.z = ComputeMean(pix02, pix00, pix01,
                              pix12, pix10, pix11,
                              pix22, pix20, pix21, fScale);
 
         pix02 = LocalBlock[SharedIdx+4*ib+0*SharedPitch+5];
         pix12 = LocalBlock[SharedIdx+4*ib+1*SharedPitch+5];
         pix22 = LocalBlock[SharedIdx+4*ib+2*SharedPitch+5];
-        out.w = ComputeSobel(pix00, pix01, pix02,
+        out.w = ComputeMean(pix00, pix01, pix02,
                              pix10, pix11, pix12,
                              pix20, pix21, pix22, fScale);
 
         if (u+ib < w/4 && v < h)
         {
-            pSobel[u+ib] = out;
+            pMean[u+ib] = out;
         }
     }
 
@@ -194,24 +194,24 @@ SobelShared(uchar4 *pSobelOriginal, unsigned short SobelPitch,
 }
 
 __global__ void
-SobelCopyImage(Pixel *pSobelOriginal, unsigned int Pitch,
+MeanCopyImage(Pixel *pMeanOriginal, unsigned int Pitch,
                int w, int h, float fscale)
 {
-    unsigned char *pSobel =
-        (unsigned char *)(((char *) pSobelOriginal)+blockIdx.x*Pitch);
+    unsigned char *pMean =
+        (unsigned char *)(((char *) pMeanOriginal)+blockIdx.x*Pitch);
 
     for (int i = threadIdx.x; i < w; i += blockDim.x)
     {
-        pSobel[i] = min(max((tex2D(tex, (float) i, (float) blockIdx.x) * fscale), 0.f), 255.f);
+        pMean[i] = min(max((tex2D(tex, (float) i, (float) blockIdx.x) * fscale), 0.f), 255.f);
     }
 }
 
 __global__ void
-SobelTex(Pixel *pSobelOriginal, unsigned int Pitch,
+MeanTex(Pixel *pMeanOriginal, unsigned int Pitch,
          int w, int h, float fScale)
 {
-    unsigned char *pSobel =
-        (unsigned char *)(((char *) pSobelOriginal)+blockIdx.x*Pitch);
+    unsigned char *pMean =
+        (unsigned char *)(((char *) pMeanOriginal)+blockIdx.x*Pitch);
 
     for (int i = threadIdx.x; i < w; i += blockDim.x)
     {
@@ -224,7 +224,7 @@ SobelTex(Pixel *pSobelOriginal, unsigned int Pitch,
         unsigned char pix20 = tex2D(tex, (float) i-1, (float) blockIdx.x+1);
         unsigned char pix21 = tex2D(tex, (float) i+0, (float) blockIdx.x+1);
         unsigned char pix22 = tex2D(tex, (float) i+1, (float) blockIdx.x+1);
-        pSobel[i] = ComputeSobel(pix00, pix01, pix02,
+        pMean[i] = ComputeMean(pix00, pix01, pix02,
                                  pix10, pix11, pix12,
                                  pix20, pix21, pix22, fScale);
     }
@@ -254,9 +254,9 @@ extern "C" void deleteTexture(void)
 
 
 // Wrapper for the __global__ call that sets up the texture and threads
-extern "C" void sobelFilter(Pixel *odata, int iw, int ih, enum SobelDisplayMode mode, float fScale)
+extern "C" void MeanFilter(Pixel *odata, int iw, int ih, enum MeanDisplayMode mode, float fScale)
 {
-#pragma parrot.start("computeSobel")
+#pragma parrot.start("computeMean")
 
     //cudaStatus = cudaMemcpyToSymbol(dIndex, &hIndex, sizeof(int));
 
@@ -264,15 +264,15 @@ extern "C" void sobelFilter(Pixel *odata, int iw, int ih, enum SobelDisplayMode 
 
     switch (mode)
     {
-        case SOBELDISPLAY_IMAGE:
-            SobelCopyImage<<<ih, 384>>>(odata, iw, iw, ih, fScale);
+        case MeanDISPLAY_IMAGE:
+            MeanCopyImage<<<ih, 384>>>(odata, iw, iw, ih, fScale);
             break;
 
-        case SOBELDISPLAY_SOBELTEX:
-            SobelTex<<<ih, 384>>>(odata, iw, iw, ih, fScale);
+        case MeanDISPLAY_MeanTEX:
+            MeanTex<<<ih, 384>>>(odata, iw, iw, ih, fScale);
             break;
 
-        case SOBELDISPLAY_SOBELSHARED:
+        case MeanDISPLAY_MeanSHARED:
             {
                 dim3 threads(16,4);
 #ifndef FIXED_BLOCKWIDTH
@@ -286,7 +286,7 @@ extern "C" void sobelFilter(Pixel *odata, int iw, int ih, enum SobelDisplayMode 
                 // for the shared kernel, width must be divisible by 4
                 iw &= ~3;
 
-                SobelShared<<<blocks, threads, sharedMem>>>((uchar4 *) odata,
+                MeanShared<<<blocks, threads, sharedMem>>>((uchar4 *) odata,
                                                             iw,
 #ifndef FIXED_BLOCKWIDTH
                                                             BlockWidth, SharedPitch,
@@ -300,6 +300,6 @@ extern "C" void sobelFilter(Pixel *odata, int iw, int ih, enum SobelDisplayMode 
     //cudaStatus = cudaMemcpyFromSymbol(hData, dData, SIZE * sizeof(float));
     //cudaStatus = cudaMemcpyFromSymbol(&hIndex, dIndex, sizeof(int));
 
-#pragma parrot.end("computeSobel")
+#pragma parrot.end("computeMean")
 
 }

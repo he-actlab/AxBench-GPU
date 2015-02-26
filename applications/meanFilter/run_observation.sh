@@ -11,7 +11,7 @@ Cyan='\e[0;36m'         # Cyan
 White='\e[0;37m'        # White
 
 
-echo -e "${Green} CUDA Sobel Edge-Detection Starting... ${White}"
+echo -e "${Green} CUDA Mean Filter Starting... ${White}"
 
 if [ ! -d ./train.data/output/kernel.data ]; then
 	mkdir ./train.data/output/kernel.data
@@ -24,14 +24,15 @@ do
 	filename="${filename%.*}"
 	echo -e "-------------------------------------------------------"
 	echo -e "${Green} Input Image:  $f"
-	echo -e "${Green} output Image: ./train.data/output/${filename}_sobel.pgm ${White}"
+	echo -e "${Green} output Image: ./train.data/output/${filename}_mean.pgm ${White}"
 	echo -e "-------------------------------------------------------"
-	./bin/mean.out -file=$f -output=./train.data/output/${filename}_sobel.pgm
-	# for kData in ./kernel_*.data
-	# do
-	# 	filename_kernel=$(basename "$kData")
-	# 	extension_kernel="${filename_kernel##*.}"
-	# 	filename_kernel="${filename_kernel%.*}"
-	# 	mv ${kData} ./train.data/output/kernel.data/${filename_kernel}_${filename}.data
-	# done
+	./bin/meanFilter.out -file=$f -output=./train.data/output/${filename}_mean.pgm
+	
+	for kData in ./kernel_*.data
+	do
+		filename_kernel=$(basename "$kData")
+		extension_kernel="${filename_kernel##*.}"
+		filename_kernel="${filename_kernel%.*}"
+		mv ${kData} ./train.data/output/kernel.data/${filename_kernel}_${filename}.data
+	done
 done

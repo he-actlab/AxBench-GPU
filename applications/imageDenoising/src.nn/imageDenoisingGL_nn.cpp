@@ -459,7 +459,7 @@ void runAutoTest(int argc, char **argv)
     // }
 
     LoadBMPFile(&h_Src, &imageW, &imageH, argv[1]);
-    printf("Data init done.\n");
+    //printf("Data init done.\n");
 
     checkCudaErrors(CUDA_MallocArray(&h_Src, imageW, imageH));
 
@@ -472,7 +472,7 @@ void runAutoTest(int argc, char **argv)
 
     {
         g_Kernel = atoi(argv[3]);
-        printf("[AutoTest]: %s <%s>\n", sSDKsample, filterMode[g_Kernel]);
+        //printf("[AutoTest]: %s <%s>\n", sSDKsample, filterMode[g_Kernel]);
         checkCudaErrors(CUDA_Bind2TextureArray());
         runImageFilters(d_dst);
         checkCudaErrors(CUDA_UnbindTexture());
@@ -488,7 +488,7 @@ void runAutoTest(int argc, char **argv)
     checkCudaErrors(cudaFree(d_dst));
     free(h_dst);
 
-    printf("\n[%s] -> Kernel %d, Saved: %s\n", sSDKsample, g_Kernel, argv[2]);
+    //printf("\n[%s] -> Kernel %d, Saved: %s\n", sSDKsample, g_Kernel, argv[2]);
 
     // cudaDeviceReset causes the driver to clean up all state. While
     // not mandatory in normal operation, it is good practice.  It is also
@@ -508,7 +508,7 @@ int main(int argc, char **argv)
     pArgc = &argc;
     pArgv = argv;
 
-    printf("%s Starting...\n\n", sSDKsample);
+    //printf("%s Starting...\n\n", sSDKsample);
 
     // if (checkCmdLineFlag(argc, (const char **)argv, "file"))
     // {

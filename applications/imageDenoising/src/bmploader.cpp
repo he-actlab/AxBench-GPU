@@ -62,7 +62,7 @@ extern "C" void LoadBMPFile(uchar4 **dst, int *width, int *height, const char *n
     FILE *fd;
 
 
-    printf("Loading %s...\n", name);
+    //printf("Loading %s...\n", name);
 
     if (sizeof(uchar4) != 4)
     {
@@ -102,8 +102,8 @@ extern "C" void LoadBMPFile(uchar4 **dst, int *width, int *height, const char *n
     *height = infoHdr.height;
     *dst    = (uchar4 *)malloc(*width **height * 4);
 
-    printf("BMP width: %u\n", infoHdr.width);
-    printf("BMP height: %u\n", infoHdr.height);
+    //printf("BMP width: %u\n", infoHdr.width);
+    //printf("BMP height: %u\n", infoHdr.height);
 
     fseek(fd, hdr.offset - sizeof(hdr) - sizeof(infoHdr), SEEK_CUR);
 
@@ -134,7 +134,7 @@ extern "C" void LoadBMPFile(uchar4 **dst, int *width, int *height, const char *n
         exit(EXIT_SUCCESS);
     }
     else
-        printf("BMP file loaded successfully!\n");
+        //printf("BMP file loaded successfully!\n");
 
     fclose(fd);
 }

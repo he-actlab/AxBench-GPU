@@ -55,7 +55,7 @@ unsigned char *pixels = NULL;
 int main(int argc, char **argv)
 {
     // start logs
-    printf("[%s] - Starting...\n", argv[0]);
+    //printf("[%s] - Starting...\n", argv[0]);
 
     float
     *h_Kernel,
@@ -83,12 +83,12 @@ int main(int argc, char **argv)
     StopWatchInterface *hTimer = NULL;
 
     //Use command-line specified CUDA device, otherwise use device with highest Gflops/s
-    findCudaDevice(argc, (const char **)argv);
+    //findCudaDevice(argc, (const char **)argv);
 
     sdkCreateTimer(&hTimer);
 
-    printf("Image Width x Height = %i x %i\n\n", imageW, imageH);
-    printf("Allocating and initializing host arrays...\n");
+    //printf("Image Width x Height = %i x %i\n\n", imageW, imageH);
+    //printf("Allocating and initializing host arrays...\n");
     h_Kernel    = (float *)malloc(KERNEL_LENGTH * sizeof(float));
     h_Input     = (float *)malloc(imageW * imageH * sizeof(float));
     h_Buffer    = (float *)malloc(imageW * imageH * sizeof(float));
@@ -137,7 +137,7 @@ int main(int argc, char **argv)
         h_Input[i]  = (float) pixels[i]; // Amir
     }
 
-    printf("Allocating and initializing CUDA arrays...\n");
+    //printf("Allocating and initializing CUDA arrays...\n");
     checkCudaErrors(cudaMalloc((void **)&d_Input,   imageW * imageH * sizeof(float)));
     checkCudaErrors(cudaMalloc((void **)&d_Output,  imageW * imageH * sizeof(float)));
     checkCudaErrors(cudaMalloc((void **)&d_Buffer , imageW * imageH * sizeof(float)));
@@ -145,7 +145,7 @@ int main(int argc, char **argv)
     setConvolutionKernel(h_Kernel);
     checkCudaErrors(cudaMemcpy(d_Input, h_Input, imageW * imageH * sizeof(float), cudaMemcpyHostToDevice));
 
-    printf("Running GPU convolution (%u identical iterations)...\n\n", iterations);
+    //printf("Running GPU convolution (%u identical iterations)...\n\n", iterations);
 
     for (int i = -1; i < iterations; i++)
     {
@@ -175,14 +175,14 @@ int main(int argc, char **argv)
     checkCudaErrors(cudaDeviceSynchronize());
     sdkStopTimer(&hTimer);
     double gpuTime = 0.001 * sdkGetTimerValue(&hTimer) / (double)iterations;
-    printf("convolutionSeparable, Throughput = %.4f MPixels/sec, Time = %.5f s, Size = %u Pixels, NumDevsUsed = %i, Workgroup = %u\n",
-           (1.0e-6 * (double)(imageW * imageH)/ gpuTime), gpuTime, (imageW * imageH), 1, 0);
+    //printf("convolutionSeparable, Throughput = %.4f MPixels/sec, Time = %.5f s, Size = %u Pixels, NumDevsUsed = %i, Workgroup = %u\n",
+         //  (1.0e-6 * (double)(imageW * imageH)/ gpuTime), gpuTime, (imageW * imageH), 1, 0);
 
-    printf("\nReading back GPU results...\n\n");
+    //printf("\nReading back GPU results...\n\n");
     checkCudaErrors(cudaMemcpy(h_OutputGPU, d_Output, imageW * imageH * sizeof(float), cudaMemcpyDeviceToHost));
 
-    printf("Checking the results...\n");
-    printf(" ...running convolutionRowCPU()\n");
+    //printf("Checking the results...\n");
+    //printf(" ...running convolutionRowCPU()\n");
     convolutionRowCPU(
         h_Buffer,
         h_Input,
@@ -192,7 +192,7 @@ int main(int argc, char **argv)
         KERNEL_RADIUS
     );
 
-    printf(" ...running convolutionColumnCPU()\n");
+    //printf(" ...running convolutionColumnCPU()\n");
     convolutionColumnCPU(
         h_OutputCPU,
         h_Buffer,
@@ -202,7 +202,7 @@ int main(int argc, char **argv)
         KERNEL_RADIUS
     );
 
-    printf(" ...comparing the results\n");
+    //printf(" ...comparing the results\n");
     double sum = 0, delta = 0;
 
     for (unsigned i = 0; i < imageW * imageH; i++)
@@ -212,8 +212,8 @@ int main(int argc, char **argv)
     }
 
     double L2norm = sqrt(delta / sum);
-    printf(" ...Relative L2 norm: %E\n\n", L2norm);
-    printf("Shutting down...\n");
+    printf("%2.2f", L2norm*100.0);
+    //printf("Shutting down...\n");
 
 
     checkCudaErrors(cudaFree(d_Buffer));
@@ -234,12 +234,12 @@ int main(int argc, char **argv)
     // flushed before the application exits
     cudaDeviceReset();
 
-    if (L2norm > 1e-6)
-    {
-        printf("Test failed!\n");
-        exit(EXIT_FAILURE);
-    }
+    // if (L2norm > 1e-6)
+    // {
+    //     printf("Test failed!\n");
+    //     exit(EXIT_FAILURE);
+    // }
 
-    printf("Test passed\n");
+    // printf("Test passed\n");
     exit(EXIT_SUCCESS);
 }

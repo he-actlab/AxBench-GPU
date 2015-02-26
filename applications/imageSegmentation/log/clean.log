@@ -1,0 +1,2 @@
+rm -f ./bin/quickshift.out
+rm -f ./obj/Image.o ./obj/quickshift_cpu.o ./obj/main.o ./obj/quickshift_gpu.o

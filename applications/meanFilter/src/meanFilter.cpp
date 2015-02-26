@@ -39,21 +39,21 @@
 const char *filterMode[] =
 {
     "No Filtering",
-    "Sobel Texture",
-    "Sobel SMEM+Texture",
+    "Mean Texture",
+    "Mean SMEM+Texture",
     NULL
 };
 
 //
-// Cuda example code that implements the Sobel edge detection
+// Cuda example code that implements the Mean edge detection
 // filter. This code works for 8-bit monochrome images.
 //
 // Use the '-' and '=' keys to change the scale factor.
 //
 // Other keys:
 // I: display image
-// T: display Sobel edge detection (computed solely with texture)
-// S: display Sobel edge detection (computed with texture and shared memory)
+// T: display Mean edge detection (computed solely with texture)
+// S: display Mean edge detection (computed with texture and shared memory)
 
 void cleanup(void);
 void initializeData(char *file) ;
@@ -61,7 +61,7 @@ void initializeData(char *file) ;
 #define MAX_EPSILON_ERROR 5.0f
 #define REFRESH_DELAY     10 //ms
 
-const char *sSDKsample = "CUDA Sobel Edge-Detection";
+const char *sSDKsample = "CUDA Mean Edge-Detection";
 
 static int wWidth   = 512; // Window width
 static int wHeight  = 512; // Window height
@@ -87,7 +87,7 @@ struct cudaGraphicsResource *cuda_pbo_resource; // CUDA Graphics Resource (to tr
 static GLuint texid = 0;       // Texture for display
 unsigned char *pixels = NULL;  // Image pixel data on the host
 float imageScale = 1.f;        // Image exposure
-enum SobelDisplayMode g_SobelDisplayMode;
+enum MeanDisplayMode g_MeanDisplayMode;
 
 int *pArgc   = NULL;
 char **pArgv = NULL;
@@ -106,7 +106,7 @@ void computeFPS()
     {
         char fps[256];
         float ifps = 1.f / (sdkGetAverageTimerValue(&timer) / 1000.f);
-        sprintf(fps, "CUDA Edge Detection (%s): %3.1f fps", filterMode[g_SobelDisplayMode], ifps);
+        sprintf(fps, "CUDA Edge Detection (%s): %3.1f fps", filterMode[g_MeanDisplayMode], ifps);
 
         glutSetWindowTitle(fps);
         fpsCount = 0;
@@ -121,7 +121,7 @@ void display(void)
 {
     sdkStartTimer(&timer);
 
-    // Sobel operation
+    // Mean operation
     Pixel *data = NULL;
 
     // map PBO to get CUDA device pointer
@@ -131,7 +131,7 @@ void display(void)
                                                          cuda_pbo_resource));
     //printf("CUDA mapped PBO: May access %ld bytes\n", num_bytes);
 
-    sobelFilter(data, imWidth, imHeight, g_SobelDisplayMode, imageScale);
+    MeanFilter(data, imWidth, imHeight, g_MeanDisplayMode, imageScale);
     checkCudaErrors(cudaGraphicsUnmapResources(1, &cuda_pbo_resource, 0));
 
     glClear(GL_COLOR_BUFFER_BIT);
@@ -206,22 +206,22 @@ void keyboard(unsigned char key, int /*x*/, int /*y*/)
 
         case 'i':
         case 'I':
-            g_SobelDisplayMode = SOBELDISPLAY_IMAGE;
-            sprintf(temp, "CUDA Edge Detection (%s)", filterMode[g_SobelDisplayMode]);
+            g_MeanDisplayMode = MeanDISPLAY_IMAGE;
+            sprintf(temp, "CUDA Edge Detection (%s)", filterMode[g_MeanDisplayMode]);
             glutSetWindowTitle(temp);
             break;
 
         case 's':
         case 'S':
-            g_SobelDisplayMode = SOBELDISPLAY_SOBELSHARED;
-            sprintf(temp, "CUDA Edge Detection (%s)", filterMode[g_SobelDisplayMode]);
+            g_MeanDisplayMode = MeanDISPLAY_MeanSHARED;
+            sprintf(temp, "CUDA Edge Detection (%s)", filterMode[g_MeanDisplayMode]);
             glutSetWindowTitle(temp);
             break;
 
         case 't':
         case 'T':
-            g_SobelDisplayMode = SOBELDISPLAY_SOBELTEX;
-            sprintf(temp, "CUDA Edge Detection (%s)", filterMode[g_SobelDisplayMode]);
+            g_MeanDisplayMode = MeanDISPLAY_MeanTEX;
+            sprintf(temp, "CUDA Edge Detection (%s)", filterMode[g_MeanDisplayMode]);
             glutSetWindowTitle(temp);
             break;
 
@@ -391,9 +391,9 @@ void runAutoTest(int argc, char *argv[])
     Pixel *d_result;
     checkCudaErrors(cudaMalloc((void **)&d_result, imWidth*imHeight*sizeof(Pixel)));
 
-    g_SobelDisplayMode = SOBELDISPLAY_SOBELTEX;
+    g_MeanDisplayMode = MeanDISPLAY_MeanTEX;
 
-    sobelFilter(d_result, imWidth, imHeight, g_SobelDisplayMode, imageScale);
+    MeanFilter(d_result, imWidth, imHeight, g_MeanDisplayMode, imageScale);
     checkCudaErrors(cudaDeviceSynchronize());
 
     unsigned char *h_result = (unsigned char *)malloc(imWidth*imHeight*sizeof(Pixel));
@@ -414,7 +414,7 @@ int main(int argc, char **argv)
 
     if (checkCmdLineFlag(argc, (const char **)argv, "help"))
     {
-        printf("\nUsage: SobelFilter <options>\n");
+        printf("\nUsage: MeanFilter <options>\n");
         printf("\t\t-mode=n (0=original, 1=texture, 2=smem + texture)\n");
         printf("\t\t-file=ref_orig.pgm (ref_tex.pgm, ref_shared.pgm)\n\n");
         exit(EXIT_SUCCESS);

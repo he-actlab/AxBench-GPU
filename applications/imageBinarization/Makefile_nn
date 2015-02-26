@@ -224,15 +224,15 @@ else
 	@echo "Sample is ready - all dependencies have been met"
 endif
 
-./obj/bmploader_nn.o:./src/bmploader_nn.cpp
+./obj/bmploader_nn.o:./src.nn/bmploader_nn.cpp
 	#python $(PLANG) -c $(PARROT_JSON) -a observe -e "$(NVCC) $(CFLAGS) $(INCLUDE) -I$(NVIDIA_HELPER) $(INCLUDES) $(ALL_CCFLAGS) $(GENCODE_FLAGS) -I$(PARROT_LIB) -c" -s "$<" -o "$@" -t
 	$(EXEC) $(NVCC) $(CFLAGS) $(INCLUDE) -I$(NVIDIA_HELPER) $(INCLUDES) $(ALL_CCFLAGS) $(GENCODE_FLAGS) -I$(PARROT_LIB) -o $@ -c $<
 
-./obj/imageBinarization_cu_nn.o:./src/imageBinarization_nn.cu
+./obj/imageBinarization_cu_nn.o:./src.nn/imageBinarization_nn.cu
 	#python $(PLANG) -c $(PARROT_JSON) -a observe -e "$(NVCC) $(CFLAGS) $(INCLUDE) -I$(NVIDIA_HELPER) $(INCLUDES) $(ALL_CCFLAGS) $(GENCODE_FLAGS) -I$(PARROT_LIB) -c" -s "$<" -o "$@" -t
 	$(EXEC) $(NVCC) $(CFLAGS) $(INCLUDE) -I$(NVIDIA_HELPER) $(INCLUDES) $(ALL_CCFLAGS) $(GENCODE_FLAGS) -I$(PARROT_LIB) -o $@ -c $<
 
-./obj/imageBinarization_nn.o:./src/imageBinarization_nn.cpp
+./obj/imageBinarization_nn.o:./src.nn/imageBinarization_nn.cpp
 	#python $(PLANG) -c $(PARROT_JSON) -a observe -e "$(NVCC) $(CFLAGS) $(INCLUDE) -I$(NVIDIA_HELPER) $(INCLUDES) $(ALL_CCFLAGS) $(GENCODE_FLAGS) -I$(PARROT_LIB) -c" -s "$<" -o "$@" -t
 	$(EXEC) $(NVCC) $(CFLAGS) $(INCLUDE) -I$(NVIDIA_HELPER) $(INCLUDES) $(ALL_CCFLAGS) $(GENCODE_FLAGS) -I$(PARROT_LIB) -o $@ -c $<
 

@@ -46,7 +46,7 @@ image_t imseg(image_t im, int * flatmap)
     if (flatmap[p] == p)
       roots++;
   }
-  printf("Roots: %d\n", roots);
+  //printf("Roots: %d\n", roots);
 
   int nonzero = 0;
   for (int p = 0; p < im.N1*im.N2; p++)
@@ -187,7 +187,7 @@ int main(int argc, char ** argv)
     cutilCheckError( cutStartTimer(timer) );
 
     /********** Quick shift **********/
-    printf("Mode: %s\n", modes[m]);
+    //printf("Mode: %s\n", modes[m]);
     if(!strcmp(modes[m], "cpu"))
       quickshift(im, sigma, tau, map, gaps, E);
     else if(!strcmp(modes[m], "gpu"))
@@ -218,12 +218,12 @@ int main(int argc, char ** argv)
     free(flatmap);
     free(imout.I);
 
-    printf("Time: %fms\n\n\n", modeTime);
+    //printf("Time: %fms\n\n\n", modeTime);
   }
 
   cutilCheckError( cutStopTimer(totaltimer) );
   float totalTime = cutGetTimerValue(totaltimer);
-  printf("Total time: %fms\n", totalTime);
+  //printf("Total time: %fms\n", totalTime);
 
 
   /********** Cleanup **********/

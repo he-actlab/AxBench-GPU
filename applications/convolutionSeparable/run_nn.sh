@@ -19,7 +19,10 @@ do
 	extension="${filename##*.}"
 	filename="${filename%.*}"
 	echo -e "-------------------------------------------------------"
-	echo -e "${Green} Input Image:  $f"
+	echo -e "${Green} Input Image:  $f${White}"
 	echo -e "-------------------------------------------------------"
-	./bin/convolutionSeparable_nn.out $f
+	./bin/convolutionSeparable_nn.out $f > error.tmp
+	echo -ne "${Red}$f\t"
+	awk '{ printf("*** Error: %0.2f%\n",$1)}' error.tmp
+	echo -ne "${White}"
 done

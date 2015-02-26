@@ -141,7 +141,7 @@ void computeFPS()
 
 void runImageFilters(unsigned char *d_dst)
 {
-    printf("Hello!\n");
+    //printf("Hello!\n");
 
     cuda_imageBinarization(d_dst, imageW, imageH);
 
@@ -408,7 +408,7 @@ void runAutoTest(int argc, char **argv)
 
 
     LoadBMPFile(&h_Src, &imageW, &imageH, argv[1]);
-    printf("Data init done.\n");
+    //printf("Data init done.\n");
 
     checkCudaErrors(CUDA_MallocArray(&h_Src, imageW, imageH));
 
@@ -449,7 +449,7 @@ int main(int argc, char **argv)
     pArgc = &argc;
     pArgv = argv;
 
-    printf("%s Starting...\n\n", sSDKsample);
+    //printf("%s Starting...\n\n", sSDKsample);
 
     runAutoTest(argc, argv); // main function for performing image binarization
 

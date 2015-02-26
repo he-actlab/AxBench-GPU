@@ -207,7 +207,7 @@ extern "C"
 void quickshift_gpu(image_t im, float sigma, float tau, float * map, float * gaps, float * E)
 {
 #if USE_TEX_I
-  printf("quickshiftGPU: using texture for I\n");
+  //printf("quickshiftGPU: using texture for I\n");
   cudaArray * cu_array_I;
 
   // Allocate array
@@ -265,14 +265,14 @@ void quickshift_gpu(image_t im, float sigma, float tau, float * map, float * gap
   tR = (int) ceil (tau) ;
   
   if (verb) {
-    printf("quickshiftGPU: [N1,N2,K]: [%d,%d,%d]\n", N1,N2,K) ;
-    printf("quickshiftGPU: type: quick\n");
-    printf("quickshiftGPU: sigma:   %g\n", sigma) ;
+    //printf("quickshiftGPU: [N1,N2,K]: [%d,%d,%d]\n", N1,N2,K) ;
+    //printf("quickshiftGPU: type: quick\n");
+    //printf("quickshiftGPU: sigma:   %g\n", sigma) ;
     /* R is ceil(3 * sigma) and determines the window size to accumulate
      * similarity */
-    printf("quickshiftGPU: R:       %d\n", R) ; 
-    printf("quickshiftGPU: tau:     %g\n", tau) ;
-    printf("quickshiftGPU: tR:      %d\n", tR) ;
+    //printf("quickshiftGPU: R:       %d\n", R) ; 
+    //printf("quickshiftGPU: tau:     %g\n", tau) ;
+    //printf("quickshiftGPU: tR:      %d\n", tR) ;
   }
 
   unsigned int Etimer;
@@ -297,7 +297,7 @@ void quickshift_gpu(image_t im, float sigma, float tau, float * map, float * gap
 
   cutilCheckError( cutStopTimer(Etimer) );
   float ETime = cutGetTimerValue(Etimer);
-  printf("ComputeE: %fms\n", ETime);
+  //printf("ComputeE: %fms\n", ETime);
 
   unsigned int Ntimer;
   cutilCheckError( cutCreateTimer(&Ntimer) );
@@ -306,7 +306,7 @@ void quickshift_gpu(image_t im, float sigma, float tau, float * map, float * gap
 
   /* Texture map E */
 #if USE_TEX_E
-  printf("quickshiftGPU: using texture for E\n");
+  //printf("quickshiftGPU: using texture for E\n");
   cudaChannelFormatDesc descriptionE = cudaCreateChannelDesc<float>();
 
   cudaArray * cu_array_E;
@@ -341,9 +341,9 @@ void quickshift_gpu(image_t im, float sigma, float tau, float * map, float * gap
 
   cutilCheckError( cutStopTimer(Ntimer) );
   float NTime = cutGetTimerValue(Ntimer);
-  printf("ComputeN: %fms\n", NTime);
-  printf("dimGrid: %d %d\n", dimGrid.x, dimGrid.y);
-  printf("dimBlock: %d %d\n", dimBlock.x, dimBlock.y);
+  //printf("ComputeN: %fms\n", NTime);
+  //printf("dimGrid: %d %d\n", dimGrid.x, dimGrid.y);
+  //printf("dimBlock: %d %d\n", dimBlock.x, dimBlock.y);
 
   cutilSafeCall(cudaFree(I));
   cutilSafeCall(cudaFree(map_d));

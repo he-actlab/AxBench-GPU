@@ -15,17 +15,17 @@
 typedef unsigned char Pixel;
 
 // global determines which filter to invoke
-enum SobelDisplayMode
+enum MeanDisplayMode
 {
-    SOBELDISPLAY_IMAGE = 0,
-    SOBELDISPLAY_SOBELTEX,
-    SOBELDISPLAY_SOBELSHARED
+    MeanDISPLAY_IMAGE = 0,
+    MeanDISPLAY_MeanTEX,
+    MeanDISPLAY_MeanSHARED
 };
 
 
-extern enum SobelDisplayMode g_SobelDisplayMode;
+extern enum MeanDisplayMode g_MeanDisplayMode;
 
-extern "C" void sobelFilter(Pixel *odata, int iw, int ih, enum SobelDisplayMode mode, float fScale);
+extern "C" void MeanFilter(Pixel *odata, int iw, int ih, enum MeanDisplayMode mode, float fScale);
 extern "C" void setupTexture(int iw, int ih, Pixel *data, int Bpp);
 extern "C" void deleteTexture(void);
 extern "C" void initFilter(void);

@@ -129,14 +129,14 @@ void quickshift(image_t im, float sigma, float tau, float * map, float * gaps, f
   tR = (int) ceil (tau) ;
   
   if (verb) {
-    printf("quickshift: [N1,N2,K]: [%d,%d,%d]\n", N1,N2,K) ;
-    printf("quickshift: type: %s\n", medoid ? "medoid" : "quick");
-    printf("quickshift: sigma:   %g\n", sigma) ;
+    //printf("quickshift: [N1,N2,K]: [%d,%d,%d]\n", N1,N2,K) ;
+    //printf("quickshift: type: %s\n", medoid ? "medoid" : "quick");
+    //printf("quickshift: sigma:   %g\n", sigma) ;
     /* R is ceil(3 * sigma) and determines the window size to accumulate
      * similarity */
-    printf("quickshift: R:       %d\n", R) ; 
-    printf("quickshift: tau:     %g\n", tau) ;
-    printf("quickshift: tR:      %d\n", tR) ;
+    //printf("quickshift: R:       %d\n", R) ; 
+    //printf("quickshift: tau:     %g\n", tau) ;
+    //printf("quickshift: tR:      %d\n", tR) ;
   }
 
   /* -----------------------------------------------------------------
@@ -219,7 +219,7 @@ void quickshift(image_t im, float sigma, float tau, float * map, float * gaps, f
   
   cutilCheckError( cutStopTimer(Etimer) );
   float ETime = cutGetTimerValue(Etimer);
-  printf("ComputeE: %fms\n", ETime);
+  //printf("ComputeE: %fms\n", ETime);
 
   unsigned int Ntimer;
   cutilCheckError( cutCreateTimer(&Ntimer) );

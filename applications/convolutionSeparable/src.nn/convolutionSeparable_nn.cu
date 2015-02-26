@@ -102,15 +102,11 @@ __global__ void convolutionRowsKernel(
         }
         // Rima
 
-float layer_1_0 = parrotInput[0] * 36.021164 + parrotInput[1] * 35.539227 + parrotInput[2] * 16.319891 + parrotInput[3] * 16.663332 + parrotInput[4] * 13.312828 + parrotInput[5] * -3.753598 + parrotInput[6] * -15.971216 + parrotInput[7] * -74.571922 + parrotInput[8] * -0.774290 + parrotInput[9] * 15.760172 + parrotInput[10] * 4.064026 + parrotInput[11] * 16.833529 + parrotInput[12] * 15.842857 + parrotInput[13] * 13.380342 + parrotInput[14] * 13.063256 + parrotInput[15] * 14.531695 + parrotInput[16] * 14.838722 + 1.0f * 0.842725;
+float layer_1_0 = parrotInput[0] * 0.654191 + parrotInput[1] * 0.687100 + parrotInput[2] * 0.512922 + parrotInput[3] * 0.788191 + parrotInput[4] * 0.643487 + parrotInput[5] * -1.232771 + parrotInput[6] * -0.644141 + parrotInput[7] * -1.025035 + parrotInput[8] * -0.039344 + parrotInput[9] * 0.662402 + parrotInput[10] * 0.339676 + parrotInput[11] * 0.798456 + parrotInput[12] * 0.593221 + parrotInput[13] * 0.715733 + parrotInput[14] * 0.656841 + parrotInput[15] * 0.383015 + parrotInput[16] * 0.671904 + 1.0f * -2.796154;
 
-float layer_1_1 = parrotInput[0] * 36.032173 + parrotInput[1] * 35.585796 + parrotInput[2] * 16.316252 + parrotInput[3] * 16.648279 + parrotInput[4] * 13.123125 + parrotInput[5] * -5.539348 + parrotInput[6] * -8.066578 + parrotInput[7] * -55.881817 + parrotInput[8] * -0.206014 + parrotInput[9] * 15.957002 + parrotInput[10] * 5.600278 + parrotInput[11] * 17.247503 + parrotInput[12] * 29.633108 + parrotInput[13] * 14.054038 + parrotInput[14] * 13.668683 + parrotInput[15] * 21.892227 + parrotInput[16] * 20.818293 + 1.0f * 1.314986;
+float layer_1_1 = parrotInput[0] * 0.677373 + parrotInput[1] * 0.705730 + parrotInput[2] * 0.725955 + parrotInput[3] * 0.716386 + parrotInput[4] * 0.580137 + parrotInput[5] * -0.061835 + parrotInput[6] * -0.729910 + parrotInput[7] * -0.286791 + parrotInput[8] * 0.121661 + parrotInput[9] * 0.606789 + parrotInput[10] * 0.876676 + parrotInput[11] * 0.670156 + parrotInput[12] * 0.663020 + parrotInput[13] * 0.717234 + parrotInput[14] * 0.683454 + parrotInput[15] * 0.929709 + parrotInput[16] * 0.739613 + 1.0f * -3.124024;
 
-float layer_1_2 = parrotInput[0] * 1.351913 + parrotInput[1] * 1.338836 + parrotInput[2] * 1.670588 + parrotInput[3] * 1.364371 + parrotInput[4] * 1.288478 + parrotInput[5] * -1.227318 + parrotInput[6] * -1.533414 + parrotInput[7] * -1.238412 + parrotInput[8] * -0.032072 + parrotInput[9] * 1.342823 + parrotInput[10] * 1.305236 + parrotInput[11] * 1.541245 + parrotInput[12] * 1.273737 + parrotInput[13] * 1.558126 + parrotInput[14] * 1.194067 + parrotInput[15] * 1.586174 + parrotInput[16] * 1.445397 + 1.0f * -4.076314;
-
-float layer_1_3 = parrotInput[0] * 1.074052 + parrotInput[1] * 0.949440 + parrotInput[2] * 0.969797 + parrotInput[3] * 1.053749 + parrotInput[4] * 1.031119 + parrotInput[5] * -1.045560 + parrotInput[6] * -1.034856 + parrotInput[7] * -1.015039 + parrotInput[8] * -0.018008 + parrotInput[9] * 1.060055 + parrotInput[10] * 1.030391 + parrotInput[11] * 1.086625 + parrotInput[12] * 0.902483 + parrotInput[13] * 1.099750 + parrotInput[14] * 0.958928 + parrotInput[15] * 1.057689 + parrotInput[16] * 0.943299 + 1.0f * -5.769458;
-
-float layer_2_0 = sigmoid(layer_1_0, 0.500000) * 0.404556 + sigmoid(layer_1_1, 0.500000) * 1.269753 + sigmoid(layer_1_2, 0.500000) * 4.856860 + sigmoid(layer_1_3, 0.500000) * 7.633713 + 1.0f * 1.162027;
+float layer_2_0 = sigmoid(layer_1_0, 0.500000) * 6.989107 + sigmoid(layer_1_1, 0.500000) * 6.867698 + 1.0f * 1.898852;
 
 layer_2_0 = linear(layer_2_0, 0.5);
 

@@ -1,3 +1,3 @@
 rm -rf ./bin
 rm -rf ./obj
-rm -f sobel.out SobelFilter.o SobelFilter_kernels.o
+rm -f mean.out meanFilter.o meanFilter_kernels.o

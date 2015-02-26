@@ -2,271 +2,667 @@ Application name: 				imageBinarization_imageBinarization
 Number of input neurons: 			3
 Number of output neurons: 		1
 Min number of hidden neurons:		2
-Max number of hidden neurons:		3
+Max number of hidden neurons:		4
 Number of hidden layers: 			4
-Sampling Rate: 					0.01
-Test Fraction: 					0.96
+Sampling Rate: 					0.1
+Test Fraction: 					0.85
 Learning rate: 					0.5
-Number of epochs:					10
+Number of epochs:					300
 Kernel Name:                      imageBinarization
 --------------- Training imageBinarization_imageBinarization ---------------
 # preparing the configuration 3_2_1...
+# preparing the configuration 3_4_1...
 # preparing the configuration 3_2_2_1...
-/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_2_1/epochs_10
+# preparing the configuration 3_4_2_1...
+# preparing the configuration 3_4_4_1...
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_2_1/epochs_300
 # config: 3 -> 2 -> 1
-# epochs: 10
+# epochs: 300
 # run:    1
 ...............................................
-/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_2_1/epochs_10/run_1
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_2_1/epochs_300/run_1
 @ Start RPROP...0
 # training algorithm: RPROP
 ***********************************************
 # config: 3 -> 2 -> 1
-# epochs: 10
+# epochs: 300
 # run:    2
 ...............................................
-/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_2_1/epochs_10/run_2
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_2_1/epochs_300/run_2
 @ Start RPROP...0
 # training algorithm: RPROP
 ***********************************************
 # config: 3 -> 2 -> 1
-# epochs: 10
+# epochs: 300
 # run:    3
 ...............................................
-/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_2_1/epochs_10/run_3
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_2_1/epochs_300/run_3
 @ Start RPROP...0
 # training algorithm: RPROP
 ***********************************************
 # config: 3 -> 2 -> 1
-# epochs: 10
+# epochs: 300
 # run:    4
 ...............................................
-/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_2_1/epochs_10/run_4
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_2_1/epochs_300/run_4
 @ Start RPROP...0
 # training algorithm: RPROP
 ***********************************************
 # config: 3 -> 2 -> 1
-# epochs: 10
+# epochs: 300
 # run:    5
 ...............................................
-/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_2_1/epochs_10/run_5
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_2_1/epochs_300/run_5
 @ Start RPROP...0
 # training algorithm: RPROP
 ***********************************************
 # config: 3 -> 2 -> 1
-# epochs: 10
+# epochs: 300
 # run:    6
 ...............................................
-/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_2_1/epochs_10/run_6
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_2_1/epochs_300/run_6
 @ Start RPROP...0
 # training algorithm: RPROP
 ***********************************************
 # config: 3 -> 2 -> 1
-# epochs: 10
+# epochs: 300
 # run:    7
 ...............................................
-/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_2_1/epochs_10/run_7
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_2_1/epochs_300/run_7
 @ Start RPROP...0
 # training algorithm: RPROP
 ***********************************************
 # config: 3 -> 2 -> 1
-# epochs: 10
+# epochs: 300
 # run:    8
 ...............................................
-/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_2_1/epochs_10/run_8
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_2_1/epochs_300/run_8
 @ Start RPROP...0
 # training algorithm: RPROP
 ***********************************************
 # config: 3 -> 2 -> 1
-# epochs: 10
+# epochs: 300
 # run:    9
 ...............................................
-/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_2_1/epochs_10/run_9
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_2_1/epochs_300/run_9
 @ Start RPROP...0
 # training algorithm: RPROP
 ***********************************************
 # config: 3 -> 2 -> 1
-# epochs: 10
+# epochs: 300
 # run:    10
 ...............................................
-/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_2_1/epochs_10/run_10
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_2_1/epochs_300/run_10
 @ Start RPROP...0
 # training algorithm: RPROP
 ***********************************************
 # config: 3 -> 2 -> 1
-# epochs: 10
+# epochs: 300
 # run:    11
 ...............................................
-/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_2_1/epochs_10/run_11
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_2_1/epochs_300/run_11
 @ Start RPROP...0
 # training algorithm: RPROP
 ***********************************************
 # config: 3 -> 2 -> 1
-# epochs: 10
+# epochs: 300
 # run:    12
 ...............................................
-/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_2_1/epochs_10/run_12
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_2_1/epochs_300/run_12
 @ Start RPROP...0
 # training algorithm: RPROP
 ***********************************************
 # config: 3 -> 2 -> 1
-# epochs: 10
+# epochs: 300
 # run:    13
 ...............................................
-/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_2_1/epochs_10/run_13
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_2_1/epochs_300/run_13
 @ Start RPROP...0
 # training algorithm: RPROP
 ***********************************************
 # config: 3 -> 2 -> 1
-# epochs: 10
+# epochs: 300
 # run:    14
 ...............................................
-/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_2_1/epochs_10/run_14
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_2_1/epochs_300/run_14
 @ Start RPROP...0
 # training algorithm: RPROP
 ***********************************************
 # config: 3 -> 2 -> 1
-# epochs: 10
+# epochs: 300
 # run:    15
 ...............................................
-/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_2_1/epochs_10/run_15
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_2_1/epochs_300/run_15
 @ Start RPROP...0
 # training algorithm: RPROP
 ***********************************************
-/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_2_2_1/epochs_10
-# config: 3 -> 2 -> 2 -> 1
-# epochs: 10
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_4_1/epochs_300
+# config: 3 -> 4 -> 1
+# epochs: 300
 # run:    1
 ...............................................
-/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_2_2_1/epochs_10/run_1
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_4_1/epochs_300/run_1
 @ Start RPROP...0
 # training algorithm: RPROP
-./train_2_hidden_layers_rprop imageBinarization_imageBinarization 10 aggregated_train.fann 3 2 2 1 0.5 3 aggregated_test.fann >> run_1_rprop.log
 ***********************************************
-# config: 3 -> 2 -> 2 -> 1
-# epochs: 10
+# config: 3 -> 4 -> 1
+# epochs: 300
 # run:    2
 ...............................................
-/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_2_2_1/epochs_10/run_2
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_4_1/epochs_300/run_2
 @ Start RPROP...0
 # training algorithm: RPROP
-./train_2_hidden_layers_rprop imageBinarization_imageBinarization 10 aggregated_train.fann 3 2 2 1 0.5 3 aggregated_test.fann >> run_2_rprop.log
 ***********************************************
-# config: 3 -> 2 -> 2 -> 1
-# epochs: 10
+# config: 3 -> 4 -> 1
+# epochs: 300
 # run:    3
 ...............................................
-/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_2_2_1/epochs_10/run_3
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_4_1/epochs_300/run_3
 @ Start RPROP...0
 # training algorithm: RPROP
-./train_2_hidden_layers_rprop imageBinarization_imageBinarization 10 aggregated_train.fann 3 2 2 1 0.5 3 aggregated_test.fann >> run_3_rprop.log
 ***********************************************
-# config: 3 -> 2 -> 2 -> 1
-# epochs: 10
+# config: 3 -> 4 -> 1
+# epochs: 300
 # run:    4
 ...............................................
-/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_2_2_1/epochs_10/run_4
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_4_1/epochs_300/run_4
 @ Start RPROP...0
 # training algorithm: RPROP
-./train_2_hidden_layers_rprop imageBinarization_imageBinarization 10 aggregated_train.fann 3 2 2 1 0.5 3 aggregated_test.fann >> run_4_rprop.log
 ***********************************************
-# config: 3 -> 2 -> 2 -> 1
-# epochs: 10
+# config: 3 -> 4 -> 1
+# epochs: 300
 # run:    5
 ...............................................
-/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_2_2_1/epochs_10/run_5
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_4_1/epochs_300/run_5
 @ Start RPROP...0
 # training algorithm: RPROP
-./train_2_hidden_layers_rprop imageBinarization_imageBinarization 10 aggregated_train.fann 3 2 2 1 0.5 3 aggregated_test.fann >> run_5_rprop.log
 ***********************************************
-# config: 3 -> 2 -> 2 -> 1
-# epochs: 10
+# config: 3 -> 4 -> 1
+# epochs: 300
 # run:    6
 ...............................................
-/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_2_2_1/epochs_10/run_6
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_4_1/epochs_300/run_6
 @ Start RPROP...0
 # training algorithm: RPROP
-./train_2_hidden_layers_rprop imageBinarization_imageBinarization 10 aggregated_train.fann 3 2 2 1 0.5 3 aggregated_test.fann >> run_6_rprop.log
 ***********************************************
-# config: 3 -> 2 -> 2 -> 1
-# epochs: 10
+# config: 3 -> 4 -> 1
+# epochs: 300
 # run:    7
 ...............................................
-/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_2_2_1/epochs_10/run_7
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_4_1/epochs_300/run_7
 @ Start RPROP...0
 # training algorithm: RPROP
-./train_2_hidden_layers_rprop imageBinarization_imageBinarization 10 aggregated_train.fann 3 2 2 1 0.5 3 aggregated_test.fann >> run_7_rprop.log
 ***********************************************
-# config: 3 -> 2 -> 2 -> 1
-# epochs: 10
+# config: 3 -> 4 -> 1
+# epochs: 300
 # run:    8
 ...............................................
-/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_2_2_1/epochs_10/run_8
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_4_1/epochs_300/run_8
 @ Start RPROP...0
 # training algorithm: RPROP
-./train_2_hidden_layers_rprop imageBinarization_imageBinarization 10 aggregated_train.fann 3 2 2 1 0.5 3 aggregated_test.fann >> run_8_rprop.log
 ***********************************************
-# config: 3 -> 2 -> 2 -> 1
-# epochs: 10
+# config: 3 -> 4 -> 1
+# epochs: 300
 # run:    9
 ...............................................
-/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_2_2_1/epochs_10/run_9
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_4_1/epochs_300/run_9
 @ Start RPROP...0
 # training algorithm: RPROP
-./train_2_hidden_layers_rprop imageBinarization_imageBinarization 10 aggregated_train.fann 3 2 2 1 0.5 3 aggregated_test.fann >> run_9_rprop.log
 ***********************************************
-# config: 3 -> 2 -> 2 -> 1
-# epochs: 10
+# config: 3 -> 4 -> 1
+# epochs: 300
 # run:    10
 ...............................................
-/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_2_2_1/epochs_10/run_10
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_4_1/epochs_300/run_10
 @ Start RPROP...0
 # training algorithm: RPROP
-./train_2_hidden_layers_rprop imageBinarization_imageBinarization 10 aggregated_train.fann 3 2 2 1 0.5 3 aggregated_test.fann >> run_10_rprop.log
 ***********************************************
-# config: 3 -> 2 -> 2 -> 1
-# epochs: 10
+# config: 3 -> 4 -> 1
+# epochs: 300
 # run:    11
 ...............................................
-/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_2_2_1/epochs_10/run_11
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_4_1/epochs_300/run_11
 @ Start RPROP...0
 # training algorithm: RPROP
-./train_2_hidden_layers_rprop imageBinarization_imageBinarization 10 aggregated_train.fann 3 2 2 1 0.5 3 aggregated_test.fann >> run_11_rprop.log
 ***********************************************
-# config: 3 -> 2 -> 2 -> 1
-# epochs: 10
+# config: 3 -> 4 -> 1
+# epochs: 300
 # run:    12
 ...............................................
-/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_2_2_1/epochs_10/run_12
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_4_1/epochs_300/run_12
 @ Start RPROP...0
 # training algorithm: RPROP
-./train_2_hidden_layers_rprop imageBinarization_imageBinarization 10 aggregated_train.fann 3 2 2 1 0.5 3 aggregated_test.fann >> run_12_rprop.log
 ***********************************************
-# config: 3 -> 2 -> 2 -> 1
-# epochs: 10
+# config: 3 -> 4 -> 1
+# epochs: 300
 # run:    13
 ...............................................
-/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_2_2_1/epochs_10/run_13
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_4_1/epochs_300/run_13
 @ Start RPROP...0
 # training algorithm: RPROP
-./train_2_hidden_layers_rprop imageBinarization_imageBinarization 10 aggregated_train.fann 3 2 2 1 0.5 3 aggregated_test.fann >> run_13_rprop.log
 ***********************************************
-# config: 3 -> 2 -> 2 -> 1
-# epochs: 10
+# config: 3 -> 4 -> 1
+# epochs: 300
 # run:    14
 ...............................................
-/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_2_2_1/epochs_10/run_14
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_4_1/epochs_300/run_14
 @ Start RPROP...0
 # training algorithm: RPROP
-./train_2_hidden_layers_rprop imageBinarization_imageBinarization 10 aggregated_train.fann 3 2 2 1 0.5 3 aggregated_test.fann >> run_14_rprop.log
 ***********************************************
-# config: 3 -> 2 -> 2 -> 1
-# epochs: 10
+# config: 3 -> 4 -> 1
+# epochs: 300
 # run:    15
 ...............................................
-/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_2_2_1/epochs_10/run_15
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_4_1/epochs_300/run_15
 @ Start RPROP...0
 # training algorithm: RPROP
-./train_2_hidden_layers_rprop imageBinarization_imageBinarization 10 aggregated_train.fann 3 2 2 1 0.5 3 aggregated_test.fann >> run_15_rprop.log
 ***********************************************
-bash ../../scripts/run_training.sh imageBinarization_imageBinarization 3 1 2 3 4 0.01 0.96 0.5 10 imageBinarization
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_2_2_1/epochs_300
+# config: 3 -> 2 -> 2 -> 1
+# epochs: 300
+# run:    1
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_2_2_1/epochs_300/run_1
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop imageBinarization_imageBinarization 300 aggregated_train.fann 3 2 2 1 0.5 3 aggregated_test.fann >> run_1_rprop.log
+***********************************************
+# config: 3 -> 2 -> 2 -> 1
+# epochs: 300
+# run:    2
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_2_2_1/epochs_300/run_2
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop imageBinarization_imageBinarization 300 aggregated_train.fann 3 2 2 1 0.5 3 aggregated_test.fann >> run_2_rprop.log
+***********************************************
+# config: 3 -> 2 -> 2 -> 1
+# epochs: 300
+# run:    3
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_2_2_1/epochs_300/run_3
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop imageBinarization_imageBinarization 300 aggregated_train.fann 3 2 2 1 0.5 3 aggregated_test.fann >> run_3_rprop.log
+***********************************************
+# config: 3 -> 2 -> 2 -> 1
+# epochs: 300
+# run:    4
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_2_2_1/epochs_300/run_4
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop imageBinarization_imageBinarization 300 aggregated_train.fann 3 2 2 1 0.5 3 aggregated_test.fann >> run_4_rprop.log
+***********************************************
+# config: 3 -> 2 -> 2 -> 1
+# epochs: 300
+# run:    5
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_2_2_1/epochs_300/run_5
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop imageBinarization_imageBinarization 300 aggregated_train.fann 3 2 2 1 0.5 3 aggregated_test.fann >> run_5_rprop.log
+***********************************************
+# config: 3 -> 2 -> 2 -> 1
+# epochs: 300
+# run:    6
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_2_2_1/epochs_300/run_6
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop imageBinarization_imageBinarization 300 aggregated_train.fann 3 2 2 1 0.5 3 aggregated_test.fann >> run_6_rprop.log
+***********************************************
+# config: 3 -> 2 -> 2 -> 1
+# epochs: 300
+# run:    7
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_2_2_1/epochs_300/run_7
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop imageBinarization_imageBinarization 300 aggregated_train.fann 3 2 2 1 0.5 3 aggregated_test.fann >> run_7_rprop.log
+***********************************************
+# config: 3 -> 2 -> 2 -> 1
+# epochs: 300
+# run:    8
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_2_2_1/epochs_300/run_8
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop imageBinarization_imageBinarization 300 aggregated_train.fann 3 2 2 1 0.5 3 aggregated_test.fann >> run_8_rprop.log
+***********************************************
+# config: 3 -> 2 -> 2 -> 1
+# epochs: 300
+# run:    9
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_2_2_1/epochs_300/run_9
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop imageBinarization_imageBinarization 300 aggregated_train.fann 3 2 2 1 0.5 3 aggregated_test.fann >> run_9_rprop.log
+***********************************************
+# config: 3 -> 2 -> 2 -> 1
+# epochs: 300
+# run:    10
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_2_2_1/epochs_300/run_10
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop imageBinarization_imageBinarization 300 aggregated_train.fann 3 2 2 1 0.5 3 aggregated_test.fann >> run_10_rprop.log
+***********************************************
+# config: 3 -> 2 -> 2 -> 1
+# epochs: 300
+# run:    11
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_2_2_1/epochs_300/run_11
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop imageBinarization_imageBinarization 300 aggregated_train.fann 3 2 2 1 0.5 3 aggregated_test.fann >> run_11_rprop.log
+***********************************************
+# config: 3 -> 2 -> 2 -> 1
+# epochs: 300
+# run:    12
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_2_2_1/epochs_300/run_12
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop imageBinarization_imageBinarization 300 aggregated_train.fann 3 2 2 1 0.5 3 aggregated_test.fann >> run_12_rprop.log
+***********************************************
+# config: 3 -> 2 -> 2 -> 1
+# epochs: 300
+# run:    13
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_2_2_1/epochs_300/run_13
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop imageBinarization_imageBinarization 300 aggregated_train.fann 3 2 2 1 0.5 3 aggregated_test.fann >> run_13_rprop.log
+***********************************************
+# config: 3 -> 2 -> 2 -> 1
+# epochs: 300
+# run:    14
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_2_2_1/epochs_300/run_14
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop imageBinarization_imageBinarization 300 aggregated_train.fann 3 2 2 1 0.5 3 aggregated_test.fann >> run_14_rprop.log
+***********************************************
+# config: 3 -> 2 -> 2 -> 1
+# epochs: 300
+# run:    15
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_2_2_1/epochs_300/run_15
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop imageBinarization_imageBinarization 300 aggregated_train.fann 3 2 2 1 0.5 3 aggregated_test.fann >> run_15_rprop.log
+***********************************************
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_4_2_1/epochs_300
+# config: 3 -> 4 -> 2 -> 1
+# epochs: 300
+# run:    1
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_4_2_1/epochs_300/run_1
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop imageBinarization_imageBinarization 300 aggregated_train.fann 3 4 2 1 0.5 3 aggregated_test.fann >> run_1_rprop.log
+***********************************************
+# config: 3 -> 4 -> 2 -> 1
+# epochs: 300
+# run:    2
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_4_2_1/epochs_300/run_2
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop imageBinarization_imageBinarization 300 aggregated_train.fann 3 4 2 1 0.5 3 aggregated_test.fann >> run_2_rprop.log
+***********************************************
+# config: 3 -> 4 -> 2 -> 1
+# epochs: 300
+# run:    3
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_4_2_1/epochs_300/run_3
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop imageBinarization_imageBinarization 300 aggregated_train.fann 3 4 2 1 0.5 3 aggregated_test.fann >> run_3_rprop.log
+***********************************************
+# config: 3 -> 4 -> 2 -> 1
+# epochs: 300
+# run:    4
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_4_2_1/epochs_300/run_4
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop imageBinarization_imageBinarization 300 aggregated_train.fann 3 4 2 1 0.5 3 aggregated_test.fann >> run_4_rprop.log
+***********************************************
+# config: 3 -> 4 -> 2 -> 1
+# epochs: 300
+# run:    5
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_4_2_1/epochs_300/run_5
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop imageBinarization_imageBinarization 300 aggregated_train.fann 3 4 2 1 0.5 3 aggregated_test.fann >> run_5_rprop.log
+***********************************************
+# config: 3 -> 4 -> 2 -> 1
+# epochs: 300
+# run:    6
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_4_2_1/epochs_300/run_6
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop imageBinarization_imageBinarization 300 aggregated_train.fann 3 4 2 1 0.5 3 aggregated_test.fann >> run_6_rprop.log
+***********************************************
+# config: 3 -> 4 -> 2 -> 1
+# epochs: 300
+# run:    7
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_4_2_1/epochs_300/run_7
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop imageBinarization_imageBinarization 300 aggregated_train.fann 3 4 2 1 0.5 3 aggregated_test.fann >> run_7_rprop.log
+***********************************************
+# config: 3 -> 4 -> 2 -> 1
+# epochs: 300
+# run:    8
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_4_2_1/epochs_300/run_8
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop imageBinarization_imageBinarization 300 aggregated_train.fann 3 4 2 1 0.5 3 aggregated_test.fann >> run_8_rprop.log
+***********************************************
+# config: 3 -> 4 -> 2 -> 1
+# epochs: 300
+# run:    9
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_4_2_1/epochs_300/run_9
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop imageBinarization_imageBinarization 300 aggregated_train.fann 3 4 2 1 0.5 3 aggregated_test.fann >> run_9_rprop.log
+***********************************************
+# config: 3 -> 4 -> 2 -> 1
+# epochs: 300
+# run:    10
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_4_2_1/epochs_300/run_10
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop imageBinarization_imageBinarization 300 aggregated_train.fann 3 4 2 1 0.5 3 aggregated_test.fann >> run_10_rprop.log
+***********************************************
+# config: 3 -> 4 -> 2 -> 1
+# epochs: 300
+# run:    11
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_4_2_1/epochs_300/run_11
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop imageBinarization_imageBinarization 300 aggregated_train.fann 3 4 2 1 0.5 3 aggregated_test.fann >> run_11_rprop.log
+***********************************************
+# config: 3 -> 4 -> 2 -> 1
+# epochs: 300
+# run:    12
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_4_2_1/epochs_300/run_12
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop imageBinarization_imageBinarization 300 aggregated_train.fann 3 4 2 1 0.5 3 aggregated_test.fann >> run_12_rprop.log
+***********************************************
+# config: 3 -> 4 -> 2 -> 1
+# epochs: 300
+# run:    13
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_4_2_1/epochs_300/run_13
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop imageBinarization_imageBinarization 300 aggregated_train.fann 3 4 2 1 0.5 3 aggregated_test.fann >> run_13_rprop.log
+***********************************************
+# config: 3 -> 4 -> 2 -> 1
+# epochs: 300
+# run:    14
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_4_2_1/epochs_300/run_14
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop imageBinarization_imageBinarization 300 aggregated_train.fann 3 4 2 1 0.5 3 aggregated_test.fann >> run_14_rprop.log
+***********************************************
+# config: 3 -> 4 -> 2 -> 1
+# epochs: 300
+# run:    15
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_4_2_1/epochs_300/run_15
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop imageBinarization_imageBinarization 300 aggregated_train.fann 3 4 2 1 0.5 3 aggregated_test.fann >> run_15_rprop.log
+***********************************************
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_4_4_1/epochs_300
+# config: 3 -> 4 -> 4 -> 1
+# epochs: 300
+# run:    1
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_4_4_1/epochs_300/run_1
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop imageBinarization_imageBinarization 300 aggregated_train.fann 3 4 4 1 0.5 3 aggregated_test.fann >> run_1_rprop.log
+***********************************************
+# config: 3 -> 4 -> 4 -> 1
+# epochs: 300
+# run:    2
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_4_4_1/epochs_300/run_2
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop imageBinarization_imageBinarization 300 aggregated_train.fann 3 4 4 1 0.5 3 aggregated_test.fann >> run_2_rprop.log
+***********************************************
+# config: 3 -> 4 -> 4 -> 1
+# epochs: 300
+# run:    3
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_4_4_1/epochs_300/run_3
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop imageBinarization_imageBinarization 300 aggregated_train.fann 3 4 4 1 0.5 3 aggregated_test.fann >> run_3_rprop.log
+***********************************************
+# config: 3 -> 4 -> 4 -> 1
+# epochs: 300
+# run:    4
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_4_4_1/epochs_300/run_4
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop imageBinarization_imageBinarization 300 aggregated_train.fann 3 4 4 1 0.5 3 aggregated_test.fann >> run_4_rprop.log
+***********************************************
+# config: 3 -> 4 -> 4 -> 1
+# epochs: 300
+# run:    5
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_4_4_1/epochs_300/run_5
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop imageBinarization_imageBinarization 300 aggregated_train.fann 3 4 4 1 0.5 3 aggregated_test.fann >> run_5_rprop.log
+***********************************************
+# config: 3 -> 4 -> 4 -> 1
+# epochs: 300
+# run:    6
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_4_4_1/epochs_300/run_6
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop imageBinarization_imageBinarization 300 aggregated_train.fann 3 4 4 1 0.5 3 aggregated_test.fann >> run_6_rprop.log
+***********************************************
+# config: 3 -> 4 -> 4 -> 1
+# epochs: 300
+# run:    7
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_4_4_1/epochs_300/run_7
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop imageBinarization_imageBinarization 300 aggregated_train.fann 3 4 4 1 0.5 3 aggregated_test.fann >> run_7_rprop.log
+***********************************************
+# config: 3 -> 4 -> 4 -> 1
+# epochs: 300
+# run:    8
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_4_4_1/epochs_300/run_8
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop imageBinarization_imageBinarization 300 aggregated_train.fann 3 4 4 1 0.5 3 aggregated_test.fann >> run_8_rprop.log
+***********************************************
+# config: 3 -> 4 -> 4 -> 1
+# epochs: 300
+# run:    9
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_4_4_1/epochs_300/run_9
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop imageBinarization_imageBinarization 300 aggregated_train.fann 3 4 4 1 0.5 3 aggregated_test.fann >> run_9_rprop.log
+***********************************************
+# config: 3 -> 4 -> 4 -> 1
+# epochs: 300
+# run:    10
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_4_4_1/epochs_300/run_10
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop imageBinarization_imageBinarization 300 aggregated_train.fann 3 4 4 1 0.5 3 aggregated_test.fann >> run_10_rprop.log
+***********************************************
+# config: 3 -> 4 -> 4 -> 1
+# epochs: 300
+# run:    11
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_4_4_1/epochs_300/run_11
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop imageBinarization_imageBinarization 300 aggregated_train.fann 3 4 4 1 0.5 3 aggregated_test.fann >> run_11_rprop.log
+***********************************************
+# config: 3 -> 4 -> 4 -> 1
+# epochs: 300
+# run:    12
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_4_4_1/epochs_300/run_12
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop imageBinarization_imageBinarization 300 aggregated_train.fann 3 4 4 1 0.5 3 aggregated_test.fann >> run_12_rprop.log
+***********************************************
+# config: 3 -> 4 -> 4 -> 1
+# epochs: 300
+# run:    13
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_4_4_1/epochs_300/run_13
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop imageBinarization_imageBinarization 300 aggregated_train.fann 3 4 4 1 0.5 3 aggregated_test.fann >> run_13_rprop.log
+***********************************************
+# config: 3 -> 4 -> 4 -> 1
+# epochs: 300
+# run:    14
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_4_4_1/epochs_300/run_14
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop imageBinarization_imageBinarization 300 aggregated_train.fann 3 4 4 1 0.5 3 aggregated_test.fann >> run_14_rprop.log
+***********************************************
+# config: 3 -> 4 -> 4 -> 1
+# epochs: 300
+# run:    15
+...............................................
+/home/yazdan/phd/projects/many.npu/applications/imageBinarization/nn.configs/imageBinarization/3_4_4_1/epochs_300/run_15
+@ Start RPROP...0
+# training algorithm: RPROP
+./train_2_hidden_layers_rprop imageBinarization_imageBinarization 300 aggregated_train.fann 3 4 4 1 0.5 3 aggregated_test.fann >> run_15_rprop.log
+***********************************************
+bash ../../scripts/run_training.sh imageBinarization_imageBinarization 3 1 2 4 4 0.1 0.85 0.5 300 imageBinarization

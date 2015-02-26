@@ -142,18 +142,19 @@ __global__ void imageBinarization(
         parrotInput[1] = g / 255.0;
         parrotInput[2] = b / 255.0;
 
+        unsigned char result;
 #pragma parrot(input, "imageBinarization", [3]parrotInput)
 
         unsigned char mi = __min(r, __min(g, b));
         unsigned char ma = __max(r, __max(g, b));
 
-        unsigned char result = (((unsigned short) ma + (unsigned short) mi) > THRESHOLD * 2 ) ? 255 : 0;
+        result = (((unsigned short) ma + (unsigned short) mi) > THRESHOLD * 2 ) ? 255 : 0;
 
-        parrotOutput[0] = (result == 255) ? 0.8 : 0.2;
+        parrotOutput[0] = (result == 255) ? 0.9 : 0.1;
 
 #pragma parrot(output, "imageBinarization", [1]<0.0; 1.0>parrotOutput)
 
-        if(parrotOutput[0] > 0.5)
+        if(parrotOutput[0] > 0.7)
             result = 255;
         else
             result = 0;
@@ -169,7 +170,7 @@ void cuda_imageBinarization(
     int imageH
 )
 {
-    printf("cuda image binarization\n");
+    //printf("cuda image binarization\n");
 #pragma parrot.start("imageBinarization")
 
     dim3 threads(BLOCKDIM_X, BLOCKDIM_Y);

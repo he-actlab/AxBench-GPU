@@ -1,6 +1,6 @@
 #!/bin/bash
 
-USAGE="usage: run.sh [setup] [application name] | [make|clean|run] [blackscholes|dct|fft|imageDenoising|convolution|segmentation|imageBinarization|jmeint|jpeg|kmeans|sobel|all]"
+USAGE="usage: run.sh [setup] [application name] | [make|clean|run] [binarization|blackscholes|convolution|denoising|meanFilter|segmentation|sobel|srad|all]"
 
 
 red='\033[0;31m'
@@ -200,7 +200,7 @@ if [ "$1" = "make" ]
 then
 	case $2 in
 		"blackscholes")
-			MakeSrc BlackScholes
+			MakeSrc blackscholes
 		;;
 		"dct")
 			MakeSrc dct8x8
@@ -208,16 +208,16 @@ then
 		"fft")
 			MakeSrc convolutionFFT2D
 		;;
-		"inversek2j")
-			MakeSrc $2
+		"meanFilter")
+			MakeSrc meanFilter
 		;;
 		"segmentation")
 			MakeSrc imageSegmentation
 		;;
-		"imageDenoising")
-			MakeSrc $2
+		"denoising")
+			MakeSrc imageDenoising
 		;;
-		"imageBinarization")
+		"binarization")
 			MakeSrc imageBinarization
 		;;
 		"convolution")
@@ -226,23 +226,24 @@ then
 		"jmeint")
 			MakeSrc $2
 		;;
-		"jpeg")
+		"srad")
 			MakeSrc $2
 		;;
 		"kmeans")
 			MakeSrc $2
 		;;
 		"sobel")
-			MakeSrc SobelFilter
+			MakeSrc sobel
 		;;
 		"all")
 			MakeSrc BlackScholes
-			MakeSrc fft
-			MakeSrc inversek2j
-			MakeSrc	jmeint
-			MakeSrc jpeg
-			MakeSrc kmeans
+			MakeSrc convolutionSeparable
+			MakeSrc imageBinarization
 			MakeSrc sobel
+			MakeSrc meanFilter
+			MakeSrc imageSegmentation
+			MakeSrc imageDenoising
+			MakeSrc srad
 		;;
 	*)
 		printUsage
@@ -253,7 +254,7 @@ elif [ "$1" = "clean" ]
 then
 	case $2 in
 		"blackscholes")
-			CleanSrc BlackScholes
+			CleanSrc blackscholes
 		;;
 		"dct")
 			CleanSrc dct8x8
@@ -261,41 +262,42 @@ then
 		"fft")
 			CleanSrc convolutionFFT2D
 		;;
-		"imageDenoising")
-			CleanSrc $2
+		"denoising")
+			CleanSrc imageDenoising
 		;;
 		"segmentation")
-			CleenSrc imageSegmentation
+			CleanSrc imageSegmentation
 		;;
 		"convolution")
 			CleanSrc convolutionSeparable
 		;;
-		"imageBinarization")
+		"binarization")
 			CleanSrc imageBinarization
 		;;
-		"inversek2j")
-			CleanSrc $2
+		"meanFilter")
+			CleanSrc meanFilter
 		;;
 		"jmeint")
 			CleanSrc $2
 		;;
-		"jpeg")
+		"srad")
 			CleanSrc $2
 		;;
 		"kmeans")
 			CleanSrc $2
 		;;
 		"sobel")
-			CleanSrc SobelFilter
+			CleanSrc sobel
 		;;
 		"all")
 			CleanSrc BlackScholes
-			CleanSrc fft
-			CleanSrc inversek2j
-			CleanSrc	jmeint
-			CleanSrc jpeg
-			CleanSrc kmeans
+			CleanSrc convolutionSeparable
+			CleanSrc imageBinarization
 			CleanSrc sobel
+			CleanSrc meanFilter
+			CleanSrc imageSegmentation
+			CleanSrc imageDenoising
+			CleanSrc srad
 		;;
 	*)
 		printUsage
@@ -306,7 +308,7 @@ elif [ "$1" = "run" ]
 then
 		case $2 in
 		"blackscholes")
-			RunSrc BlackScholes
+			RunSrc blackscholes
 		;;
 		"dct")
 			RunSrc dct8x8
@@ -314,8 +316,8 @@ then
 		"fft")
 			RunSrc convolutionFFT2D
 		;;
-		"imageDenoising")
-			RunSrc $2
+		"denoising")
+			RunSrc imageDenoising
 		;;
 		"convolution")
 			RunSrc convolutionSeparable
@@ -323,32 +325,33 @@ then
 		"segmentation")
 			RunSrc imageSegmentation
 		;;
-		"imageBinarization")
+		"binarization")
 			RunSrc imageBinarization
 		;;
-		"inversek2j")
-			RunSrc $2
+		"meanFilter")
+			RunSrc meanFilter
 		;;
 		"jmeint")
 			RunSrc $2
 		;;
-		"jpeg")
+		"srad")
 			RunSrc $2
 		;;
 		"kmeans")
 			RunSrc $2
 		;;
 		"sobel")
-			RunSrc SobelFilter
+			RunSrc sobel
 		;;
 		"all")
-			RunSrc BlackScholes
-			RunSrc fft
-			RunSrc inversek2j
-			RunSrc jmeint
-			RunSrc jpeg
-			RunSrc kmeans
+			RunSrc blackscholes
+			RunSrc convolutionSeparable
+			RunSrc imageBinarization
 			RunSrc sobel
+			RunSrc meanFilter
+			RunSrc imageSegmentation
+			RunSrc imageDenoising
+			RunSrc srad
 		;;
 	*)
 		printUsage

@@ -10,9 +10,9 @@ purple='\e[0;35m'       # Purple
 cyan='\e[0;36m'         # Cyan
 white='\e[0;37m'        # White
 
-application=sobel
+application=meanFilter
 
-echo -e "${green} CUDA Sobel Edge-Detection Starting... ${white}"
+echo -e "${green} CUDA Mean Filter Starting... ${white}"
 
 
 for f in test.data/input/*.pgm

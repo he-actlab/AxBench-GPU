@@ -198,7 +198,7 @@ LFLAGS		:= -lfann -lboost_regex -lParrot
 HEADERS     := src
 INCLUDE 	:= -I${ANALOG_INC} -I${FANN_INC} -I${HEADERS}
 LIB			:= -L${ANALOG_LIB} -L${FANN_LIB} -L$(PARROT_LIB)
-MODULE		:= sobel_nn.out
+MODULE		:= meanFilter_nn.out
 
 ################################################################################
 
@@ -225,15 +225,15 @@ else
 	@echo "Sample is ready - all dependencies have been met"
 endif
 
-./obj/SobelFilter.o:./src.nn/SobelFilter_nn.cpp
+./obj/meanFilter_nn.o:./src.nn/meanFilter_nn.cpp
 	#python $(PLANG) -c $(PARROT_JSON) -a observe -e "$(NVCC) $(CFLAGS) $(INCLUDE) -I$(NVIDIA_HELPER) $(INCLUDES) $(ALL_CCFLAGS) $(GENCODE_FLAGS) -I$(#PARROT_LIB) -c" -s "$<" -o "$@" -t
 	$(EXEC) $(NVCC) $(CFLAGS) $(INCLUDE) -I$(NVIDIA_HELPER) $(INCLUDES) $(ALL_CCFLAGS) $(GENCODE_FLAGS) -o $@ -c $<
 
-./obj/SobelFilter_kernels.o:./src.nn/SobelFilter_kernels_nn.cu
+./obj/meanFilter_kernels_nn.o:./src.nn/meanFilter_kernels_nn.cu
 	#python $(PLANG) -c $(PARROT_JSON) -a observe -e "$(NVCC) $(INCLUDES) -I$(NVIDIA_HELPER) $(ALL_CCFLAGS) $(GENCODE_FLAGS) $(CFLAGS) $(INCLUDE) -I$(#PARROT_LIB) -c" -s "$<" -o "$@" -t
 	$(EXEC) $(NVCC) $(CFLAGS) $(INCLUDE) -I$(NVIDIA_HELPER) $(INCLUDES) $(ALL_CCFLAGS) $(GENCODE_FLAGS) -o $@ -c $<
 
-$(MODULE): ./obj/SobelFilter.o ./obj/SobelFilter_kernels.o
+$(MODULE): ./obj/meanFilter_nn.o ./obj/meanFilter_kernels_nn.o
 	$(EXEC) $(NVCC) $(ALL_LDFLAGS) $(GENCODE_FLAGS) -o ./bin/$@ $+ $(LIBRARIES)
 
 
@@ -243,6 +243,6 @@ run: build
 clean:
 	rm -rf ./bin
 	rm -rf ./obj
-	rm -f $(MODULE) SobelFilter.o SobelFilter_kernels.o
+	rm -f $(MODULE) meanFilter_nn.o meanFilter_kernels_nn.o
 
 clobber: clean

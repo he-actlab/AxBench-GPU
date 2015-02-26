@@ -25,7 +25,7 @@ do
 	echo -e "-------------------------------------------------------"
 	echo -e "${Green} Input Image:  $f${White}"
 	echo -e "-------------------------------------------------------"
-	./bin/convolutionSeparable.out $f
+	./bin/convolutionSeparable.out $f > /dev/null
 	for kData in ./kernel_*.data
 	do
 		filename_kernel=$(basename "$kData")

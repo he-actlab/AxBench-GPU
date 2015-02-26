@@ -37,7 +37,7 @@ src.nn/convolutionSeparable_nn.cu(84): warning: this pragma must immediately pre
 
 src.nn/convolutionSeparable_nn.cu(95): warning: this pragma must immediately precede a statement
 
-ptxas /tmp/tmpxft_0000073b_00000000-20_convolutionSeparable_nn.compute_11.ptx, line 168; warning : Double is not supported. Demoting to float
+ptxas /tmp/tmpxft_0000129e_00000000-20_convolutionSeparable_nn.compute_11.ptx, line 167; warning : Double is not supported. Demoting to float
 src.nn/convolutionSeparable_nn.cu(84): warning: this pragma must immediately precede a statement
 
 src.nn/convolutionSeparable_nn.cu(95): warning: this pragma must immediately precede a statement
