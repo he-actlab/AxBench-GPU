@@ -1,26 +1,6 @@
-/*
- * Copyright 1993-2014 NVIDIA Corporation.  All rights reserved.
- *
- * Please refer to the NVIDIA end user license agreement (EULA) associated
- * with this source code for terms and conditions that govern your use of
- * this software. Any use, reproduction, disclosure, or distribution of
- * this software and related documentation outside the terms of the EULA
- * is strictly prohibited.
- *
- */
-
-/*
- * This sample evaluates fair call and put prices for a
- * given set of European options by Black-Scholes formula.
- * See supplied whitepaper for more explanations.
- */
-
-
-//#include <helper_functions.h>   // helper functions for string parsing
-//#include <helper_cuda.h>        // helper functions CUDA error checking and initialization
- // Amir
+// Amir
 #include <fstream>
- using namespace std;
+using namespace std;
 // Rima
 ////////////////////////////////////////////////////////////////////////////////
 // Process an array of optN options on CPU
@@ -35,22 +15,6 @@ extern "C" void BlackScholesCPU(
     float Volatility,
     int optN
 );
-
-////////////////////////////////////////////////////////////////////////////////
-// Process an array of OptN options on GPU
-////////////////////////////////////////////////////////////////////////////////
-/*
- * Copyright 1993-2014 NVIDIA Corporation.  All rights reserved.
- *
- * Please refer to the NVIDIA end user license agreement (EULA) associated
- * with this source code for terms and conditions that govern your use of
- * this software. Any use, reproduction, disclosure, or distribution of
- * this software and related documentation outside the terms of the EULA
- * is strictly prohibited.
- *
- */
-
-
 
 ///////////////////////////////////////////////////////////////////////////////
 // Polynomial approximation of cumulative normal distribution function
@@ -136,16 +100,8 @@ __global__ void BlackScholesGPU(
     int optN
 )
 {
-    ////Thread index
-    //const int      tid = blockDim.x * blockIdx.x + threadIdx.x;
-    ////Total number of threads in execution grid
-    //const int THREAD_N = blockDim.x * gridDim.x;
 
     const int opt = blockDim.x * blockIdx.x + threadIdx.x;
-
-    //No matter how small is execution grid or how large OptN is,
-    //exactly OptN indices will be processed with perfect memory coalescing
-    //for (int opt = tid; opt < optN; opt += THREAD_N)
     if (opt < optN)
         BlackScholesBodyGPU(
             d_CallResult[opt],
@@ -188,9 +144,6 @@ int main(int argc, char **argv)
 {
 
 #pragma parrot.start("BlackScholesBodyGPU")
-    // Start logs
-    //printf("[%s] - Starting...\n", argv[0]);
-
     //'h_' prefix - CPU (host) memory space
     float
     //Results calculated by CPU for reference
@@ -214,19 +167,8 @@ int main(int argc, char **argv)
     *d_OptionStrike,
     *d_OptionYears;
 
-    //double
-    //delta, ref, sum_delta, sum_ref, max_delta, L1norm, gpuTime;
-    //double gpuTime;
-
-    //StopWatchInterface *hTimer = NULL;
     int i;
 
-    //findCudaDevice(argc, (const char **)argv);
-
-    //sdkCreateTimer(&hTimer);
-
-    //printf("Initializing data...\n");
-    //printf("...allocating CPU memory for options.\n");
     h_CallResultCPU = (float *)malloc(OPT_SZ);
     h_PutResultCPU  = (float *)malloc(OPT_SZ);
     h_CallResultGPU = (float *)malloc(OPT_SZ);
@@ -235,21 +177,18 @@ int main(int argc, char **argv)
     h_OptionStrike  = (float *)malloc(OPT_SZ);
     h_OptionYears   = (float *)malloc(OPT_SZ);
 
-    //printf("...allocating GPU memory for options.\n");
     cudaMalloc((void **)&d_CallResult,   OPT_SZ);
     cudaMalloc((void **)&d_PutResult,    OPT_SZ);
     cudaMalloc((void **)&d_StockPrice,   OPT_SZ);
     cudaMalloc((void **)&d_OptionStrike, OPT_SZ);
     cudaMalloc((void **)&d_OptionYears,  OPT_SZ);
 
-    //printf("...generating input data in CPU mem.\n");
     srand(5347);
 
     // Amir
     std::ifstream dataFile(argv[1]);
     int numberOptions;
     dataFile >> numberOptions;
-    //std::cout << "Total number of options:  " << numberOptions << std::endl;
     float stockPrice, optionStrike, optionYear;
     // Rima
 
@@ -258,9 +197,6 @@ int main(int argc, char **argv)
     {
         h_CallResultCPU[i] = 0.0f;
         h_PutResultCPU[i]  = -1.0f;
-        //h_StockPrice[i]    = RandFloat(5.0f, 30.0f);
-        //h_OptionStrike[i]  = RandFloat(1.0f, 100.0f);
-        //h_OptionYears[i]   = RandFloat(0.25f, 10.0f);
 
         // Amir
         dataFile >> stockPrice >> optionStrike >> optionYear;
@@ -272,15 +208,10 @@ int main(int argc, char **argv)
 
     int optionSize = numberOptions * sizeof(float);
 
-    //printf("...copying input data to GPU mem.\n");
     //Copy options data to GPU memory for further processing
     cudaMemcpy(d_StockPrice,  h_StockPrice,   optionSize, cudaMemcpyHostToDevice);
     cudaMemcpy(d_OptionStrike, h_OptionStrike,  optionSize, cudaMemcpyHostToDevice);
     cudaMemcpy(d_OptionYears,  h_OptionYears,   optionSize, cudaMemcpyHostToDevice);
-    //printf("Data init done.\n\n");
-
-
-
 
     cudaDeviceSynchronize();
 
@@ -306,8 +237,6 @@ int main(int argc, char **argv)
     cudaMemcpy(h_CallResultGPU, d_CallResult, optionSize, cudaMemcpyDeviceToHost);
     cudaMemcpy(h_PutResultGPU,  d_PutResult,  optionSize, cudaMemcpyDeviceToHost);
 
-
-
     // Amir
     ofstream callResultFile;
     callResultFile.open(argv[2]);
@@ -321,15 +250,11 @@ int main(int argc, char **argv)
 
 #pragma parrot.end("BlackScholesBodyGPU")
 
-    // printf("Shutting down...\n");
-    // printf("...releasing GPU memory.\n");
     cudaFree(d_OptionYears);
     cudaFree(d_OptionStrike);
     cudaFree(d_StockPrice);
     cudaFree(d_PutResult);
     cudaFree(d_CallResult);
-
-    //printf("...releasing CPU memory.\n");
     free(h_OptionYears);
     free(h_OptionStrike);
     free(h_StockPrice);
