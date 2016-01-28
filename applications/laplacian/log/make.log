@@ -1,0 +1,17 @@
+
+
+if [ ! -d "./bin" ];then 	\
+		mkdir bin;				\
+	fi
+if [ ! -d "./obj" ];then 	\
+		mkdir obj;				\
+	fi
+nvcc	./src/CudaFilter.cu \
+				-g -Isrc -I/home/yazdan/NVIDIA_GPU_Computing_SDK/C/common/inc/ -O3 -I/home/yazdan/NVIDIA_CUDA-7.5_Samples/common/inc -Dorig_code    -c -arch sm_20 -o ./obj/laplacianFilter.o
+/usr/local/cuda/bin/nvcc	./obj/laplacianFilter.o \
+					-I/usr/local/cuda/include \
+					-L/usr/local/cuda/lib  \
+					-O3 -Dorig_code -lm -lcuda -lcudart -o ./bin/laplacian_orig_code.out
+/usr/bin/ld: skipping incompatible /usr/local/cuda/lib/libcudart.so when searching for -lcudart
+/usr/bin/ld: skipping incompatible /usr/local/cuda/lib/libcudadevrt.a when searching for -lcudadevrt
+/usr/bin/ld: skipping incompatible /usr/local/cuda/lib/libcudart_static.a when searching for -lcudart_static
