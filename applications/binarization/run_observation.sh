@@ -11,7 +11,7 @@ Cyan='\e[0;36m'         # Cyan
 White='\e[0;37m'        # White
 
 
-echo -e "${Green} CUDA Image Binarization Starting... ${White}"
+echo -e "${Green} CUDA Binarization Starting... ${White}"
 
 if [ ! -d ./train.data/output/kernel.data ]; then
 	mkdir ./train.data/output/kernel.data
@@ -26,7 +26,7 @@ do
 	echo -e "${Green} Input Image:  $f"
 	echo -e "${Green} output Image: ./train.data/output/${filename}_bin.pgm ${White}"
 	echo -e "-------------------------------------------------------"
-	./bin/imageBinarization.out $f ./train.data/output/${filename}_bin.pgm
+	./bin/binarization.out $f ./train.data/output/${filename}_bin.pgm
 	
 	for kData in ./kernel_*.data
 	do

@@ -11,9 +11,9 @@ Cyan='\e[0;36m'         # Cyan
 White='\e[0;37m'        # White
 
 
-application=imageBinarization
+application=binarization
 
-echo -e "${Green} CUDA Image Binarization Starting... ${White}"
+echo -e "${Green} CUDA Binarization Starting... ${White}"
 
 for f in test.data/input/*.bmp
 do
@@ -27,7 +27,7 @@ do
 	./bin/${application}_nn.out 	$f ./test.data/output/${filename}_bin_nn.pgm
 	./bin/${application}.out 		$f ./test.data/output/${filename}_bin.pgm
 	compare -metric RMSE ./test.data/output/${filename}_bin_nn.pgm ./test.data/output/${filename}_bin.pgm null > tmp.log 2> tmp.err
-	echo -ne "${red}$f\t"
-	awk '{ printf("*** Error: %0.2f%\n",substr($2, 2, length($2) - 2) * 100) }' tmp.err
-	echo -ne "${white}"
+	echo -ne "${Red}$f\t"
+	awk '{ printf("*** Error: %0.2f%%\n",substr($2, 2, length($2) - 2) * 100) }' tmp.err
+	echo -ne "${White}"
 done

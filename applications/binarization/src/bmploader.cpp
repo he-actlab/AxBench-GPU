@@ -122,7 +122,7 @@ extern "C" void LoadBMPFile(uchar4 **dst, int *width, int *height, const char *n
             (*dst)[(y * infoHdr.width + x)].y = g;
             (*dst)[(y * infoHdr.width + x)].x = r;
 
-            // printf(" %d %d %d\n", (*dst)[(y * infoHdr.width + x)].z, (*dst)[(y * infoHdr.width + x)].y, (*dst)[(y * infoHdr.width + x)].x);
+            //printf(" %d %d %d\n", (*dst)[(y * infoHdr.width + x)].z, (*dst)[(y * infoHdr.width + x)].y, (*dst)[(y * infoHdr.width + x)].x);
         }
 
         for (x = 0; x < (4 - (3 * infoHdr.width) % 4) % 4; x++)

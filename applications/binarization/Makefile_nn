@@ -34,7 +34,7 @@
 ################################################################################
 
 # Location of the CUDA Toolkit
-CUDA_PATH ?= "/usr/local/cuda-6.5"
+CUDA_PATH ?= "/usr/local/cuda"
 
 OSUPPER = $(shell uname -s 2>/dev/null | tr "[:lower:]" "[:upper:]")
 OSLOWER = $(shell uname -s 2>/dev/null | tr "[:upper:]" "[:lower:]")
@@ -163,14 +163,14 @@ ifneq ($(DARWIN),)
  ALL_LDFLAGS += -Xlinker -framework -Xlinker GLUT
 else
  LIBRARIES += -L../../common/lib/$(OSLOWER)/$(OS_ARCH) $(GLLINK)
- LIBRARIES += -lGL -lGLU -lX11 -lXi -lXmu -lglut -lGLEW
+ LIBRARIES += -lGL -lGLU -lX11 -lXi -lXmu
 endif
 
 # Gencode arguments
 ifeq ($(OS_ARCH),armv7l)
 SMS ?= 20 30 32 35 37 50
 else
-SMS ?= 11 20 30 35 37 50
+SMS ?= 20 30 35 37 50
 endif
 
 ifeq ($(SMS),)
@@ -198,7 +198,7 @@ LFLAGS		:= -lfann -lboost_regex -lParrot
 HEADERS     := src
 INCLUDE 	:= -I${ANALOG_INC} -I${FANN_INC} -I${HEADERS}
 LIB			:= -L${ANALOG_LIB} -L${FANN_LIB} -L$(PARROT_LIB)
-MODULE		:= imageBinarization_nn.out
+MODULE		:= binarization_nn.out
 
 ################################################################################
 
@@ -228,22 +228,22 @@ endif
 	#python $(PLANG) -c $(PARROT_JSON) -a observe -e "$(NVCC) $(CFLAGS) $(INCLUDE) -I$(NVIDIA_HELPER) $(INCLUDES) $(ALL_CCFLAGS) $(GENCODE_FLAGS) -I$(PARROT_LIB) -c" -s "$<" -o "$@" -t
 	$(EXEC) $(NVCC) $(CFLAGS) $(INCLUDE) -I$(NVIDIA_HELPER) $(INCLUDES) $(ALL_CCFLAGS) $(GENCODE_FLAGS) -I$(PARROT_LIB) -o $@ -c $<
 
-./obj/imageBinarization_cu_nn.o:./src.nn/imageBinarization_nn.cu
+./obj/binarization_cu_nn.o:./src.nn/binarization_nn.cu
 	#python $(PLANG) -c $(PARROT_JSON) -a observe -e "$(NVCC) $(CFLAGS) $(INCLUDE) -I$(NVIDIA_HELPER) $(INCLUDES) $(ALL_CCFLAGS) $(GENCODE_FLAGS) -I$(PARROT_LIB) -c" -s "$<" -o "$@" -t
 	$(EXEC) $(NVCC) $(CFLAGS) $(INCLUDE) -I$(NVIDIA_HELPER) $(INCLUDES) $(ALL_CCFLAGS) $(GENCODE_FLAGS) -I$(PARROT_LIB) -o $@ -c $<
 
-./obj/imageBinarization_nn.o:./src.nn/imageBinarization_nn.cpp
+./obj/binarization_nn.o:./src.nn/binarization_nn.cpp
 	#python $(PLANG) -c $(PARROT_JSON) -a observe -e "$(NVCC) $(CFLAGS) $(INCLUDE) -I$(NVIDIA_HELPER) $(INCLUDES) $(ALL_CCFLAGS) $(GENCODE_FLAGS) -I$(PARROT_LIB) -c" -s "$<" -o "$@" -t
 	$(EXEC) $(NVCC) $(CFLAGS) $(INCLUDE) -I$(NVIDIA_HELPER) $(INCLUDES) $(ALL_CCFLAGS) $(GENCODE_FLAGS) -I$(PARROT_LIB) -o $@ -c $<
 
-$(MODULE): ./obj/bmploader_nn.o ./obj/imageBinarization_cu_nn.o ./obj/imageBinarization_nn.o
+$(MODULE): ./obj/bmploader_nn.o ./obj/binarization_cu_nn.o ./obj/binarization_nn.o
 	$(EXEC) $(NVCC) $(ALL_LDFLAGS) $(GENCODE_FLAGS) -o ./bin/$@ $+ $(LIBRARIES)
 
 run: build
-	$(EXEC) ./imageBinarization
+	$(EXEC) ./binarization
 
 clean:
-	rm -f ./obj/imageBinarization_nn.out ./obj/bmploader_nn.o ./obj/imageBinarization_cu_nn.o ./obj/imageBinarization_nn.o
+	rm -f ./obj/binarization_nn.out ./obj/bmploader_nn.o ./obj/binarization_cu_nn.o ./obj/binarization_nn.o
 	rm -f ./bin/$(MODULE)
 
 clobber: clean
