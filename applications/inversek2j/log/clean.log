@@ -1,0 +1,2 @@
+rm -f ./bin/invkin.out 
+rm -f ./obj/invkin.o

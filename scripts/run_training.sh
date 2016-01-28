@@ -71,7 +71,13 @@ do
 	cd ${input_neurons}_${i}_${output_neurons}
 	mkdir log
 	# creating all the symbolic link to the training algorithms
-	ln -s ../../../../../scripts/fann_prepare.py .
+	if [ -f ../../../script/fann_prepare.py ]; then # pick the local splitting algorithm
+		echo "local training"
+		ln -s ../../../script/fann_prepare.py .
+	else
+		echo "global training"
+		ln -s ../../../../../scripts/fann_prepare.py . # pick the general splitting algorithm
+	fi
 	ln -s ../../../train.data/output/fann.data/${kName}_aggregated.fann .
 	mkdir epochs_${epochs}
 	for ((j=1; j<=${MAX_RUNS}; j++));
@@ -105,7 +111,12 @@ then
 			cd ${input_neurons}_${i}_${k}_${output_neurons}
 			mkdir log
 			# creating all the symbolic link to the training algorithms
-			ln -s ../../../../../scripts/fann_prepare.py .
+			if [ -f ../../../script/fann_prepare.py ]; then # pick the local splitting algorithm
+				ln -s ../../../script/fann_prepare.py .
+			else
+				ln -s ../../../../../scripts/fann_prepare.py . # pick the general splitting algorithm
+			fi
+
 			ln -s ../../../train.data/output/fann.data/${kName}_aggregated.fann .
 		
 			mkdir epochs_${epochs}

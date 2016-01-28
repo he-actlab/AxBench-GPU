@@ -54,21 +54,8 @@ ComputeSobel(unsigned char ul, // upper left
              float fScale)
 {
     
-    float parrotInput[9];
-    float parrotOutput[1];
-
-    parrotInput[0] = (float) ul / 256.0;
-    parrotInput[1] = (float) um / 256.0;
-    parrotInput[2] = (float) ur / 256.0;
-    parrotInput[3] = (float) ml / 256.0;
-    parrotInput[4] = (float) mm / 256.0;
-    parrotInput[5] = (float) mr / 256.0;
-    parrotInput[6] = (float) ll / 256.0;
-    parrotInput[7] = (float) lm / 256.0;
-    parrotInput[8] = (float) lr / 256.0;  
     short Sum = 0;
 
-#pragma parrot(input, "computeSobel", [9]parrotInput)
 
     short Horz = ur + 2*mr + lr - ul - 2*ml - ll;
     short Vert = ul + 2*um + ur - ll - 2*lm - lr;
@@ -82,12 +69,6 @@ ComputeSobel(unsigned char ul, // upper left
     {
         Sum = 0xff;
     }
-
-    parrotOutput[0] = Sum / 256.0;
-
-#pragma parrot(output, "computeSobel", [1]<0.0; 1.0>parrotOutput)
-
-    Sum = parrotOutput[0] * 256.0;
 
     return (unsigned char) Sum;
 }

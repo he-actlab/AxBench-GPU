@@ -49,6 +49,10 @@ def main():
 	max_layer     			= int(data["max_layer_num"])
 	max_neurons   			= int(data["max_neuron_num_per_layer"])
 
+	print >> sys.stderr, bcolors.OKBLUE + "# Learning Rate:		%f " % (learning_rate)
+	print >> sys.stderr, bcolors.OKBLUE + "# Epochs:			%f " % (epochs)
+	print >> sys.stderr, bcolors.OKBLUE + "# Sampling Rate:		%f " % (sampling_rate) + bcolors.ENDC
+
 	# extract the size of training
 	trainPercent = sampling_rate * test_data_fraction
 	lines     = open(train_file, "r+").readlines()

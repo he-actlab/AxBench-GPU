@@ -1,6 +1,6 @@
 #!/bin/bash
 
-USAGE="usage: run.sh [setup] [application name] | [make|clean|run] [binarization|blackscholes|convolution|denoising|meanFilter|segmentation|sobel|srad|all]"
+USAGE="usage: run.sh [setup] [application name] | [make|clean|run] [binarization|blackscholes|convolution|inversek2j|jmeint|laplacian|meanFilter|newton-raph|sobel|srad]"
 
 
 red='\033[0;31m'
@@ -11,6 +11,7 @@ underline=`tput smul`
 normal=`tput sgr0`
 
 kernelArray=()
+isKernel=()
 
 
 function printUsage()
@@ -117,13 +118,20 @@ function RunSrc()
 			continue
 		fi
 
-		echo -e "${green}#3: Provide the compile parameters...${nc}"
+		isKernel+=(${k})
+
+		echo -e "${green}#3: Read compile parameter from json file...${nc}"
 		python ../../scripts/comm_to_json.py ${1}_${k}
 		echo -e "${green}#4: Explore different NN topologies for each kernel...${nc}"
 		python ../../scripts/train.py ${1}_${k} ${k} > ./log/${1}_training.log
 		echo -e "${green}#5: Find the best NN topology...${nc}"
 		python ../../scripts/find_best_NN.py $1 ${k}
 	done
+
+	if [[ ${#isKernel[@]} == 0 ]]; then
+		echo -e "${green} Thank you...${nc}"
+		exit
+	fi
 	# convert the best NN to cuda kernel
 	for nn in ./fann.config/*.nn; do
 		python ../../scripts/fann2kernel.py ${nn}
@@ -199,51 +207,35 @@ fi
 if [ "$1" = "make" ]
 then
 	case $2 in
-		"blackscholes")
-			MakeSrc blackscholes
-		;;
-		"dct")
-			MakeSrc dct8x8
-		;;
-		"fft")
-			MakeSrc convolutionFFT2D
-		;;
-		"meanFilter")
-			MakeSrc meanFilter
-		;;
-		"segmentation")
-			MakeSrc imageSegmentation
-		;;
-		"denoising")
-			MakeSrc imageDenoising
-		;;
 		"binarization")
-			MakeSrc imageBinarization
+			MakeSrc $2
+		;;
+		"blackscholes")
+			MakeSrc $2
 		;;
 		"convolution")
-			MakeSrc convolutionSeparable
+			MakeSrc $2
+		;;
+		"inversek2j")
+			MakeSrc $2
 		;;
 		"jmeint")
 			MakeSrc $2
 		;;
-		"srad")
+		"laplacian")
 			MakeSrc $2
 		;;
-		"kmeans")
+		"meanfilter")
 			MakeSrc $2
+		;;
+		"newton-raph")
+			MakeSrc newton-raph
 		;;
 		"sobel")
 			MakeSrc sobel
 		;;
-		"all")
-			MakeSrc BlackScholes
-			MakeSrc convolutionSeparable
-			MakeSrc imageBinarization
-			MakeSrc sobel
-			MakeSrc meanFilter
-			MakeSrc imageSegmentation
-			MakeSrc imageDenoising
-			MakeSrc srad
+		"srad")
+			MakeSrc $2
 		;;
 	*)
 		printUsage
@@ -253,51 +245,35 @@ then
 elif [ "$1" = "clean" ]
 then
 	case $2 in
+		"binarization")
+			CleanSrc $2
+		;;
 		"blackscholes")
-			CleanSrc blackscholes
-		;;
-		"dct")
-			CleanSrc dct8x8
-		;;
-		"fft")
-			CleanSrc convolutionFFT2D
-		;;
-		"denoising")
-			CleanSrc imageDenoising
-		;;
-		"segmentation")
-			CleanSrc imageSegmentation
+			CleanSrc $2
 		;;
 		"convolution")
-			CleanSrc convolutionSeparable
+			CleanSrc $2
 		;;
-		"binarization")
-			CleanSrc imageBinarization
-		;;
-		"meanFilter")
-			CleanSrc meanFilter
+		"inversek2j")
+			CleanSrc $2
 		;;
 		"jmeint")
 			CleanSrc $2
 		;;
-		"srad")
+		"laplacian")
 			CleanSrc $2
 		;;
-		"kmeans")
+		"meanfilter")
 			CleanSrc $2
+		;;
+		"newton-raph")
+			CleanSrc newton-raph
 		;;
 		"sobel")
 			CleanSrc sobel
 		;;
-		"all")
-			CleanSrc BlackScholes
-			CleanSrc convolutionSeparable
-			CleanSrc imageBinarization
-			CleanSrc sobel
-			CleanSrc meanFilter
-			CleanSrc imageSegmentation
-			CleanSrc imageDenoising
-			CleanSrc srad
+		"srad")
+			CleanSrc $2
 		;;
 	*)
 		printUsage
@@ -307,51 +283,35 @@ then
 elif [ "$1" = "run" ]
 then
 		case $2 in
+		"binarization")
+			RunSrc $2
+		;;
 		"blackscholes")
-			RunSrc blackscholes
-		;;
-		"dct")
-			RunSrc dct8x8
-		;;
-		"fft")
-			RunSrc convolutionFFT2D
-		;;
-		"denoising")
-			RunSrc imageDenoising
+			RunSrc $2
 		;;
 		"convolution")
-			RunSrc convolutionSeparable
+			RunSrc $2
 		;;
-		"segmentation")
-			RunSrc imageSegmentation
-		;;
-		"binarization")
-			RunSrc imageBinarization
-		;;
-		"meanFilter")
-			RunSrc meanFilter
+		"inversek2j")
+			RunSrc $2
 		;;
 		"jmeint")
 			RunSrc $2
 		;;
-		"srad")
+		"laplacian")
 			RunSrc $2
 		;;
-		"kmeans")
+		"meanfilter")
 			RunSrc $2
+		;;
+		"newton-raph")
+			RunSrc newton-raph
 		;;
 		"sobel")
 			RunSrc sobel
 		;;
-		"all")
-			RunSrc blackscholes
-			RunSrc convolutionSeparable
-			RunSrc imageBinarization
-			RunSrc sobel
-			RunSrc meanFilter
-			RunSrc imageSegmentation
-			RunSrc imageDenoising
-			RunSrc srad
+		"srad")
+			RunSrc $2
 		;;
 	*)
 		printUsage

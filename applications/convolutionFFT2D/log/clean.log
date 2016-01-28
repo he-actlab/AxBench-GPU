@@ -1,2 +1,0 @@
-rm -rf ./obj/convolutionFFT2D.o ./obj/convolutionFFT2D_gold.o ./obj/main.o
-rm -f ./bin/convolutionFFT2D.out 

@@ -1,0 +1,2 @@
+rm -f ./bin/nrpoly3.out 
+rm -f ./obj/nrpoly3.o

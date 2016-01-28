@@ -1,2 +1,0 @@
-rm -f ./obj/imageDenoising ./obj/bmploader.o ./obj/imageDenoising.o ./obj/imageDenoisingGL.o
-rm -f ./bin/imageDenoising.out

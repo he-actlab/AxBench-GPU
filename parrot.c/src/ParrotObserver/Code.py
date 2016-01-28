@@ -277,15 +277,21 @@ class Code(object):
             isLoop = True
             nInputs = 1
             nOutputs = 1
+            varList1 = region[0][2]
+            varList2 = region[1][2]
+
+            nInputs  = varList1[0][1]
+            nOutputs = varList2[0][1] 
+
             for i in range(2):
                 loc = region[i][0]
                 tag = region[i][1]
                 varList = region[i][2]
 
-                if(i == 0):
-                    nInputs = varList[0][1]
-                else:
-                    nOutputs = varList[0][1]
+                # if(i == 0):
+                #     nInputs = varList[0][1]
+                # else:
+                #     nOutputs = varList[0][1]
 
                 probeStr = ''
                 for var in varList:

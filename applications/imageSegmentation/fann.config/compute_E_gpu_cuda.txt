@@ -1,7 +1,0 @@
-float layer_1_0 = parrotInput[0] * -1.522834 + parrotInput[1] * -0.662261 + parrotInput[2] * -1500.000000 + parrotInput[3] * 1500.000000 + parrotInput[4] * 1500.000000 + parrotInput[5] * 209.477997 + 1.0f * -0.517169;
-float layer_1_1 = parrotInput[0] * -0.387868 + parrotInput[1] * -0.369250 + parrotInput[2] * 0.427768 + parrotInput[3] * 0.192909 + parrotInput[4] * -0.445800 + parrotInput[5] * 0.655006 + 1.0f * -1.834540;
-float layer_1_2 = parrotInput[0] * 136.454300 + parrotInput[1] * -2.051326 + parrotInput[2] * 1500.000000 + parrotInput[3] * -135.596634 + parrotInput[4] * -1442.484253 + parrotInput[5] * -122.538925 + 1.0f * -1.537653;
-float layer_1_3 = parrotInput[0] * -0.296651 + parrotInput[1] * 0.333198 + parrotInput[2] * -0.753976 + parrotInput[3] * -0.367202 + parrotInput[4] * -0.499004 + parrotInput[5] * 1.655033 + 1.0f * -2.038385;
-float layer_2_0 = sigmoid(layer_1_0, 0.500000) * 0.001715 + sigmoid(layer_1_1, 0.500000) * 0.146615 + sigmoid(layer_1_2, 0.500000) * -0.007966 + sigmoid(layer_1_3, 0.500000) * -0.142282 + 1.0f * 0.011396;
-layer_2_0 = linear(layer_2_0, 0.5);
-parrotOutput[0] = layer_2_0;
