@@ -6,5 +6,61 @@ if [ ! -d "./bin" ];then 	\
 if [ ! -d "./obj" ];then 	\
 		mkdir obj;				\
 	fi
-"/usr/local/cuda-6.5"/bin/nvcc -ccbin g++   -m64       -gencode arch=compute_11,code=sm_11 -gencode arch=compute_20,code=sm_20 -gencode arch=compute_30,code=sm_30 -gencode arch=compute_35,code=sm_35 -gencode arch=compute_37,code=sm_37 -gencode arch=compute_50,code=sm_50 -gencode arch=compute_50,code=compute_50 -o ./bin/blackscholes_nn.out obj/BlackScholes.o obj/BlackScholes_gold.o  -L../../common/lib/linux/x86_64 -L/usr/lib/"nvidia-340" -lGL -lGLU -lX11 -lXi -lXmu -lglut -lGLEW
+#python /home/yazdan/phd/projects/many.npu/parrot.c/src/ParrotObserver/plang.py -c /home/yazdan/phd/projects/many.npu/parrot.c/src/ParrotObserver/ParrotC.json -a observe -e ""/usr/local/cuda"/bin/nvcc -ccbin g++ -lfann -I -I/usr/local/include -Isrc -I/home/yazdan/NVIDIA_CUDA-6.5_Samples/common/inc -I../../common/inc  -m64     -gencode arch=compute_11,code=sm_11 -gencode arch=compute_20,code=sm_20 -gencode arch=compute_20,code=compute_20 -I/home/yazdan/phd/projects/many.npu/parrot.c/src/ParrotLib -c" -s "src.nn/BlackScholes_nn.cu" -#o "obj/BlackScholes_nn.o" -t
+"/usr/local/cuda"/bin/nvcc -ccbin g++ -I../../common/inc -O3  -m64     -gencode arch=compute_11,code=sm_11 -gencode arch=compute_20,code=sm_20 -gencode arch=compute_20,code=compute_20 -o obj/BlackScholes_nn.o -c src.nn/BlackScholes_nn.cu
+nvcc warning : The 'compute_11', 'compute_12', 'compute_13', 'sm_11', 'sm_12', and 'sm_13' architectures are deprecated, and may be removed in a future release.
+src.nn/BlackScholes_nn.cu(161): warning: variable "CNDD2" is used before its value is set
+
+src.nn/BlackScholes_nn.cu(161): warning: variable "CNDD1" is used before its value is set
+
+src.nn/BlackScholes_nn.cu(161): warning: variable "expRT" is used before its value is set
+
+src.nn/BlackScholes_nn.cu(96): warning: variable "sqrtT" was declared but never referenced
+
+src.nn/BlackScholes_nn.cu(97): warning: variable "d1" was declared but never referenced
+
+src.nn/BlackScholes_nn.cu(97): warning: variable "d2" was declared but never referenced
+
+src.nn/BlackScholes_nn.cu(161): warning: variable "CNDD2" is used before its value is set
+
+src.nn/BlackScholes_nn.cu(161): warning: variable "CNDD1" is used before its value is set
+
+src.nn/BlackScholes_nn.cu(161): warning: variable "expRT" is used before its value is set
+
+src.nn/BlackScholes_nn.cu(96): warning: variable "sqrtT" was declared but never referenced
+
+src.nn/BlackScholes_nn.cu(97): warning: variable "d1" was declared but never referenced
+
+src.nn/BlackScholes_nn.cu(97): warning: variable "d2" was declared but never referenced
+
+src.nn/BlackScholes_nn.cu(161): warning: variable "CNDD2" is used before its value is set
+
+src.nn/BlackScholes_nn.cu(161): warning: variable "CNDD1" is used before its value is set
+
+src.nn/BlackScholes_nn.cu(161): warning: variable "expRT" is used before its value is set
+
+src.nn/BlackScholes_nn.cu(96): warning: variable "sqrtT" was declared but never referenced
+
+src.nn/BlackScholes_nn.cu(97): warning: variable "d1" was declared but never referenced
+
+src.nn/BlackScholes_nn.cu(97): warning: variable "d2" was declared but never referenced
+
+ptxas /tmp/tmpxft_000072ae_00000000-8_BlackScholes_nn.compute_11.ptx, line 94; warning : Double is not supported. Demoting to float
+src.nn/BlackScholSignal: Terminated in Reading WHIRL file phase.
+ before its value is set
+
+src.nn/BlackScholes_nn.cu(161): warning: variable "CNDD1" is used before its value is set
+
+src.nn/BlackScholes_nn.cu(161): warning: variable "expRT" is used before its value is set
+
+src.nn/BlackScholes_nn.cu(96): warning: variable "sqrtT" was declared but never referenced
+
+src.nn/BlackScholes_nn.cu(97): warning: variable "d1" was declared but never referenced
+
+src.nn/BlackScholes_nn.cu(97): warning: variable "d2" was declared but never referenced
+
+#python /home/yazdan/phd/projects/many.npu/parrot.c/src/ParrotObserver/plang.py -c /home/yazdan/phd/projects/many.npu/parrot.c/src/ParrotObserver/ParrotC.json -a observe -e ""/usr/local/cuda"/bin/nvcc -ccbin g++ -I../../common/inc -I/home/yazdan/NVIDIA_CUDA-6.5_Samples/common/inc  -m64     -gencode arch=compute_11,code=sm_11 -gencode arch=compute_20,code=sm_20 -gencode arch=compute_20,code=compute_20 -lfann -I -I/usr/local/include -Isrc -I/home/yazdan/phd/projects/many.npu/parrot.c/src/ParrotLib -c" -s "src.nn/BlackScholes_gold_nn.cpp" -#o "obj/BlackScholes_gold_nn.o" -t
+"/usr/local/cuda"/bin/nvcc -ccbin g++ -I../../common/inc -O3  -m64     -gencode arch=compute_11,code=sm_11 -gencode arch=compute_20,code=sm_20 -gencode arch=compute_20,code=compute_20 -o obj/BlackScholes_gold_nn.o -c src.nn/BlackScholes_gold_nn.cpp
+nvcc warning : The 'compute_11', 'compute_12', 'compute_13', 'sm_11', 'sm_12', and 'sm_13' architectures are deprecated, and may be removed in a future release.
+"/usr/local/cuda"/bin/nvcc -ccbin g++   -m64       -O3 -gencode arch=compute_11,code=sm_11 -gencode arch=compute_20,code=sm_20 -gencode arch=compute_20,code=compute_20 -o ./bin/blackscholes_nn.out obj/BlackScholes_nn.o obj/BlackScholes_gold_nn.o  -L../../common/lib/linux/x86_64 -L/usr/lib/"nvidia-340" -lGL -lGLU -lX11 -lXi -lXmu -lglut -lGLEW
 nvcc warning : The 'compute_11', 'compute_12', 'compute_13', 'sm_11', 'sm_12', and 'sm_13' architectures are deprecated, and may be removed in a future release.

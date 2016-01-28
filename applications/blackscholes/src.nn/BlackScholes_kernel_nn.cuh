@@ -62,17 +62,37 @@ __device__ inline void BlackScholesBodyGPU(
     parrotInput[1] = X;
     parrotInput[2] = T;
 
-float layer_1_0 = parrotInput[0] * 1500.000000 + parrotInput[1] * -1500.000000 + parrotInput[2] * 1500.000000 + 1.0f * 1500.000000;
+float layer_1_0 = parrotInput[0] * -1.517956 + parrotInput[1] * -23.738037 + parrotInput[2] * 48.788017 + 1.0f * -1.904377;
 
-float layer_1_1 = parrotInput[0] * 1500.000000 + parrotInput[1] * -1500.000000 + parrotInput[2] * 1500.000000 + 1.0f * 1500.000000;
+float layer_1_1 = parrotInput[0] * 0.941893 + parrotInput[1] * -22.499035 + parrotInput[2] * -4.052216 + 1.0f * 0.340915;
 
-float layer_2_0 = sigmoid(layer_1_0, 0.500000) * 1500.000000 + sigmoid(layer_1_1, 0.500000) * 1500.000000 + 1.0f * 1500.000000;
+float layer_1_2 = parrotInput[0] * 1.737908 + parrotInput[1] * -15.498505 + parrotInput[2] * -1.600299 + 1.0f * 0.407830;
+
+float layer_1_3 = parrotInput[0] * -3.457692 + parrotInput[1] * 3.864713 + parrotInput[2] * -1.743620 + 1.0f * -0.312864;
+
+float layer_2_0 = sigmoid(layer_1_0, 0.500000) * -0.890064 + sigmoid(layer_1_1, 0.500000) * -2.869173 + sigmoid(layer_1_2, 0.500000) * -1.481759 + sigmoid(layer_1_3, 0.500000) * 6.760577 + 1.0f * -1.203726;
 
 layer_2_0 = sigmoid(layer_2_0, 0.5);
 
-parrotOutput[0] = layer_2_0;
+float layer_2_1 = sigmoid(layer_1_0, 0.500000) * -0.610240 + sigmoid(layer_1_1, 0.500000) * -1.277162 + sigmoid(layer_1_2, 0.500000) * -4.149025 + sigmoid(layer_1_3, 0.500000) * 12.601338 + 1.0f * -0.964733;
 
-// parrotOutput[0] = layer_2_0;
+layer_2_1 = sigmoid(layer_2_1, 0.5);
+
+float layer_2_2 = sigmoid(layer_1_0, 0.500000) * 0.032721 + sigmoid(layer_1_1, 0.500000) * -2.250315 + sigmoid(layer_1_2, 0.500000) * -1.582945 + sigmoid(layer_1_3, 0.500000) * 31.708364 + 1.0f * -1.008929;
+
+layer_2_2 = sigmoid(layer_2_2, 0.5);
+
+float layer_2_3 = sigmoid(layer_1_0, 0.500000) * 0.479379 + sigmoid(layer_1_1, 0.500000) * -2.225986 + sigmoid(layer_1_2, 0.500000) * -0.474371 + sigmoid(layer_1_3, 0.500000) * 168.709946 + 1.0f * -2.223274;
+
+layer_2_3 = sigmoid(layer_2_3, 0.5);
+
+float layer_3_0 = sigmoid(layer_2_0, 0.500000) * -2.133898 + sigmoid(layer_2_1, 0.500000) * -2.628783 + sigmoid(layer_2_2, 0.500000) * -1.735862 + sigmoid(layer_2_3, 0.500000) * -0.773615 + 1.0f * 0.340383;
+
+layer_3_0 = sigmoid(layer_3_0, 0.5);
+
+parrotOutput[0] = layer_3_0;
+
+// parrotOutput[0] = layer_3_0;
 //     sqrtT = sqrtf(T);
 //     d1 = (__logf(S / X) + (R + 0.5f * V * V) * T) / (V * sqrtT);
 //     d2 = d1 - V * sqrtT;

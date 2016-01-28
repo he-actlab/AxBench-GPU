@@ -34,7 +34,7 @@
 ################################################################################
 
 # Location of the CUDA Toolkit
-CUDA_PATH ?= "/usr/local/cuda-6.5"
+CUDA_PATH ?= "/usr/local/cuda"
 
 OSUPPER = $(shell uname -s 2>/dev/null | tr "[:lower:]" "[:upper:]")
 OSLOWER = $(shell uname -s 2>/dev/null | tr "[:upper:]" "[:lower:]")
@@ -168,9 +168,9 @@ endif
 
 # Gencode arguments
 ifeq ($(OS_ARCH),armv7l)
-SMS ?= 20 30 32 35 37 50
+SMS ?= 20 #30 32 35 37 50
 else
-SMS ?= 11 20 30 35 37 50
+SMS ?= 11 20 #30 35 37 50
 endif
 
 ifeq ($(SMS),)
@@ -193,7 +193,7 @@ ifeq ($(SAMPLE_ENABLED),0)
 EXEC ?= @echo "[@]"
 endif
 
-CFLAGS		:= -lfann -lboost_regex -std=c++11
+CFLAGS		:= -lfann
 LFLAGS		:= -lfann -lboost_regex -lParrot
 HEADERS     := src
 INCLUDE 	:= -I${ANALOG_INC} -I${FANN_INC} -I${HEADERS}
@@ -225,24 +225,23 @@ else
 	@echo "Sample is ready - all dependencies have been met"
 endif
 
-./obj/BlackScholes.o:./src/BlackScholes.cu
+./obj/BlackScholes_nn.o:./src.nn/BlackScholes_nn.cu
 	#python $(PLANG) -c $(PARROT_JSON) -a observe -e "$(NVCC) $(CFLAGS) $(INCLUDE) -I$(NVIDIA_HELPER) $(INCLUDES) $(ALL_CCFLAGS) $(GENCODE_FLAGS) -I$(PARROT_LIB) -c" -s "$<" -#o "$@" -t
-	$(EXEC) $(NVCC) $(INCLUDES) $(ALL_CCFLAGS) $(GENCODE_FLAGS) -o $@ -c $<
+	$(EXEC) $(NVCC) $(INCLUDES) -O3 $(ALL_CCFLAGS) $(GENCODE_FLAGS) -o $@ -c $<
 
-./obj/BlackScholes_gold.o:./src/BlackScholes_gold.cpp
+./obj/BlackScholes_gold_nn.o:./src.nn/BlackScholes_gold_nn.cpp
 	#python $(PLANG) -c $(PARROT_JSON) -a observe -e "$(NVCC) $(INCLUDES) -I$(NVIDIA_HELPER) $(ALL_CCFLAGS) $(GENCODE_FLAGS) $(CFLAGS) $(INCLUDE) -I$(PARROT_LIB) -c" -s "$<" -#o "$@" -t
-	$(EXEC) $(NVCC) $(INCLUDES) $(ALL_CCFLAGS) $(GENCODE_FLAGS) -o $@ -c $<
+	$(EXEC) $(NVCC) $(INCLUDES) -O3 $(ALL_CCFLAGS) $(GENCODE_FLAGS) -o $@ -c $<
 
-$(MODULE): ./obj/BlackScholes.o ./obj/BlackScholes_gold.o
-	$(EXEC) $(NVCC) $(ALL_LDFLAGS) $(GENCODE_FLAGS) -o ./bin/$@ $+ $(LIBRARIES)
+$(MODULE): ./obj/BlackScholes_nn.o ./obj/BlackScholes_gold_nn.o
+	$(EXEC) $(NVCC) $(ALL_LDFLAGS) -O3 $(GENCODE_FLAGS) -o ./bin/$@ $+ $(LIBRARIES)
 
 
 run: build
 	$(EXEC) ./$(MODULE)
 
 clean:
-	rm -rf ./bin
-	rm -rf ./obj
-	rm -f $(MODULE) BlackScholes_gold.o BlackScholes.o
+	rm -rf ./bin/$(MODULE)
+	rm -rf ./obj/BlackScholes_nn.o ./obj/BlackScholes_gold_nn.o
 
 clobber: clean

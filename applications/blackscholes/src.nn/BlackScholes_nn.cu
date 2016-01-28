@@ -18,8 +18,8 @@
  */
 
 
-#include <helper_functions.h>   // helper functions for string parsing
-#include <helper_cuda.h>        // helper functions CUDA error checking and initialization
+//#include <helper_functions.h>   // helper functions for string parsing
+//#include <helper_cuda.h>        // helper functions CUDA error checking and initialization
  // Amir
 #include <fstream>
  using namespace std;
@@ -103,11 +103,39 @@ __device__ inline void BlackScholesBodyGPU(
     parrotInput[1] = X;
     parrotInput[2] = T;
 
-float layer_1_0 = parrotInput[0] * 1500.000000 + parrotInput[1] * -1500.000000 + parrotInput[2] * 1500.000000 + 1.0f * 1500.000000;
+float layer_1_0 = parrotInput[0] * -0.332116 + parrotInput[1] * 0.250840 + parrotInput[2] * -0.614888 + 1.0f * 0.694309;
 
-float layer_1_1 = parrotInput[0] * 1500.000000 + parrotInput[1] * -1500.000000 + parrotInput[2] * 1500.000000 + 1.0f * 1500.000000;
+float layer_1_1 = parrotInput[0] * -0.306451 + parrotInput[1] * 0.223694 + parrotInput[2] * -0.540508 + 1.0f * 0.649405;
 
-float layer_2_0 = sigmoid(layer_1_0, 0.500000) * 1500.000000 + sigmoid(layer_1_1, 0.500000) * 1500.000000 + 1.0f * 1500.000000;
+float layer_1_2 = parrotInput[0] * -0.169577 + parrotInput[1] * 0.004298 + parrotInput[2] * -0.169569 + 1.0f * 0.049087;
+
+float layer_1_3 = parrotInput[0] * 0.084604 + parrotInput[1] * 0.292642 + parrotInput[2] * -0.444550 + 1.0f * 0.614365;
+
+float layer_1_4 = parrotInput[0] * -0.136793 + parrotInput[1] * 0.013866 + parrotInput[2] * -0.033237 + 1.0f * 0.058597;
+
+float layer_1_5 = parrotInput[0] * 0.234285 + parrotInput[1] * -0.026773 + parrotInput[2] * 0.109796 + 1.0f * -6.014935;
+
+float layer_1_6 = parrotInput[0] * -0.375738 + parrotInput[1] * 0.310065 + parrotInput[2] * -0.832586 + 1.0f * 0.898780;
+
+float layer_1_7 = parrotInput[0] * -0.360932 + parrotInput[1] * 0.241707 + parrotInput[2] * -0.495324 + 1.0f * 0.644464;
+
+float layer_1_8 = parrotInput[0] * -0.020845 + parrotInput[1] * 0.030548 + parrotInput[2] * -0.445393 + 1.0f * 0.253491;
+
+float layer_1_9 = parrotInput[0] * 1.112529 + parrotInput[1] * -2.702432 + parrotInput[2] * -14.137556 + 1.0f * -0.149519;
+
+float layer_1_10 = parrotInput[0] * -0.125802 + parrotInput[1] * 0.254723 + parrotInput[2] * -0.630701 + 1.0f * 0.716845;
+
+float layer_1_11 = parrotInput[0] * -0.216828 + parrotInput[1] * 0.308279 + parrotInput[2] * -0.674003 + 1.0f * 0.587158;
+
+float layer_1_12 = parrotInput[0] * -0.152571 + parrotInput[1] * 0.140373 + parrotInput[2] * -0.532035 + 1.0f * 0.836703;
+
+float layer_1_13 = parrotInput[0] * -0.349835 + parrotInput[1] * 0.298816 + parrotInput[2] * -0.854428 + 1.0f * 1.057956;
+
+float layer_1_14 = parrotInput[0] * -0.353645 + parrotInput[1] * 0.274070 + parrotInput[2] * -0.684168 + 1.0f * 0.727741;
+
+float layer_1_15 = parrotInput[0] * -0.177731 + parrotInput[1] * 0.284129 + parrotInput[2] * -0.480911 + 1.0f * 0.624303;
+
+float layer_2_0 = sigmoid(layer_1_0, 0.500000) * -0.073969 + sigmoid(layer_1_1, 0.500000) * -0.014646 + sigmoid(layer_1_2, 0.500000) * -19.731762 + sigmoid(layer_1_3, 0.500000) * -0.020306 + sigmoid(layer_1_4, 0.500000) * -5.598285 + sigmoid(layer_1_5, 0.500000) * 1.677688 + sigmoid(layer_1_6, 0.500000) * -0.023441 + sigmoid(layer_1_7, 0.500000) * -0.005766 + sigmoid(layer_1_8, 0.500000) * -3.517432 + sigmoid(layer_1_9, 0.500000) * 1500.000000 + sigmoid(layer_1_10, 0.500000) * 0.025085 + sigmoid(layer_1_11, 0.500000) * 0.008612 + sigmoid(layer_1_12, 0.500000) * -0.494611 + sigmoid(layer_1_13, 0.500000) * -0.057754 + sigmoid(layer_1_14, 0.500000) * -0.011988 + sigmoid(layer_1_15, 0.500000) * 0.012520 + 1.0f * 0.137436;
 
 layer_2_0 = sigmoid(layer_2_0, 0.5);
 
@@ -125,11 +153,11 @@ parrotOutput[0] = layer_2_0;
 //     //Calculate Call and Put simultaneously
 //     expRT = __expf(- R * T);
 //     CallResult = S * CNDD1 - X * expRT * CNDD2;
-//     parrotOutput[0] = CallResult;
+//     parrotOutput[0] = CallResult / 10.0;
 // 
-// #pragma parrot(output, "BlackScholesBodyGPU", [1]<0.0; 1.0>parrotOutput)
+// #pragma parrot(output, "BlackScholesBodyGPU", [1]<0.0;0.9>parrotOutput)
 
-    CallResult = parrotOutput[0];
+    CallResult = parrotOutput[0] * 10.0;
     PutResult  = X * expRT * (1.0f - CNDD2) - S * (1.0f - CNDD1);
 }
 
@@ -184,7 +212,7 @@ float RandFloat(float low, float high)
 // Data configuration
 ////////////////////////////////////////////////////////////////////////////////
 const int OPT_N = 4000000;
-const int  NUM_ITERATIONS = 512;
+const int  NUM_ITERATIONS = 1; // Amir: Change number of iteration
 
 
 const int          OPT_SZ = OPT_N * sizeof(float);
@@ -248,11 +276,11 @@ int main(int argc, char **argv)
     h_OptionYears   = (float *)malloc(OPT_SZ);
 
     //printf("...allocating GPU memory for options.\n");
-    checkCudaErrors(cudaMalloc((void **)&d_CallResult,   OPT_SZ));
-    checkCudaErrors(cudaMalloc((void **)&d_PutResult,    OPT_SZ));
-    checkCudaErrors(cudaMalloc((void **)&d_StockPrice,   OPT_SZ));
-    checkCudaErrors(cudaMalloc((void **)&d_OptionStrike, OPT_SZ));
-    checkCudaErrors(cudaMalloc((void **)&d_OptionYears,  OPT_SZ));
+    cudaMalloc((void **)&d_CallResult,   OPT_SZ);
+    cudaMalloc((void **)&d_PutResult,    OPT_SZ);
+    cudaMalloc((void **)&d_StockPrice,   OPT_SZ);
+    cudaMalloc((void **)&d_OptionStrike, OPT_SZ);
+    cudaMalloc((void **)&d_OptionYears,  OPT_SZ);
 
     //printf("...generating input data in CPU mem.\n");
     srand(5347);
@@ -286,17 +314,16 @@ int main(int argc, char **argv)
 
     //printf("...copying input data to GPU mem.\n");
     //Copy options data to GPU memory for further processing
-    checkCudaErrors(cudaMemcpy(d_StockPrice,  h_StockPrice,   optionSize, cudaMemcpyHostToDevice));
-    checkCudaErrors(cudaMemcpy(d_OptionStrike, h_OptionStrike,  optionSize, cudaMemcpyHostToDevice));
-    checkCudaErrors(cudaMemcpy(d_OptionYears,  h_OptionYears,   optionSize, cudaMemcpyHostToDevice));
+    cudaMemcpy(d_StockPrice,  h_StockPrice,   optionSize, cudaMemcpyHostToDevice);
+    cudaMemcpy(d_OptionStrike, h_OptionStrike,  optionSize, cudaMemcpyHostToDevice);
+    cudaMemcpy(d_OptionYears,  h_OptionYears,   optionSize, cudaMemcpyHostToDevice);
     //printf("Data init done.\n\n");
 
 
 
-    //printf("Executing Black-Scholes GPU kernel (%i iterations)...\n", NUM_ITERATIONS);
-    checkCudaErrors(cudaDeviceSynchronize());
-    //sdkResetTimer(&hTimer);
-    //sdkStartTimer(&hTimer);
+
+    cudaDeviceSynchronize();
+
 
     for (i = 0; i < NUM_ITERATIONS; i++)
     {
@@ -310,48 +337,15 @@ int main(int argc, char **argv)
             VOLATILITY,
             numberOptions
         );
-        getLastCudaError("BlackScholesGPU() execution failed\n");
+
     }
 
-    checkCudaErrors(cudaDeviceSynchronize());
-    //sdkStopTimer(&hTimer);
-    //gpuTime = sdkGetTimerValue(&hTimer) / NUM_ITERATIONS;
+    cudaDeviceSynchronize();
 
-    //Both call and put is calculated
-    //printf("Options count             : %i     \n", 2 * numberOptions);
-    //printf("BlackScholesGPU() time    : %f msec\n", gpuTime);
-    //printf("Effective memory bandwidth: %f GB/s\n", ((double)(5 * numberOptions * sizeof(float)) * 1E-9) / (gpuTime * 1E-3));
-    //printf("Gigaoptions per second    : %f     \n\n", ((double)(2 * numberOptions) * 1E-9) / (gpuTime * 1E-3));
-
-    //printf("BlackScholes, Throughput = %.4f GOptions/s, Time = %.5f s, Size = %u options, NumDevsUsed = %u, Workgroup = %u\n",
-           //(((double)(2.0 * numberOptions) * 1.0E-9) / (gpuTime * 1.0E-3)), gpuTime*1e-3, (2 * numberOptions), 1, 128);
-
-    //printf("\nReading back GPU results...\n");
     //Read back GPU results to compare them to CPU results
-    checkCudaErrors(cudaMemcpy(h_CallResultGPU, d_CallResult, optionSize, cudaMemcpyDeviceToHost));
-    checkCudaErrors(cudaMemcpy(h_PutResultGPU,  d_PutResult,  optionSize, cudaMemcpyDeviceToHost));
+    cudaMemcpy(h_CallResultGPU, d_CallResult, optionSize, cudaMemcpyDeviceToHost);
+    cudaMemcpy(h_PutResultGPU,  d_PutResult,  optionSize, cudaMemcpyDeviceToHost);
 
-
-    // printf("Checking the results...\n");
-    // printf("...running CPU calculations.\n\n");
-    // //Calculate options values on CPU
-    // BlackScholesCPU(
-    //     h_CallResultCPU,
-    //     h_PutResultCPU,
-    //     h_StockPrice,
-    //     h_OptionStrike,
-    //     h_OptionYears,
-    //     RISKFREE,
-    //     VOLATILITY,
-    //     numberOptions
-    // );
-
-    //printf("Comparing the results...\n");
-    //Calculate max absolute difference and L1 distance
-    //between CPU and GPU results
-    //sum_delta = 0;
-    //sum_ref   = 0;
-    //max_delta = 0;
 
 
     // Amir
@@ -365,33 +359,15 @@ int main(int argc, char **argv)
     // Rima
 
 
-    // for (i = 0; i < numberOptions; i++)
-    // {
-    //     ref   = h_CallResultCPU[i];
-    //     delta = fabs(h_CallResultCPU[i] - h_CallResultGPU[i]);
-
-    //     if (delta > max_delta)
-    //     {
-    //         max_delta = delta;
-    //     }
-
-    //     sum_delta += delta;
-    //     sum_ref   += fabs(ref);
-    // }
-
-    //L1norm = sum_delta / sum_ref;
-    //printf("L1 norm: %E\n", L1norm);
-    //printf("Max absolute error: %E\n\n", max_delta);
-
 #pragma parrot.end("BlackScholesBodyGPU")
 
     // printf("Shutting down...\n");
     // printf("...releasing GPU memory.\n");
-    checkCudaErrors(cudaFree(d_OptionYears));
-    checkCudaErrors(cudaFree(d_OptionStrike));
-    checkCudaErrors(cudaFree(d_StockPrice));
-    checkCudaErrors(cudaFree(d_PutResult));
-    checkCudaErrors(cudaFree(d_CallResult));
+    cudaFree(d_OptionYears);
+    cudaFree(d_OptionStrike);
+    cudaFree(d_StockPrice);
+    cudaFree(d_PutResult);
+    cudaFree(d_CallResult);
 
     //printf("...releasing CPU memory.\n");
     free(h_OptionYears);
@@ -401,23 +377,8 @@ int main(int argc, char **argv)
     free(h_CallResultGPU);
     free(h_PutResultCPU);
     free(h_CallResultCPU);
-    //sdkDeleteTimer(&hTimer);
-    //printf("Shutdown done.\n");
 
-    //printf("\n[BlackScholes] - Test Summary\n");
-
-    // cudaDeviceReset causes the driver to clean up all state. While
-    // not mandatory in normal operation, it is good practice.  It is also
-    // needed to ensure correct operation when the application is being
-    // profiled. Calling cudaDeviceReset causes all profile data to be
-    // flushed before the application exits
     cudaDeviceReset();
-
-    // if (L1norm > 1e-6)
-    // {
-    //     printf("Test failed!\n");
-    //     exit(EXIT_FAILURE);
-    // }
 
     //printf("Test passed\n");
     exit(EXIT_SUCCESS);
