@@ -1,3 +1,0 @@
-rm -rf ./bin
-rm -rf ./obj
-rm -f mean.out meanFilter.o meanFilter_kernels.o
