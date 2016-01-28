@@ -1,2 +1,0 @@
-rm -f ./bin/jmeint.out 
-rm -f ./obj/jmeint.o
