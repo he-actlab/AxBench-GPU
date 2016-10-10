@@ -38,8 +38,6 @@ getArray() {
 }
 
 
-
-
 function MakeSrc()
 {
 	if [ ! -d applications/$1 ]
@@ -47,20 +45,16 @@ function MakeSrc()
 		echo "$1 doesn't exist..."
 		exit 
 	fi	
-	echo "enter $1, making..."
+	echo -en "${blue}Start making $1...${nc}\n"
 	cd applications/$1
 	make &> ./log/Make.log
 	if grep -q "error" ./log/Make.log; then
 		grep -rn "error" ./log/Make.log
-    	echo -e "${red}---------- application ** $1 ** failed during compiling (check ${applications}/log/Make.log) ----------${nc}"
+    	echo -en "${red}Error! ** $1 ** failed during compiling (check ${applications}/log/Make.log).${nc}\n"
     	exit 1
 	fi
-	echo -en "\033[36m"
-	echo ""
-	echo "---------- application ** $1 ** made successfully ----------"
-	echo ""
-	echo -en "\033[0m"
-	cd -
+	echo -en "${green}Yay! ** $1 ** has been successfully compiled.${nc}\n"
+	cd - > /dev/null
 }
 
 function CleanSrc()
@@ -70,20 +64,16 @@ function CleanSrc()
 		echo "$1 doesn't exist..."
 		exit 
 	fi	
-	echo "enter $1, cleaning..."
+	echo -en "${blue}Start cleaning $1...${nc}\n"
 	cd applications/$1
 	make clean &> ./log/clean.log
 	if grep -q "error" ./log/clean.log; then
 		grep -rn "error" ./log/clean.log
-    	echo -e "${red}---------- application ** $1 ** failed during cleaning (check ${applications}/log/clean.log) ----------${nc}"
+    	echo -en "${red}Error! ** $1 ** failed during cleaning (check ${applications}/log/clean.log).${nc}\n"
     	exit 1
 	fi
-	echo -en "\033[36m"
-	echo ""
-	echo "---------- application ** $1 ** has been successfully cleaned ----------"
-	echo ""
-	echo -en "\033[0m"
-	cd -
+	echo -en "${green}Yay! ** $1 ** has been successfully cleaned.${nc}\n"
+	cd - > /dev/null
 }
 
 function RunSrc()
