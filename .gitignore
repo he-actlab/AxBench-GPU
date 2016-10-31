@@ -1,4 +1,17 @@
 *.tmp
+parrot.c/src/FannLib/doublefann.o
+parrot.c/src/FannLib/fann.o
+parrot.c/src/FannLib/fann_cascade.o
+parrot.c/src/FannLib/fann_error.o
+parrot.c/src/FannLib/fann_io.o
+parrot.c/src/FannLib/fann_train.o
+parrot.c/src/FannLib/fann_train_data.o
+parrot.c/src/FannLib/fixedfann.o
+parrot.c/src/FannLib/floatfann.o
+parrot.c/src/MeasureLib/CpuAffinity.o
+parrot.c/src/MeasureLib/Timer.o
+applications/binarization/test.data/output/
+applications/binarization/tmp.err
 parrot.c/src/ParrotLib/FannData.o
 parrot.c/src/ParrotLib/ParrotData.o
 parrot.c/src/ParrotLib/ParrotVector.o
