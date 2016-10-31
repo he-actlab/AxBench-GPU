@@ -1,6 +1,7 @@
 applications/inversek2j/test.data/output/
 applications/blackscholes/src.nn/
 applications/inversek2j/src.nn/
+applications/laplacian/data/output/
 *.tmp
 applications/convolution/src.nn/
 applications/binarization/tmp.log
