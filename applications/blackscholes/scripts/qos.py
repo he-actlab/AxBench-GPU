@@ -56,4 +56,4 @@ for i in range(len(origLines)):
  	absError += e
 pass;
 
-print bcolors.FAIL	+ "*** Error: %1.8f" % (absError/float(len(origLines))) + bcolors.ENDC
+print bcolors.FAIL	+ "*** Error: %1.8f%" % (absError/float(len(origLines))) * 100 + bcolors.ENDC

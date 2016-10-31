@@ -1,4 +1,9 @@
 *.tmp
+applications/sobel/null
+applications/sobel/nn.configs/
+applications/sobel/fann.config/
+applications/sobel/train.data/output/fann.data/*
+applications/sobel/train.data/output/kernel.data/*
 applications/binarization/binarization_binarization.json
 applications/binarization/binarization_imageBinarization.json
 applications/binarization/kernelNames.json

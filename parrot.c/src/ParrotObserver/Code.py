@@ -301,7 +301,7 @@ class Code(object):
                         probeStr += '\tint currIndex_' + tag + '= atomicAdd(&(dIndex_' + tag + '), (int)1);\n\n'
                         #probeStr += '\tif(( currIndex_' + tag + ' * ' + str(int(nInputs) + int(nOutputs)) + ' + ' + str(int(nInputs) + int(nOutputs)) + '- 1) < PARROT_SIZE){\n'
                         #probeStr += '\tif(currIndex_' + tag + " < int(PARROT_SIZE / " + str(int(nInputs) + int(nOutputs)) + ")){\n"
-                        probeStr += '\tif(currIndex_' + tag + ' < 10000){\n'
+                        probeStr += '\tif(currIndex_' + tag + ' < PARROT_SIZE){\n'
                         # First loop over the inputs
                         probeStr += '\t\tfor (int pIndex = 0; pIndex < '
                         probeStr += var[1]
@@ -318,7 +318,7 @@ class Code(object):
                         # First loop over the inputs
                         #probeStr += '\tif(( currIndex_' + tag + ' * ' + str(int(nInputs) + int(nOutputs)) + ' + ' + str(int(nInputs) + int(nOutputs)) + '- 1) < PARROT_SIZE){\n'
                         #probeStr += '\tif(currIndex_' + tag + " < int(PARROT_SIZE / " + str(int(nInputs) + int(nOutputs)) + ")){\n"
-                        probeStr += '\tif(currIndex_' + tag + ' < 10000){\n'
+                        probeStr += '\tif(currIndex_' + tag + ' < PARROT_SIZE){\n'
                         probeStr += '\t\tfor (int pIndex = 0; pIndex < '
                         probeStr += var[1]
                         probeStr += '; pIndex++){\n'

@@ -22,10 +22,8 @@ do
 	filename=$(basename "$f")
 	extension="${filename##*.}"
 	filename="${filename%.*}"
-	echo -e "-------------------------------------------------------"
 	echo -e "${Green} Input Image:  $f"
 	echo -e "${Green} output Image: ./train.data/output/${filename}_sobel.pgm ${White}"
-	echo -e "-------------------------------------------------------"
 	./bin/sobel.out -file=$f -output=./train.data/output/${filename}_sobel.pgm
 	for kData in ./kernel_*.data
 	do

@@ -1,3 +1,0 @@
-#include "parroto.h"
-extern ParrotObserver parroto;
-

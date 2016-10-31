@@ -75,15 +75,23 @@ ComputeSobel(unsigned char ul, // upper left
     parrotInput[8] = lr/255.0;
     // rima
 
-float layer_1_0 = parrotInput[0] * -0.191051 + parrotInput[1] * 5.621017 + parrotInput[2] * 7.995543 + parrotInput[3] * -1.598323 + parrotInput[4] * -0.290214 + parrotInput[5] * 3.349111 + parrotInput[6] * -13.368077 + parrotInput[7] * -0.402933 + parrotInput[8] * -1.122515 + 1.0f * -2.615931;
+float layer_1_0 = parrotInput[0] * 2.906975 + parrotInput[1] * 18.102823 + parrotInput[2] * 7.359772 + parrotInput[3] * -1.966690 + parrotInput[4] * -0.452597 + parrotInput[5] * 1.842741 + parrotInput[6] * -7.301652 + parrotInput[7] * -18.254036 + parrotInput[8] * -1.580491 + 1.0f * -2.947222;
 
-float layer_1_1 = parrotInput[0] * 0.279182 + parrotInput[1] * 0.361959 + parrotInput[2] * 6.572276 + parrotInput[3] * 0.413543 + parrotInput[4] * 0.348704 + parrotInput[5] * 1.923079 + parrotInput[6] * -8.722689 + parrotInput[7] * -0.528851 + parrotInput[8] * -1.847938 + 1.0f * 1.308268;
+float layer_1_1 = parrotInput[0] * 10.651690 + parrotInput[1] * -2.859231 + parrotInput[2] * -1.752389 + parrotInput[3] * 8.463883 + parrotInput[4] * 2.808856 + parrotInput[5] * -10.682747 + parrotInput[6] * 1.568864 + parrotInput[7] * -0.049021 + parrotInput[8] * -7.930051 + 1.0f * -1.999825;
 
-float layer_1_2 = parrotInput[0] * -7.564032 + parrotInput[1] * -21.111149 + parrotInput[2] * -1.159062 + parrotInput[3] * -1.654327 + parrotInput[4] * 0.228796 + parrotInput[5] * 4.454957 + parrotInput[6] * 4.947469 + parrotInput[7] * 7.080230 + parrotInput[8] * 15.945056 + 1.0f * 1.940841;
+float layer_1_2 = parrotInput[0] * -4.211637 + parrotInput[1] * -5.409542 + parrotInput[2] * -0.236575 + parrotInput[3] * -2.193843 + parrotInput[4] * 0.163089 + parrotInput[5] * 2.582590 + parrotInput[6] * 0.226871 + parrotInput[7] * 2.421903 + parrotInput[8] * 2.988783 + 1.0f * -0.116642;
 
-float layer_1_3 = parrotInput[0] * -0.005571 + parrotInput[1] * -6.269250 + parrotInput[2] * -0.585969 + parrotInput[3] * 0.484850 + parrotInput[4] * 0.331184 + parrotInput[5] * 0.030375 + parrotInput[6] * 2.231464 + parrotInput[7] * 0.838111 + parrotInput[8] * 2.725872 + 1.0f * -0.263775;
+float layer_1_3 = parrotInput[0] * 12.918195 + parrotInput[1] * 0.540606 + parrotInput[2] * 0.379654 + parrotInput[3] * 0.358617 + parrotInput[4] * 0.137156 + parrotInput[5] * -8.629834 + parrotInput[6] * -0.043213 + parrotInput[7] * -2.174679 + parrotInput[8] * -2.282538 + 1.0f * -0.142923;
 
-float layer_2_0 = sigmoid(layer_1_0, 0.500000) * 12.093943 + sigmoid(layer_1_1, 0.500000) * -3.555785 + sigmoid(layer_1_2, 0.500000) * -6.115889 + sigmoid(layer_1_3, 0.500000) * 13.702597 + 1.0f * -0.076973;
+float layer_1_4 = parrotInput[0] * 12.283479 + parrotInput[1] * 4.163111 + parrotInput[2] * 3.605873 + parrotInput[3] * -0.038830 + parrotInput[4] * 0.467714 + parrotInput[5] * -2.938643 + parrotInput[6] * 0.100889 + parrotInput[7] * -10.761487 + parrotInput[8] * -3.418102 + 1.0f * 4.506928;
+
+float layer_1_5 = parrotInput[0] * 11.038653 + parrotInput[1] * 0.884143 + parrotInput[2] * 0.362370 + parrotInput[3] * 0.290871 + parrotInput[4] * 0.087071 + parrotInput[5] * -7.145895 + parrotInput[6] * 0.145451 + parrotInput[7] * -3.419954 + parrotInput[8] * -1.177712 + 1.0f * 0.106418;
+
+float layer_1_6 = parrotInput[0] * 12.201486 + parrotInput[1] * -6.125398 + parrotInput[2] * -8.649518 + parrotInput[3] * 4.240808 + parrotInput[4] * 0.245731 + parrotInput[5] * -13.141877 + parrotInput[6] * 11.406070 + parrotInput[7] * 0.852653 + parrotInput[8] * -0.399534 + 1.0f * -2.261885;
+
+float layer_1_7 = parrotInput[0] * -6.720450 + parrotInput[1] * -6.182827 + parrotInput[2] * -0.158260 + parrotInput[3] * -6.175715 + parrotInput[4] * -0.253521 + parrotInput[5] * 4.252450 + parrotInput[6] * -0.042972 + parrotInput[7] * 8.334409 + parrotInput[8] * 7.170712 + 1.0f * -1.639585;
+
+float layer_2_0 = sigmoid(layer_1_0, 0.500000) * 6.607004 + sigmoid(layer_1_1, 0.500000) * 4.956233 + sigmoid(layer_1_2, 0.500000) * 0.169556 + sigmoid(layer_1_3, 0.500000) * -1.821482 + sigmoid(layer_1_4, 0.500000) * -1.815212 + sigmoid(layer_1_5, 0.500000) * -1.499189 + sigmoid(layer_1_6, 0.500000) * 2.808338 + sigmoid(layer_1_7, 0.500000) * 5.343754 + 1.0f * -0.523679;
 
 layer_2_0 = sigmoid(layer_2_0, 0.5);
 
