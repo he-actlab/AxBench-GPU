@@ -85,7 +85,9 @@ function RunSrc()
 	fi		
 	cd applications/$1
 	echo -e "${green}#1: Collect the training data...${nc}"
+	echo -e "*********************************************"
 	bash run_observation.sh
+	echo -e "*********************************************"
 	echo -e "${green}#2: Aggregate the training data...${nc}"
 	python ../../scripts/dataConv.py ./train.data/output/kernel.data
 	python ../../scripts/readKernelNames.py
