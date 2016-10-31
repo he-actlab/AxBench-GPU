@@ -1,5 +1,6 @@
 applications/blackscholes/src.nn/
 *.tmp
+applications/convolution/src.nn/
 applications/binarization/tmp.log
 applications/binarization/test.data/output/
 applications/binarization/src.nn/
