@@ -1,3 +1,8 @@
+cudaSamplesCommon/data/flower.txt
+parrot.c/src/KeyToFann/kmeans_training_15pct.data
+parrot.c/src/ParrotEvaluator/Bench/avx/sobel/parrot.data
+parrot.c/src/ParrotEvaluator/Bench/cpu_hwsigmoid/sobel/parrot.data
+parrot.c/src/ParrotGenerator/Avx/doc/319433-013b.pdf
 applications/sobel/kernel_sobel.data
 cudaSamplesCommon/data/person.txt
 cudaSamplesCommon/data/sponge.txt
