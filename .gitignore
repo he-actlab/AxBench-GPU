@@ -1,3 +1,11 @@
+applications/sobel/kernel_sobel.data
+cudaSamplesCommon/data/person.txt
+cudaSamplesCommon/data/sponge.txt
+parrot.c/src/KeyToFann/kmeans.data
+parrot.c/src/KeyToFann/kmeans_mandrill.data
+parrot.c/src/KeyToFann/kmeans_random.data
+parrot.c/src/ParrotEvaluator/Bench/avx/kmeans/parrot.data
+parrot.c/src/ParrotEvaluator/Bench/cpu_hwsigmoid/kmeans/parrot.data
 applications/srad.srad/null
 applications/srad.srad/src.nn/
 applications/srad.srad/test.data/output/
