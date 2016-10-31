@@ -28,6 +28,6 @@ do
 	./bin/${application}.out    -file=$f -output=./test.data/output/${filename}_${application}.pgm
 	compare -metric RMSE ./test.data/output/${filename}_${application}_nn.pgm ./test.data/output/${filename}_${application}.pgm null > tmp.log 2> tmp.err
 	echo -ne "${red}$f\t"
-	awk '{ printf("*** Error: %0.2f%\n",substr($2, 2, length($2) - 2) * 100) }' tmp.err
+	awk '{ printf("*** Error: %0.2f%%\n",substr($2, 2, length($2) - 2) * 100) }' tmp.err
 	echo -ne "${white}"
 done
