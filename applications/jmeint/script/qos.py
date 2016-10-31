@@ -36,4 +36,4 @@ for i in range(len(origLines)):
     if(origLine != nnLine):
         mismatch += 1
 
-print bcolors.FAIL	+ "*** Error: %1.8f" % (mismatch/float(len(origLines))) + bcolors.ENDC
+print bcolors.FAIL	+ "*** Error: %1.8f%%" % ((mismatch/float(len(origLines)))*100) + bcolors.ENDC
