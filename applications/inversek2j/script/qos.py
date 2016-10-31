@@ -52,4 +52,4 @@ for i in range(len(origLines)):
 
     total += (distance(xOrig, yOrig, xNN, yNN) / math.sqrt(xOrig*xOrig + yOrig*yOrig))
 
-print bcolors.FAIL	+ "*** Error: %1.8f" % (total/float(len(origLines))) + bcolors.ENDC
+print bcolors.FAIL	+ "*** Error: %1.2f%%" % ((total/float(len(origLines))) * 100) + bcolors.ENDC
