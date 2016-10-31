@@ -1,4 +1,14 @@
 *.tmp
+parrot.c/src/ParrotLib/FannData.o
+parrot.c/src/ParrotLib/ParrotData.o
+parrot.c/src/ParrotLib/ParrotVector.o
+parrot.c/src/ParrotLib/parrot_cpu.o
+parrot.c/src/ParrotLib/parroto.o
+parrot.c/src/ParrotObserver/parroto.o
+parrot.c/src/ParrotObserver/second_timer.o
+parrot.c/src/ParrotObserver/sin.o
+parrot.c/src/ParrotObserver/sin2.o
+tracked.files
 applications/sobel/null
 applications/sobel/nn.configs/
 applications/sobel/fann.config/
