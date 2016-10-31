@@ -1,3 +1,5 @@
+applications/sobel/tmp.err
+applications/sobel/tmp.log
 applications/sobel/test.data/output/
 applications/meanfilter/tmp.log
 applications/sobel/src.nn/
