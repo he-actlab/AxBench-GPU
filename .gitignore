@@ -1,3 +1,4 @@
+applications/blackscholes/src.nn/
 *.tmp
 applications/binarization/tmp.log
 applications/binarization/test.data/output/
