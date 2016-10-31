@@ -1,4 +1,5 @@
 *.tmp
+applications/binarization/src.nn/
 parrot.c/src/FannLib/doublefann.o
 parrot.c/src/FannLib/fann.o
 parrot.c/src/FannLib/fann_cascade.o
