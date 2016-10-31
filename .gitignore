@@ -1,3 +1,9 @@
+applications/srad.srad/null
+applications/srad.srad/src.nn/
+applications/srad.srad/test.data/output/
+applications/srad.srad/tmp.err
+applications/srad.srad/tmp.log
+applications/srad.srad/train.data/output/
 applications/srad.srad/nn.configs/
 applications/sobel/tmp.err
 applications/sobel/tmp.log
