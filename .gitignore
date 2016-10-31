@@ -1,3 +1,4 @@
+applications/inversek2j/fann.config/
 cudaSamplesCommon/data/flower.txt
 parrot.c/src/KeyToFann/kmeans_training_15pct.data
 parrot.c/src/ParrotEvaluator/Bench/avx/sobel/parrot.data
