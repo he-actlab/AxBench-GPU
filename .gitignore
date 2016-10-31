@@ -1,4 +1,5 @@
 applications/blackscholes/src.nn/
+applications/inversek2j/src.nn/
 *.tmp
 applications/convolution/src.nn/
 applications/binarization/tmp.log
